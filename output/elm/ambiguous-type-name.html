@@ -1,0 +1,24 @@
+
+<p>Occurs when Elm cannot resolve which 'map' to use from the two imports:</p>
+
+<pre><code>
+6m-- AMBIGUOUS NAME ------------------------------------------------------ Two.elm
+
+This usage of `map` is ambiguous:
+
+6| foo = map
+         <span style="color:#F55">^^^</span>
+This name is exposed by 2 of your imports, so I am not sure which one to use:
+
+    <span style="color:#A50">Dict.map</span>[0m
+    <span style="color:#A50">List.map</span>
+
+I recommend using qualified names for imported values. I also recommend having
+at most one `exposing (..)` per file to make name clashes like this less common
+in the long run.
+
+<u>No</u>te: Check out <https://elm-lang.org/0.19.1/imports> for more info on the
+import syntax.
+
+
+</code></pre>

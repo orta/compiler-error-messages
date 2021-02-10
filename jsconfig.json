@@ -1,0 +1,8 @@
+{
+  "include": ["*/*.mjs"],
+  "compilerOptions": {
+    "moduleResolution": "classic",
+    "checkJs": true,
+    "module": "esnext"
+  } 
+}

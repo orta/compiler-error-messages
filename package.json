@@ -1,0 +1,14 @@
+{
+  "name": "compiler-error-messages",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Orta Therox",
+  "license": "MIT",
+
+  "dependencies": {
+    "ansi-to-html": "^0.6.14",
+    "gray-matter": "^4.0.2",
+    "node-pty": "^0.10.0",
+    "shelljs": "^0.8.4"
+  }
+}
