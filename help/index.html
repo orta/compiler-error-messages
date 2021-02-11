@@ -426,40 +426,85 @@ Options:
                 For tools that listen on build completion.
 
 </code></pre>
-<h3>ReScript</h3>
+<h3>Swift</h3>
 <pre><code>
-Usage : bsb.exe &lt;bsb-options&gt; -- &lt;ninja_options&gt;
-For ninja options, try bsb.exe --  -h.  
-Note they are supposed to be internals and not reliable.
-ninja will be loaded either by just running `bsb.exe' or `bsb.exe .. -- ..`
-It is always recommended to run ninja via bsb.exe
-Options:
-  -v            Print version and exit
-  -version      Print version and exit
-  -verbose      Set the output(from bsb) to be verbose
-  -w            Watch mode
-  -clean-world  Clean all bs dependencies
-  -clean        Clean only current project
-  -make-world   Build all dependencies and itself 
-  -install      Install public interface files into lib/ocaml
-  -init         Init sample project to get started. 
-                Note (`bsb -init sample` will create a sample project while 
-                `bsb -init .` will reuse current directory)
-  -theme        The theme for project initialization. 
-                default is basic:
-                https://github.com/rescript-lang/rescript-compiler/tree/master/jscomp/bsb/templates
-  -themes       List all available themes
-  -where        Show where bsb.exe is located
-  -ws           [host:]port 
-                specify a websocket number (and optionally, a host). 
-                When a build finishes, we send a message to that port. 
-                For tools that listen on build completion.
+OVERVIEW: Swift compiler
+
+USAGE: swiftc
+
+MODES:
+  -dump-ast              Parse and type-check input file(s) and dump AST(s)
+  -dump-parse            Parse input file(s) and dump AST(s)
+  -dump-pcm              Dump debugging information about a precompiled Clang module
+  -dump-scope-maps &lt;expanded-or-list-of-line:column&gt;
+                         Parse and type-check input file(s) and dump the scope map(s)
+  -dump-type-info        Output YAML dump of fixed-size types from all imported modules
+  -dump-type-refinement-contexts
+                         Type-check input file(s) and dump type refinement contexts(s)
+  -emit-assembly         Emit assembly file(s) (-S)
+  -emit-bc               Emit LLVM BC file(s)
+  -emit-executable       Emit a linked executable
+  -emit-imported-modules Emit a list of the imported modules
+  -emit-ir               Emit LLVM IR file(s)
+  -emit-library          Emit a linked library
+  -emit-object           Emit object file(s) (-c)
+  -emit-pcm              Emit a precompiled Clang module from a module map
+  -emit-sibgen           Emit serialized AST + raw SIL file(s)
+  -emit-sib              Emit serialized AST + canonical SIL file(s)
+  -emit-silgen           Emit raw SIL file(s)
+  -emit-sil              Emit canonical SIL file(s)
+  -index-file            Produce index data for a source file
+  -parse                 Parse input file(s)
+  -print-ast             Parse and type-check input file(s) and pretty print AST(s)
+  -resolve-imports       Parse and resolve imports in input file(s)
+  -typecheck             Parse and type-check input file(s)
+
+OPTIONS:
+  -api-diff-data-dir &lt;path&gt;
+                          Load platform and version specific API migration data files from &lt;path&gt;. Ignored if -api-diff-data-file is specified.
+  -api-diff-data-file &lt;path&gt;
+                          API migration data is from &lt;path&gt;
+  -application-extension  Restrict code to those available for App Extensions
+  -assert-config &lt;value&gt;  Specify the assert_configuration replacement. Possible values are Debug, Release, Unchecked, DisableReplacement.
+  -avoid-emit-module-source-info
+                          don't emit Swift source info file
+  -color-diagnostics      Print diagnostics in color
+  -continue-building-after-errors
+                          Continue building, even after errors are encountered
+  -coverage-prefix-map &lt;value&gt;
+                          Remap source paths in coverage info
+  -debug-info-format=&lt;value&gt;
+                          Specify the debug info format type to either 'dwarf' or 'codeview'
+  -debug-info-store-invocation
+                          Emit the compiler invocation in the debug info.
+  -debug-prefix-map &lt;value&gt;
+                          Remap source paths in debug info
+  -disable-astscope-lookup
+                          Disable ASTScope-based unqualified name lookup
+  -disable-autolinking-runtime-compatibility-dynamic-replacements
+                          Do not use autolinking for the dynamic replacement runtime compatibility library
+  -disable-autolinking-runtime-compatibility
+                          Do not use autolinking for runtime compatibility libraries
+  -disable-fuzzy-forward-scan-trailing-closure-matching
+                          Disable fuzzy forward-scan trailing closure matching
+  -disable-migrator-fixits
+                          Disable the Migrator phase which automatically applies fix-its
+  -disable-only-one-dependency-file
+                          Disables incremental build optimization that only produces one dependencies file
+  -disable-parser-lookup  Disable parser lookup &amp; use ast scope lookup only (experimental)
+  -disable-request-based-incremental-dependencies
+                          Disable request-based name tracking
+  -driver-compare-incremental-schemes-path &lt;path&gt;
+                          Path to use for machine-readable comparision
+  -driver-compare-incremental-schemes
+                          Print a simple message comparing dependencies with source ranges (w/ fallback)
+  -driver-time
 
 </code></pre>
 <h3>Other build tools</h3>
 <p>These aren't compilers, which means they're a bit less rigidly &quot;professional&quot; in their output and have a bit more style about themselves. Rome especially is very clear in its hierarchy and visual weighting, but it's also very long - trade-offs.</p>
-<p>Some of these tools of these are definitely pushing the ANSI to HTML systems in my tooling, so forgive some ASCII errors. I'll send some PRs with time.</p>
-<p>Rome's help output next is probably my favourite of the whole set, the use of bold, lines and taking the width into account all make for a very polished introduction to the tool.</p>
+<p>Some of these tools of these are definitely pushing the ANSI to HTML systems in my tooling, so forgive some ASCII/color errors. I'll get it fixed with time.</p>
+<p>Rome's help output is coming up next, and it is probably my favourite of the whole set. The use of bold, lines for delination and taking the width into account all make for a very polished introduction to the tool.</p>
 <pre><code>
 
                                                                                          
@@ -516,9 +561,7 @@ $ /home/runner/work/compiler-error-messages/compiler-error-messages/node_modules
   --profile-sampling &lt;microsec&gt;         Profiler sampling interval in microseconds -
                                         default 100
   --profile-timeout &lt;millisec&gt;          Stop the profile after the milliseconds
-                                        specified. When omitted the profile is of the
-                                        whole command
-  --rage                                Create a rage 
+      
 
 </code></pre>
 <p>Jest has a static line width, and does a good job of wrapping the long paragraphs for the bazillion config options.</p>
@@ -681,9 +724,7 @@ Options:
                                 will look for.                           [array]
   --moduleNameMapper            A JSON string with a map from regular
                                 expressions to module names or to arrays of
-                                module names that allow to stub out resources,
-                                like images or styles with a single module
-                                                                       
+                                modul
 
 </code></pre>
 <p>Prettier's help does a good job of categorizing different types of settings via a hierarchy.</p>
@@ -761,8 +802,7 @@ Config options:
   --plugin &lt;path&gt;          Add a plugin. Multiple plugins can be passed as separate `--plugin`s.
                            Defaults to [].
   --plugin-search-dir &lt;path&gt;
-                           Custom directory that contains prettier plugins in node_modules subdirectory.
-                           Overrides default behavior when plugins are searched relatively to the location of
+                     
 
 </code></pre>
 <p>I wrote this CLI, sure, but I think I did a pretty good job on offering a bunch of ways to go from here in the &quot;footer&quot; which hasn't really been represented other than Jest's mention of the website.</p>
