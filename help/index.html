@@ -1,0 +1,506 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/vanilla.css">
+    <link rel="stylesheet" href="/assets/site.css">
+    <title>Help prompts for different compilers</title>
+  </head>
+  <body>
+    <h1>TypeScript</h1>
+<pre><code>
+Version 4.1.5
+Syntax:   tsc [options] [file...]
+
+Examples: tsc hello.ts
+          tsc --outFile file.js file.ts
+          tsc @args.txt
+          tsc --build tsconfig.json
+
+Options:
+ -h, --help                                         Print this message.
+ -w, --watch                                        Watch input files.
+ --pretty                                           Stylize errors and messages using color and context (experimental).
+ --all                                              Show all compiler options.
+ -v, --version                                      Print the compiler's version.
+ --init                                             Initializes a TypeScript project and creates a tsconfig.json file.
+ -p FILE OR DIRECTORY, --project FILE OR DIRECTORY  Compile the project given the path to its configuration file, or to a folder with a 'tsconfig.json'.
+ -b, --build                                        Build one or more projects and their dependencies, if out of date
+ -t VERSION, --target VERSION                       Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019', 'ES2020', or 'ESNEXT'.
+ -m KIND, --module KIND                             Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', 'es2020', or 'ESNext'.
+ --lib                                              Specify library files to be included in the compilation.
+                                                      'es5' 'es6' 'es2015' 'es7' 'es2016' 'es2017' 'es2018' 'es2019' 'es2020' 'esnext' 'dom' 'dom.iterable' 'webworker' 'webworker.importscripts' 'webworker.iterable' 'scripthost' 'es2015.core' 'es2015.collection' 'es2015.generator' 'es2015.iterable' 'es2015.promise' 'es2015.proxy' 'es2015.reflect' 'es2015.symbol' 'es2015.symbol.wellknown' 'es2016.array.include' 'es2017.object' 'es2017.sharedmemory' 'es2017.string' 'es2017.intl' 'es2017.typedarrays' 'es2018.asyncgenerator' 'es2018.asynciterable' 'es2018.intl' 'es2018.promise' 'es2018.regexp' 'es2019.array' 'es2019.object' 'es2019.string' 'es2019.symbol' 'es2020.bigint' 'es2020.promise' 'es2020.sharedmemory' 'es2020.string' 'es2020.symbol.wellknown' 'es2020.intl' 'esnext.array' 'esnext.symbol' 'esnext.asynciterable' 'esnext.intl' 'esnext.bigint' 'esnext.string' 'esnext.promise' 'esnext.weakref' 
+ --allowJs                                          Allow javascript files to be compiled.
+ --jsx KIND                                         Specify JSX code generation: 'preserve', 'react-native', or 'react'.
+ -d, --declaration                                  Generates corresponding '.d.ts' file.
+ --declarationMap                                   Generates a sourcemap for each corresponding '.d.ts' file.
+ --sourceMap                                        Generates corresponding '.map' file.
+ --outFile FILE                                     Concatenate and emit output to single file.
+ --outDir DIRECTORY                                 Redirect output structure to the directory.
+ --removeComments                                   Do not emit comments to output.
+ --noEmit                                           Do not emit outputs.
+ --strict                                           Enable all strict type-checking options.
+ --noImplicitAny                                    Raise error on expressions and declarations with an implied 'any' type.
+ --strictNullChecks                                 Enable strict null checks.
+ --strictFunctionTypes                              Enable strict checking of function types.
+ --strictBindCallApply                              Enable strict 'bind', 'call', and 'apply' methods on functions.
+ --strictPropertyInitialization                     Enable strict checking of property initialization in classes.
+ --noImplicitThis                                   Raise error on 'this' expressions with an implied 'any' type.
+ --alwaysStrict                                     Parse in strict mode and emit "use strict" for each source file.
+ --noUnusedLocals                                   Report errors on unused locals.
+ --noUnusedParameters                               Report errors on unused parameters.
+ --noImplicitReturns                                Report error when not all code paths in function return a value.
+ --noFallthroughCasesInSwitch                       Report errors for fallthrough cases in switch statement.
+ --types                                            Type declaration files to be included in compilation.
+ --esModuleInterop                                  Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'.
+ @<file>                                            Insert command line options and files from a file.
+
+</code></pre>
+<p>With a variant which includes all possible flags:</p>
+<pre><code>
+Version 4.1.5
+Syntax:   tsc [options] [file...]
+
+Examples: tsc hello.ts
+          tsc --outFile file.js file.ts
+          tsc @args.txt
+          tsc --build tsconfig.json
+
+Options:
+ --all                                              Show all compiler options.
+ --allowJs                                          Allow javascript files to be compiled.
+ --allowSyntheticDefaultImports                     Allow default imports from modules with no default export. This does not affect code emit, just typechecking.
+ --allowUmdGlobalAccess                             Allow accessing UMD globals from modules.
+ --allowUnreachableCode                             Do not report errors on unreachable code.
+ --allowUnusedLabels                                Do not report errors on unused labels.
+ --alwaysStrict                                     Parse in strict mode and emit "use strict" for each source file.
+ --assumeChangesOnlyAffectDirectDependencies        Have recompiles in '--incremental' and '--watch' assume that changes within a file will only affect files directly depending on it.
+ --baseUrl                                          Base directory to resolve non-absolute module names.
+ -b, --build                                        Build one or more projects and their dependencies, if out of date
+ --charset                                          The character set of the input files.
+ --checkJs                                          Report errors in .js files.
+ --composite                                        Enable project compilation
+ -d, --declaration                                  Generates corresponding '.d.ts' file.
+ --declarationDir DIRECTORY                         Output directory for generated declaration files.
+ --declarationMap                                   Generates a sourcemap for each corresponding '.d.ts' file.
+ --diagnostics                                      Show diagnostic information.
+ --disableReferencedProjectLoad                     Disable loading referenced projects.
+ --disableSizeLimit                                 Disable size limitations on JavaScript projects.
+ --disableSolutionSearching                         Disable solution searching for this project.
+ --disableSourceOfProjectReferenceRedirect          Disable use of source files instead of declaration files from referenced projects.
+ --downlevelIteration                               Provide full support for iterables in 'for-of', spread, and destructuring when targeting 'ES5' or 'ES3'.
+ --emitBOM                                          Emit a UTF-8 Byte Order Mark (BOM) in the beginning of output files.
+ --emitDeclarationOnly                              Only emit '.d.ts' declaration files.
+ --emitDecoratorMetadata                            Enables experimental support for emitting type metadata for decorators.
+ --esModuleInterop                                  Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'.
+ --experimentalDecorators                           Enables experimental support for ES7 decorators.
+ --extendedDiagnostics                              Show verbose diagnostic information.
+ --forceConsistentCasingInFileNames                 Disallow inconsistently-cased references to the same file.
+ --generateCpuProfile FILE OR DIRECTORY             Generates a CPU profile.
+ --generateTrace DIRECTORY                          Generates an event trace and a list of types.
+ -h, --help                                         Print this message.
+ --importHelpers                                    Import emit helpers from 'tslib'.
+ --importsNotUsedAsValues                           Specify emit/checking behavior for imports that are only used for types
+ -i, --incremental                                  Enable incremental compilation
+ --init                                             Initializes a TypeScript project and creates a tsconfig.json file.
+ --inlineSourceMap                                  Emit a single file with source maps instead of having a separate file.
+ --inlineSources                                    Emit the source alongside the sourcemaps within a single file; requires '--inlineSourceMap' or '--sourceMap' to be set.
+ --isolatedModules                                  Transpile each file as a separate module (similar to 'ts.transpileModule').
+ --jsx KIND                                         Specify JSX code generation: 'preserve', 'react-native', or 'react'.
+ --jsxFactory                                       Specify the JSX factory function to use when targeting 'react' JSX emit, e.g. 'React.createElement' or 'h'.
+ --jsxFragmentFactory                               Specify the JSX fragment factory function to use when targeting 'react' JSX emit with 'jsxFactory' compiler option is specified, e.g. 'Fragment'.
+ --jsxImportSource                                  Specify the module specifier to be used to import the `jsx` and `jsxs` factory functions from. eg, react
+ --keyofStringsOnly                                 Resolve 'keyof' to string valued property names only (no numbers or symbols).
+ --lib                                              Specify library files to be included in the compilation.
+                                                      'es5' 'es6' 'es2015' 'es7' 'es2016' 'es2017' 'es2018' 'es2019' 'es2020' 'esnext' 'dom' 'dom.iterable' 'webworker' 'webworker.importscripts' 'webworker.iterable' 'scripthost' 'es2015.core' 'es2015.collection' 'es2015.generator' 'es2015.iterable' 'es2015.promise' 'es2015.proxy' 'es2015.reflect' 'es2015.symbol' 'es2015.symbol.wellknown' 'es2016.array.include' 'es2017.object' 'es2017.sharedmemory' 'es2017.string' 'es2017.intl' 'es2017.typedarrays' 'es2018.asyncgenerator' 'es2018.asynciterable' 'es2018.intl' 'es2018.promise' 'es2018.regexp' 'es2019.array' 'es2019.object' 'es2019.string' 'es2019.symbol' 'es2020.bigint' 'es2020.promise' 'es2020.sharedmemory' 'es2020.string' 'es2020.symbol.wellknown' 'es2020.intl' 'esnext.array' 'esnext.symbol' 'esnext.asynciterable' 'esnext.intl' 'esnext.bigint' 'esnext.string' 'esnext.promise' 'esnext.weakref' 
+ --listEmittedFiles                                 Print names of generated files part of the compilation.
+ --listFiles                                        Print names of files part of the compilation.
+ --listFilesOnly                                    Print names of files that are part of the compilation and then stop processing.
+ --locale                                           The locale used when displaying messages to the user (e.g. 'en-us')
+ --mapRoot LOCATION                                 Specify the location where debugger should locate map files instead of generated locations.
+ --maxNodeModuleJsDepth                             The maximum dependency depth to search under node_modules and load JavaScript files.
+ -m KIND, --module KIND                             Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', 'es2020', or 'ESNext'.
+ --moduleResolution STRATEGY                        Specify module resolution strategy: 'node' (Node.js) or 'classic' (TypeScript pre-1.6).
+ --newLine NEWLINE                                  Specify the end of line sequence to be used when emitting files: 'CRLF' (dos) or 'LF' (unix).
+ --noEmit                                           Do not emit outputs.
+ --noEmitHelpers                                    Do not generate custom helper functions like '__extends' in compiled output.
+ --noEmitOnError                                    Do not emit outputs if any errors were reported.
+ --noErrorTruncation                                Do not truncate error messages.
+ --noFallthroughCasesInSwitch                       Report errors for fallthrough cases in switch statement.
+ --noImplicitAny                                    Raise error on expressions and declarations with an implied 'any' type.
+ --noImplicitReturns                                Report error when not all code paths in function return a value.
+ --noImplicitThis                                   Raise error on 'this' expressions with an implied 'any' type.
+ --noImplicitUseStrict                              Do not emit 'use strict' directives in module output.
+ --noLib                                            Do not include the default library file (lib.d.ts).
+ --noResolve                                        Do not add triple-slash references or imported modules to the list of compiled files.
+ --noStrictGenericChecks                            Disable strict checking of generic signatures in function types.
+ --noUncheckedIndexedAccess                         Include 'undefined' in index signature results
+ --noUnusedLocals                                   Report errors on unused locals.
+ --noUnusedParameters                               Report errors on unused parameters.
+ --out FILE                                         [Deprecated] Use '--outFile' instead. Concatenate and emit output to single file
+ --outDir DIRECTORY                                 Redirect output structure to the directory.
+ --outFile FILE                                     Concatenate and emit output to single file.
+ --paths                                            A series of entries which re-map imports to lookup locations relative to the 'baseUrl'.
+ --plugins                                          List of language service plugins.
+ --preserveConstEnums                               Do not erase const enum declarations in generated code.
+ --preserveSymlinks                                 Do not resolve the real path of symlinks.
+ --preserveWatchOutput                              Whether to keep outdated console output in watch mode instead of clearing the screen.
+ --pretty                                           Stylize errors and messages using color and context (experimental).
+ -p FILE OR DIRECTORY, --project FILE OR DIRECTORY  Compile the project given the path to its configuration file, or to a folder with a 'tsconfig.json'.
+ --reactNamespace                                   [Deprecated] Use '--jsxFactory' instead. Specify the object invoked for createElement when targeting 'react' JSX emit
+ --removeComments                                   Do not emit comments to output.
+ --resolveJsonModule                                Include modules imported with '.json' extension
+ --rootDir LOCATION                                 Specify the root directory of input files. Use to control the output directory structure with --outDir.
+ --rootDirs                                         List of root folders whose combined content represents the structure of the project at runtime.
+ --showConfig                                       Print the final configuration instead of building.
+ --skipDefaultLibCheck                              [Deprecated] Use '--skipLibCheck' instead. Skip type checking of default library declaration files.
+ --skipLibCheck                                     Skip type checking of declaration files.
+ --sourceMap                                        Generates corresponding '.map' file.
+ --sourceRoot LOCATION                              Specify the location where debugger should locate TypeScript files instead of source locations.
+ --strict                                           Enable all strict type-checking options.
+ --strictBindCallApply                              Enable strict 'bind', 'call', and 'apply' methods on functions.
+ --strictFunctionTypes                              Enable strict checking of function types.
+ --strictNullChecks                                 Enable strict null checks.
+ --strictPropertyInitialization                     Enable strict checking of property initialization in classes.
+ --stripInternal                                    Do not emit declarations for code that has an '@internal' annotation.
+ --suppressExcessPropertyErrors                     Suppress excess property checks for object literals.
+ --suppressImplicitAnyIndexErrors                   Suppress noImplicitAny errors for indexing objects lacking index signatures.
+ -t VERSION, --target VERSION                       Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019', 'ES2020', or 'ESNEXT'.
+ --traceResolution                                  Enable tracing of the name resolution process.
+ --tsBuildInfoFile FILE                             Specify file to store incremental compilation information
+ --typeRoots                                        List of folders to include type definitions from.
+ --types                                            Type declaration files to be included in compilation.
+ --useDefineForClassFields                          Emit class fields with Define instead of Set.
+ -v, --version                                      Print the compiler's version.
+ -w, --watch                                        Watch input files.
+ @<file>                                            Insert command line options and files from a file.
+
+</code></pre>
+<h1>Elixir</h1>
+<pre><code>
+execvp(3) failed.: No such file or directory
+
+</code></pre>
+<h1>Elm</h1>
+<pre><code>
+Hi, thank you for trying out Elm<span style="font-weight:normal;opacity:1;color:#feffff;background:#040404;"> 0.19.1</span>. I hope you like it!
+
+<span style="color:#777;">-------------------------------------------------------------------------------<span style="font-weight:normal;opacity:1;color:#feffff;background:#040404;">
+</span>I highly recommend working through <https://guide.elm-lang.org> to get started.<span style="font-weight:normal;opacity:1;color:#feffff;background:#040404;">
+</span>It teaches many important concepts, including how to use `elm` in the terminal.<span style="font-weight:normal;opacity:1;color:#feffff;background:#040404;">
+</span>-------------------------------------------------------------------------------<span style="font-weight:normal;opacity:1;color:#feffff;background:#040404;">
+
+The most common commands are:
+
+    elm repl</span>
+        Open up an interactive programming session. Type in Elm expressions like
+        (2 + 2) or (String.length "test") and see if they equal four!
+    
+    elm init<span style="font-weight:normal;opacity:1;color:#feffff;background:#040404;">
+        Start an Elm project. It creates a starter elm.json file and provides a
+        link explaining what to do from there.
+    
+    elm reactor</span>
+        Compile code with a click. It opens a file viewer in your browser, and
+        when you click on an Elm file, it compiles and you see the result.
+
+There are a bunch of other commands as well though. Here is a full list:
+
+    <span style="color:#bdcfe5;">elm repl    --help
+    elm init    --help
+    elm reactor --help
+    elm make    --help
+    elm install --help
+    elm bump    --help
+    elm diff    --help
+    elm publish --help<span style="font-weight:normal;opacity:1;color:#feffff;background:#040404;">
+
+Adding the --help flag gives a bunch of additional details about each one.
+
+Be sure to ask on the Elm slack if you run into trouble! Folks are friendly and
+happy to help out. They hang out there because it is fun, so be kind to get the
+best results!
+
+</span></span></span>
+</code></pre>
+<h1>Rust</h1>
+<pre><code>
+Usage: rustc [OPTIONS] INPUT
+
+Options:
+    -h, --help          Display this message
+        --cfg SPEC      Configure the compilation environment
+    -L [KIND=]PATH      Add a directory to the library search path. The
+                        optional KIND can be one of dependency, crate, native,
+                        framework, or all (the default).
+    -l [KIND=]NAME      Link the generated crate(s) to the specified native
+                        library NAME. The optional KIND can be one of
+                        static, framework, or dylib (the default).
+        --crate-type [bin|lib|rlib|dylib|cdylib|staticlib|proc-macro]
+                        Comma separated list of types of crates
+                        for the compiler to emit
+        --crate-name NAME
+                        Specify the name of the crate being built
+        --edition 2015|2018
+                        Specify which edition of the compiler to use when
+                        compiling code.
+        --emit [asm|llvm-bc|llvm-ir|obj|metadata|link|dep-info|mir]
+                        Comma separated list of types of output for the
+                        compiler to emit
+        --print [crate-name|file-names|sysroot|target-libdir|cfg|target-list|target-cpus|target-features|relocation-models|code-models|tls-models|target-spec-json|native-static-libs]
+                        Compiler information to print on stdout
+    -g                  Equivalent to -C debuginfo=2
+    -O                  Equivalent to -C opt-level=2
+    -o FILENAME         Write output to <filename>
+        --out-dir DIR   Write output to compiler-chosen filename in <dir>
+        --explain OPT   Provide a detailed explanation of an error message
+        --test          Build a test harness
+        --target TARGET Target triple for which the code is compiled
+    -W, --warn OPT      Set lint warnings
+    -A, --allow OPT     Set lint allowed
+    -D, --deny OPT      Set lint denied
+    -F, --forbid OPT    Set lint forbidden
+        --cap-lints LEVEL
+                        Set the most restrictive lint level. More restrictive
+                        lints are capped at this level
+    -C, --codegen OPT[=VALUE]
+                        Set a codegen option
+    -V, --version       Print version info and exit
+    -v, --verbose       Use verbose output
+
+Additional help:
+    -C help             Print codegen options
+    -W help             Print 'lint' options and default settings
+    --help -v           Print the full set of options rustc accepts
+
+
+</code></pre>
+<p>With codegen options:</p>
+<pre><code>
+
+Available codegen options:
+
+    -C                       ar=val -- this option is deprecated and does nothing
+    -C               code-model=val -- choose the code model to use (`rustc --print code-models` for details)
+    -C            codegen-units=val -- divide crate into N units to optimize in parallel
+    -C         debug-assertions=val -- explicitly enable the `cfg(debug_assertions)` directive
+    -C                debuginfo=val -- debug info emission level (0 = no debug info, 1 = line tables only, 2 = full debug info with variable and type information; default: 0)
+    -C default-linker-libraries=val -- allow the linker to link its default libraries (default: no)
+    -C            embed-bitcode=val -- emit bitcode in rlibs (default: yes)
+    -C           extra-filename=val -- extra data to put in each output filename
+    -C     force-frame-pointers=val -- force use of the frame pointers
+    -C      force-unwind-tables=val -- force use of unwind tables
+    -C              incremental=val -- enable incremental compilation
+    -C         inline-threshold=val -- set the threshold for inlining a function
+    -C                 link-arg=val -- a single extra argument to append to the linker invocation (can be used several times)
+    -C                link-args=val -- extra arguments to append to the linker invocation (space separated)
+    -C           link-dead-code=val -- keep dead code at link time (useful for code coverage) (default: no)
+    -C                   linker=val -- system linker to link outputs with
+    -C            linker-flavor=val -- linker flavor
+    -C        linker-plugin-lto=val -- generate build artifacts that are compatible with linker-based LTO
+    -C                llvm-args=val -- a list of arguments to pass to LLVM (space separated)
+    -C                      lto=val -- perform LLVM link-time optimizations
+    -C                 metadata=val -- metadata to mangle symbol names with
+    -C    no-prepopulate-passes=val -- give an empty list of passes to the pass manager
+    -C               no-redzone=val -- disable the use of the redzone
+    -C           no-stack-check=val -- this option is deprecated and does nothing
+    -C       no-vectorize-loops=val -- disable loop vectorization optimization passes
+    -C         no-vectorize-slp=val -- disable LLVM's SLP vectorization pass
+    -C                opt-level=val -- optimization level (0-3, s, or z; default: 0)
+    -C          overflow-checks=val -- use overflow checks for integer arithmetic
+    -C                    panic=val -- panic strategy to compile crate with
+    -C                   passes=val -- a list of extra LLVM passes to run (space separated)
+    -C           prefer-dynamic=val -- prefer dynamic linking to static linking (default: no)
+    -C         profile-generate=val -- compile the program with profiling instrumentation
+    -C              profile-use=val -- use the given `.profdata` file for profile-guided optimization
+    -C         relocation-model=val -- control generation of position-independent code (PIC) (`rustc --print relocation-models` for details)
+    -C                   remark=val -- print remarks for these optimization passes (space separated, or "all")
+    -C                    rpath=val -- set rpath values in libs/exes (default: no)
+    -C               save-temps=val -- save all temporary output files during compilation (default: no)
+    -C               soft-float=val -- use soft float ABI (*eabihf targets only) (default: no)
+    -C               target-cpu=val -- select target processor (`rustc --print target-cpus` for details)
+    -C           target-feature=val -- target specific attributes. (`rustc --print target-features` for details). This feature is unsafe.
+
+</code></pre>
+<p>With linter options:</p>
+<pre><code>
+
+Available lint options:
+    -W <foo>           Warn about <foo>
+    -A <foo>           Allow <foo>
+    -D <foo>           Deny <foo>
+    -F <foo>           Forbid <foo> (deny <foo> and all attempts to override)
+
+
+Lint checks provided by rustc:
+
+                                                       name  default  meaning
+                                                       ----  -------  -------
+                     absolute-paths-not-starting-with-crate  allow    fully qualified paths that start with a module name instead of `crate`, `self`, or an extern crate name
+                                       anonymous-parameters  allow    detects anonymous parameters
+                                               box-pointers  allow    use of owned (Box type) heap memory
+                               clashing-extern-declarations  allow    detects when an extern fn has been declared with the same name but different types
+                                       deprecated-in-future  allow    detects use of items that will be deprecated in a future version
+                                  elided-lifetimes-in-paths  allow    hidden lifetime parameters in types are deprecated
+                             explicit-outlives-requirements  allow    outlives requirements can be inferred
+                                  indirect-structural-match  allow    pattern with const indirectly referencing non-structural-match type
+                                             keyword-idents  allow    detects edition keywords being used as an identifier
+                                     macro-use-extern-crate  allow    the `#[macro_use]` attribute is now deprecated in favor of using macros via the module system
+                                       meta-variable-misuse  allow    possible meta-variable misuse at macro definition
+                               missing-copy-implementations  allow    detects potentially-forgotten implementations of `Copy`
+                                   missing-crate-level-docs  allow    detects crates with no crate-level documentation
+                              missing-debug-implementations  allow    detects missing implementations of Debug
+                                               missing-docs  allow    detects missing documentation for public members
+                                  missing-doc-code-examples  allow    detects publicly-exported items without code samples in their documentation
+                                           non-ascii-idents  allow    detects non-ASCII identifiers
+                                          private-doc-tests  allow    detects code samples in docs of private items not documented by rustdoc
+                                       single-use-lifetimes  allow    detects lifetime parameters that are only used once
+                                              trivial-casts  allow    detects trivial casts which could be removed
+                                      trivial-numeric-casts  allow    detects trivial casts of numeric types which could be removed
+                                       unaligned-references  allow    detects unaligned references to fields of packed structs
+                                            unreachable-pub  allow    `pub` items not reachable from crate root
+                                                unsafe-code  allow    usage of `unsafe` code
+                                     unsafe-op-in-unsafe-fn  allow    unsafe operations in unsafe functions without an explicit unsafe block are deprecated
+                                          unstable-features  allow    enabling unstable features (deprecated. do not use)
+                                  unused-crate-dependencies  allow    crate dependencies that are never used
+                                       unused-extern-crates  allow    extern crates that are never used
+                                       unused-import-braces  allow    unnecessary braces around an imported item
+                                           unused-lifetimes  allow    detects lifetime parameters that are never used
+                                      unused-qualifications  allow    detects unnecessarily qualified names
+                                             unused-results  allow    unused result of an expression in a statement
+                                   variant-size-differences  allow    detects enums with widely varying variant sizes
+                                            array-into-iter  warn     detects calling `into_iter` on arrays
+                                           asm-sub-register  warn     using only a subset of a register for inline asm inputs
+                                         bare-trait-objects  warn     suggest using `dyn Trait` for trait objects
+                                 bindings-with-variant-name  warn     detects pattern bindings with the same name as one of the matched variants
+                                       cenum-impl-drop-cast  warn     a C-like enum implementing Drop is cast
+                                       coherence-leak-check  warn     distinct impls distinguished only by the leak-check code
+                                          confusable-idents  warn     detects visually confusable pairs between identifiers
+                                                  dead-code  warn     detect unused, unexported items
+                                                 deprecated  warn     detects use of deprecated items
+                          ellipsis-inclusive-range-patterns  warn     `...` range patterns are deprecated
+                              exported-private-dependencies  warn     public interface leaks type from a private dependency
+                     illegal-floating-point-literal-pattern  warn     floating-point literals cannot be used in patterns
+                                            improper-ctypes  warn     proper use of libc types in foreign modules
+                                improper-ctypes-definitions  warn     proper use of libc types in foreign item definitions
+                                        incomplete-features  warn     incomplete features that may function improperly in some or all cases
+                                         inline-no-sanitize  warn     detects incompatible use of `#[inline(always)]` and `#[no_sanitize(...)]`
+                          intra-doc-link-resolution-failure  warn     failures in resolving intra-doc link targets
+                               invalid-codeblock-attributes  warn     codeblock attribute looks a lot like a known one
+                                              invalid-value  warn     an invalid value is being created (such as a NULL reference)
+                                   irrefutable-let-patterns  warn     detects irrefutable patterns in if-let and while-let statements
+                              late-bound-lifetime-arguments  warn     detects generic lifetime arguments in path segments with late bound lifetime parameters
+                                   mixed-script-confusables  warn     detects Unicode scripts whose mixed script confusables codepoints are solely used
+                        mutable-borrow-reservation-conflict  warn     reservation of a two-phased borrow conflicts with other shared borrows
+                                       non-camel-case-types  warn     types, variants, traits and type parameters should have camel case names
+                               non-shorthand-field-patterns  warn     using `Struct { x: x }` instead of `Struct { x }` in a pattern
+                                             non-snake-case  warn     variables, methods, functions, lifetime parameters and modules should have snake case names
+                                     non-upper-case-globals  warn     static constants should have uppercase identifiers
+                                    no-mangle-generic-items  warn     generic items must be mangled
+                                       overlapping-patterns  warn     detects overlapping patterns
+                                            path-statements  warn     path statements with no effect
+                                          private-in-public  warn     detect private items in public interfaces not caught by the old implementation
+                      proc-macro-derive-resolution-fallback  warn     detects proc macro derives using inaccessible names from parent modules
+                                       redundant-semicolons  warn     detects unnecessary trailing semicolons
+                                  renamed-and-removed-lints  warn     lints that have been renamed or removed
+                                        safe-packed-borrows  warn     safe borrows of fields of packed structs were erroneously allowed
+                                            stable-features  warn     stable features found in `#[feature]` directive
+                                             trivial-bounds  warn     these bounds don't depend on an type parameters
+                                          type-alias-bounds  warn     bounds in type aliases are not enforced
+                                   tyvar-behind-raw-pointer  warn     raw pointer to an inference variable
+                                        uncommon-codepoints  warn     detects uncommon Unicode codepoints in identifiers
+                                    unconditional-recursion  warn     functions that cannot return without calling themselves
+                                              unknown-lints  warn     unrecognized lint attribute
+                                      unnameable-test-items  warn     detects an item that cannot be named being marked as `#[test_case]`
+                                           unreachable-code  warn     detects unreachable code paths
+                                       unreachable-patterns  warn     detects unreachable patterns
+                                   unstable-name-collisions  warn     detects name collision with an existing but unstable method
+                                          unused-allocation  warn     detects unnecessary allocations that can be eliminated
+                                         unused-assignments  warn     detect assignments that will never be read
+                                          unused-attributes  warn     detects attributes that were not used by the compiler
+                                              unused-braces  warn     unnecessary braces around an expression
+                                         unused-comparisons  warn     comparisons made useless by limits of the types involved
+                                        unused-doc-comments  warn     detects doc comments that aren't used by rustdoc
+                                            unused-features  warn     unused features found in crate-level `#[feature]` directives
+                                             unused-imports  warn     imports that are never used
+                                              unused-labels  warn     detects labels that are never used
+                                              unused-macros  warn     detects macros that were not used
+                                            unused-must-use  warn     unused result of a type flagged as `#[must_use]`
+                                                 unused-mut  warn     detect mut variables which don't need to be mutable
+                                              unused-parens  warn     `if`, `match`, `while` and `return` do not need parentheses
+                                              unused-unsafe  warn     unnecessary use of an `unsafe` block
+                                           unused-variables  warn     detect variables which are not used in any way
+                                                   warnings  warn     mass-change the level for lints which produce warnings
+                                where-clauses-object-safety  warn     checks the object safety of where clauses
+                                                 while-true  warn     suggest using `loop { }` instead of `while true { }`
+                                 ambiguous-associated-items  deny     ambiguous associated items
+                                        arithmetic-overflow  deny     arithmetic operation overflows
+                                     conflicting-repr-hints  deny     conflicts between `#[repr(..)]` hints that were previously accepted and used in practice
+                                                  const-err  deny     constant evaluation detected erroneous expression
+                                 ill-formed-attribute-input  deny     ill-formed attribute inputs that were previously accepted and used in practice
+                                         incomplete-include  deny     trailing content in included file
+                                 invalid-type-param-default  deny     type parameter default erroneously allowed in invalid location
+    macro-expanded-macro-exports-accessed-by-absolute-paths  deny     macro-expanded `macro_export` macros from the current crate cannot be referred to by absolute paths
+                                 missing-fragment-specifier  deny     detects missing fragment specifiers in unused `macro_rules!` patterns
+                                         mutable-transmutes  deny     mutating transmuted &mut T from &T may cause undefined behavior
+                                      no-mangle-const-items  deny     const items will not have their symbols exported
+                              order-dependent-trait-objects  deny     trait-object types were treated as different depending on marker-trait order
+                                       overflowing-literals  deny     literal out of range for its type
+                               patterns-in-fns-without-body  deny     patterns in functions without body were erroneously allowed
+                            pub-use-of-private-extern-crate  deny     detect public re-exports of private extern crates
+                                              soft-unstable  deny     a feature gate that doesn't break dependent crates
+                                        unconditional-panic  deny     operation will cause a panic at runtime
+                                        unknown-crate-types  deny     unknown crate type found in `#[crate_type]` directive
+
+
+Lint groups provided by rustc:
+
+                       name  sub-lints
+                       ----  ---------
+                   warnings  all lints that are set to issue warnings
+        future-incompatible  keyword-idents, anonymous-parameters, illegal-floating-point-literal-pattern, private-in-public, pub-use-of-private-extern-crate, invalid-type-param-default, safe-packed-borrows, patterns-in-fns-without-body, missing-fragment-specifier, late-bound-lifetime-arguments, order-dependent-trait-objects, coherence-leak-check, tyvar-behind-raw-pointer, absolute-paths-not-starting-with-crate, unstable-name-collisions, where-clauses-object-safety, proc-macro-derive-resolution-fallback, macro-expanded-macro-exports-accessed-by-absolute-paths, ill-formed-attribute-input, conflicting-repr-hints, ambiguous-associated-items, mutable-borrow-reservation-conflict, indirect-structural-match, soft-unstable, cenum-impl-drop-cast, array-into-iter
+          nonstandard-style  non-camel-case-types, non-snake-case, non-upper-case-globals
+    rust-2018-compatibility  keyword-idents, anonymous-parameters, tyvar-behind-raw-pointer, absolute-paths-not-starting-with-crate
+           rust-2018-idioms  bare-trait-objects, unused-extern-crates, ellipsis-inclusive-range-patterns, elided-lifetimes-in-paths, explicit-outlives-requirements
+                    rustdoc  intra-doc-link-resolution-failure, invalid-codeblock-attributes, missing-doc-code-examples, private-doc-tests
+                     unused  unused-imports, unused-variables, unused-assignments, dead-code, unused-mut, unreachable-code, unreachable-patterns, overlapping-patterns, unused-must-use, unused-unsafe, path-statements, unused-attributes, unused-macros, unused-allocation, unused-doc-comments, unused-extern-crates, unused-features, unused-labels, unused-parens, unused-braces, redundant-semicolons
+
+
+Compiler plugins can provide additional lints and lint groups. To see a listing of these, re-run `rustc -W help` with a crate filename.
+
+</code></pre>
+<h1>ReScript</h1>
+<pre><code>
+Usage : bsb.exe <bsb-options> -- <ninja_options>
+For ninja options, try bsb.exe --  -h.  
+Note they are supposed to be internals and not reliable.
+ninja will be loaded either by just running `bsb.exe' or `bsb.exe .. -- ..`
+It is always recommended to run ninja via bsb.exe
+Options:
+  -v            Print version and exit
+  -version      Print version and exit
+  -verbose      Set the output(from bsb) to be verbose
+  -w            Watch mode
+  -clean-world  Clean all bs dependencies
+  -clean        Clean only current project
+  -make-world   Build all dependencies and itself 
+  -install      Install public interface files into lib/ocaml
+  -init         Init sample project to get started. 
+                Note (`bsb -init sample` will create a sample project while 
+                `bsb -init .` will reuse current directory)
+  -theme        The theme for project initialization. 
+                default is basic:
+                https://github.com/rescript-lang/rescript-compiler/tree/master/jscomp/bsb/templates
+  -themes       List all available themes
+  -where        Show where bsb.exe is located
+  -ws           [host:]port 
+                specify a websocket number (and optionally, a host). 
+                When a build finishes, we send a message to that port. 
+                For tools that listen on build completion.
+
+</code></pre>
+
+  </body>
+</html>
