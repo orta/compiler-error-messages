@@ -65,6 +65,9 @@ jobs:
           sudo apt-get install tree
           tree output
 
+      - name: Preview Rome Output
+        run: cat output/js/help-rome.html
+
       - name: Build Site
         run: yarn build-site
 
