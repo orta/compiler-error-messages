@@ -68,11 +68,14 @@ export function execToHTML (cmd, args, opts) {
         lightgrey: '#888',
         darkgrey: '#777'
       });
-      // let html = ansiHTML(encoded)
-
-      // html = html.replace(/\[0;1;39m/g, "").replace(/\[38;2;97;175;239m/g, "").replace(/\[2K/g, "").replace(/\[1G/g, "")
-      const html = convert.toHtml(encoded)
       
+      let html = convert.toHtml(encoded)
+      
+      if(html === "") {
+        html = ansiHTML(encoded)
+        html = html.replace(/\[0;1;39m/g, "").replace(/\[38;2;97;175;239m/g, "").replace(/\[2K/g, "").replace(/\[1G/g, "")
+      }
+
       // console.log({ html, ansi })
       done(html)
     })
