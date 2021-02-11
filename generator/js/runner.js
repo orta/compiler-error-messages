@@ -10,6 +10,8 @@ const go = async () => {
   execToFixture("yarn", ["jest", "--help"], "js/help-jest")
   execToFixture("yarn", ["rome", "--help"], "js/help-rome")
   execToFixture("yarn", ["prettier", "--help"], "js/help-prettier")
+  execToFixture("yarn", ["danger", "--help"], "js/help-danger")
+  execToFixture("gh", ["--help"], "js/help-ghcli")
 }
 
 const execToFixture = async (cmd, args, template) => {

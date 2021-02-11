@@ -7,7 +7,8 @@ import { writeFixture } from "../lib/write.js";
 import { codify, setupExamples } from "../lib/runExample.js";
 
 const go = async () => {
-  const runner = setupExamples({ cmd: "elixir", args: [], env: "elixir" })
+  setupExamples({ cmd: "elixir", args: [], env: "elixir" })
+
   const html = await execToHTML("elixir", ["--help"], {})
   writeFixture("elixir/help", codify(html))
 

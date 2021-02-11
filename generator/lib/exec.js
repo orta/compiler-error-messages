@@ -14,7 +14,7 @@ export function execToHTML (cmd, args, opts) {
     /** @type {import("node-pty").IPtyForkOptions)} */
     const spawnOpts = {
       ...opts,
-      // cols: 120
+      cols: 90
     }
     const run = pty.spawn(cmd, args, spawnOpts)
     let ansi = ""
