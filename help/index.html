@@ -547,32 +547,7 @@ Lint checks provided by rustc:
                                  invalid-type-param-default  deny     type parameter default erroneously allowed in invalid location
     macro-expanded-macro-exports-accessed-by-absolute-paths  deny     macro-expanded `macro_export` macros from the current crate cannot be referred to by absolute paths
                                  missing-fragment-specifier  deny     detects missing fragment specifiers in unused `macro_rules!` patterns
-                                         mutable-transmutes  deny     mutating transmuted &mut T from &T may cause undefined behavior
-                                      no-mangle-const-items  deny     const items will not have their symbols exported
-                              order-dependent-trait-objects  deny     trait-object types were treated as different depending on marker-trait order
-                                       overflowing-literals  deny     literal out of range for its type
-                               patterns-in-fns-without-body  deny     patterns in functions without body were erroneously allowed
-                            pub-use-of-private-extern-crate  deny     detect public re-exports of private extern crates
-                                              soft-unstable  deny     a feature gate that doesn't break dependent crates
-                                        unconditional-panic  deny     operation will cause a panic at runtime
-                                        unknown-crate-types  deny     unknown crate type found in `#[crate_type]` directive
-
-
-Lint groups provided by rustc:
-
-                       name  sub-lints
-                       ----  ---------
-                   warnings  all lints that are set to issue warnings
-        future-incompatible  keyword-idents, anonymous-parameters, illegal-floating-point-literal-pattern, private-in-public, pub-use-of-private-extern-crate, invalid-type-param-default, safe-packed-borrows, patterns-in-fns-without-body, missing-fragment-specifier, late-bound-lifetime-arguments, order-dependent-trait-objects, coherence-leak-check, tyvar-behind-raw-pointer, absolute-paths-not-starting-with-crate, unstable-name-collisions, where-clauses-object-safety, proc-macro-derive-resolution-fallback, macro-expanded-macro-exports-accessed-by-absolute-paths, ill-formed-attribute-input, conflicting-repr-hints, ambiguous-associated-items, mutable-borrow-reservation-conflict, indirect-structural-match, soft-unstable, cenum-impl-drop-cast, array-into-iter
-          nonstandard-style  non-camel-case-types, non-snake-case, non-upper-case-globals
-    rust-2018-compatibility  keyword-idents, anonymous-parameters, tyvar-behind-raw-pointer, absolute-paths-not-starting-with-crate
-           rust-2018-idioms  bare-trait-objects, unused-extern-crates, ellipsis-inclusive-range-patterns, elided-lifetimes-in-paths, explicit-outlives-requirements
-                    rustdoc  intra-doc-link-resolution-failure, invalid-codeblock-attributes, missing-doc-code-examples, private-doc-tests
-                     unused  unused-imports, unused-variables, unused-assignments, dead-code, unused-mut, unreachable-code, unreachable-patterns, overlapping-patterns, unused-must-use, unused-unsafe, path-statements, unused-attributes, unused-macros, unused-allocation, unused-doc-comments, unused-extern-crates, unused-features, unused-labels, unused-parens, unused-braces, redundant-semicolons
-
-
-Compiler plugins can provide additional lints and lint groups. To see a listing of these, re-run `rustc -W help` with a crate filename.
-
+                                         mutable-transmutes  deny     mutating trans
 </code></pre>
 <h3>ReScript</h3>
 <pre><code>
@@ -1247,17 +1222,17 @@ Commands:
 <pre><code>
 Work seamlessly with GitHub from the command line.
 
-[0;1;39mUSAGE<span style="font-weight:normal;opacity:1;color:#feffff;background:#040404;">
+USAGE<span style="font-weight:normal;opacity:1;color:#feffff;background:#040404;">
   gh &lt;command&gt; &lt;subcommand&gt; [flags]
 
-[0;1;39mCORE COMMANDS</span>
+CORE COMMANDS</span>
   gist:       Manage gists
   issue:      Manage issues
   pr:         Manage pull requests
   release:    Manage GitHub releases
   repo:       Create, clone, fork, and view repositories
 
-[0;1;39mADDITIONAL COMMANDS<span style="font-weight:normal;opacity:1;color:#feffff;background:#040404;">
+ADDITIONAL COMMANDS<span style="font-weight:normal;opacity:1;color:#feffff;background:#040404;">
   alias:      Create command shortcuts
   api:        Make an authenticated GitHub API request
   auth:       Login, logout, and refresh your authentication
@@ -1266,23 +1241,23 @@ Work seamlessly with GitHub from the command line.
   help:       Help about any command
   secret:     Manage GitHub secrets
 
-[0;1;39mFLAGS</span>
+FLAGS</span>
   --help      Show help for command
   --version   Show gh version
 
-[0;1;39mEXAMPLES<span style="font-weight:normal;opacity:1;color:#feffff;background:#040404;">
+EXAMPLES<span style="font-weight:normal;opacity:1;color:#feffff;background:#040404;">
   $ gh issue create
   $ gh repo clone cli/cli
   $ gh pr checkout 321
 
-[0;1;39mENVIRONMENT VARIABLES</span>
+ENVIRONMENT VARIABLES</span>
   See 'gh help environment' for the list of supported environment variables.
 
-[0;1;39mLEARN MORE<span style="font-weight:normal;opacity:1;color:#feffff;background:#040404;">
+LEARN MORE<span style="font-weight:normal;opacity:1;color:#feffff;background:#040404;">
   Use 'gh &lt;command&gt; &lt;subcommand&gt; --help' for more information about a command.
   Read the manual at https://cli.github.com/manual
 
-[0;1;39mFEEDBACK</span>
+FEEDBACK</span>
   Open an issue using 'gh issue create -R github.com/cli/cli'
 
 
