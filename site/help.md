@@ -72,7 +72,7 @@ As well as for linter options:
 
 These aren't compilers, which means they're a bit less rigidly "professional" in their output and have a bit more style about themselves. Rome especially is very clear in its hierarchy and visual weighting, but it's also very long - trade-offs. 
 
-Some of these tools of these are definitely pushing the ANSI to HTML systems in my tooling, so forgive some ASCII errors. I'll get to them with time.
+Some of these tools of these are definitely pushing the ANSI to HTML systems in my tooling, so forgive some ASCII errors. I'll send some PRs with time.
 
 Rome's help output next is probably my favourite of the whole set, the use of bold, lines and taking the width into account all make for a very polished introduction to the tool.
 

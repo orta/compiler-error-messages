@@ -7,6 +7,10 @@ a code {
   padding: 0.2rem 0.2rem;
 }
 
+code a {
+  color: white;
+}
+
 pre {
   background-color: #040404;
   color: #feffff;

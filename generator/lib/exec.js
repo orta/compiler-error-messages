@@ -3,6 +3,31 @@
 import pty  from 'node-pty';
 import ansiHTML from 'ansi-html'
 
+import Convert  from '@orta/ansi-to-html'
+ const convert = new Convert({ 
+   fg: 'feffff',  
+   bg: '040404', 
+   space: true,
+   colors: [
+    "#040404",
+    "#d84a33",
+    "#5da602",
+    "#eebb6e",
+    "#417ab3",
+    "#e5c499",
+    "#bdcfe5",
+    "#dbded8",
+    "#685656",
+    "#d76b42",
+    "#99b52c",
+    "#ffb670",
+    "#97d7ef",
+    "#aa7900",
+    "#bdcfe5",
+    "#e4d5c7",
+   ]
+
+});
 
 /**
  * @param cmd string
@@ -30,22 +55,25 @@ export function execToHTML (cmd, args, opts) {
     });
 
     run.onExit(() => {
-      // debugger
-      ansiHTML.setColors({
-        reset: ['feffff', '040404'],
-        black: '040404',	// String
-        red: 'd76b42',
-        green: '99b52c',
-        yellow: 'ffb670',
-        blue: '417ab3',
-        magenta: 'aa7900',
-        cyan: 'bdcfe5',
-        lightgrey: '888',
-        darkgrey: '777'
-      });
+      
+      // ansiHTML.setColors({
+      //   reset: ['feffff', '040404'],
+      //   black: '040404',	// String
+      //   red: 'd76b42',
+      //   green: '99b52c',
+      //   yellow: 'ffb670',
+      //   blue: '417ab3',
+      //   magenta: 'aa7900',
+      //   cyan: 'bdcfe5',
+      //   lightgrey: '888',
+      //   darkgrey: '777'
+      // });
+      // const html = ansiHTML(encoded)
 
       const encoded = ansi.replace(/</g, "&lt;").replace(/>/g, "&gt;")
-      const html = ansiHTML(encoded)
+      
+      const html = convert.toHtml(encoded)
+      
       // console.log({ html, ansi })
       done(html)
     })
