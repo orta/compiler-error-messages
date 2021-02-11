@@ -518,79 +518,7 @@ $ /home/runner/work/compiler-error-messages/compiler-error-messages/node_modules
   --profile-timeout &lt;millisec&gt;          Stop the profile after the milliseconds
                                         specified. When omitted the profile is of the
                                         whole command
-  --rage                                Create a rage tarball of debug information
-  --rage-path &lt;path&gt;                    Path where to write rage tarball. When omitted
-                                        defaults to Rage-TIMESTAMP.tgz
-  --resolver-mocks                      Enable mocks for module resolution
-  --resolver-platform &lt;platform&gt;        Specify the platform for module resolution -
-                                        values "ios" "android" "mobile" "electron"
-                                        "web" "node")
-  --resolver-scale &lt;num&gt;                Specify the image scale for module resolution
-  --review                              Display and perform actions on diagnostics.
-                                        Only some commands support this.
-  --show-all-diagnostics                Display all diagnostics ignoring caps
-  --silent                              Don't write anything to the console
-  --temporary-daemon                    Start a daemon, if one isn't already running,
-                                        for the lifetime of this command
-  --timing                              Dump timing information after running the
-                                        command
-  --unsafe-writes                       When writing files, don't verify mtime or
-                                        existence. Potentially dangerous and could
-                                        lead to unintended data loss
-  --verbose-diagnostics                 Display hidden and truncated diagnostic
-                                        information
-  --version                             Show the version
-  --watch                               Keep running command and update on file
-                                        changes. Only some commands support this.
-  --write-shell-completions &lt;shell&gt;     Write shell completion commands - values
-                                        "fish" "bash")
-
- Commands ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-  Code Quality Commands
-  - check run lint against a set of files
-
-  Internal Commands
-  - format formats a single file
-  - json dump an RJSON file to regular JSON
-  - logs view the logs stream
-  - noop do nothing
-  - rage create a rage archive for debugging
-
-  Process Management Commands
-  - init initialise the project
-  - restart restart daemon
-  - start start daemon (if none running)
-  - status get the current daemon status
-  - stop stop a running daemon if one exists
-
-  Project Management Commands
-  - config disable modify a project config- set the &lt;key&gt; to false
-  - config enable modify a project config- set the &lt;key&gt; to true
-  - config location show the config location
-  - config push modify a project config - push &lt;values&gt; to &lt;key&gt;
-  - config set modify a project config - set the &lt;key&gt; to &lt;value&gt;
-  - config set-directory modify a project config - set the &lt;key&gt; to &lt;value&gt;
-  - lsp connect to an lsp
-
-  Source Code Commands
-  - cache clear clear the cache directory
-  - cache dir show the location of the cache directory
-  - recover apply apply a specific patch from the recovery store
-  - recover clear clear the contents of the recovery store
-  - recover diff show the differences that would be applied for a given patch
-  - recover dir print the location of the recovery store
-  - recover list show all patches in the recovery store
-  - recover pop apply the most recent patch in the recovery story
-
-  ℹ To view help for a specific command run
-  $ rome command_name --help
-
-
-                                                                                         
-error Command failed with exit code 1.
-
-                                                                 
+  --rage                                Create a rage 
 
 </code></pre>
 <p>Jest has a static line width, and does a good job of wrapping the long paragraphs for the bazillion config options.</p>
@@ -753,7 +681,9 @@ Options:
                                 will look for.                           [array]
   --moduleNameMapper            A JSON string with a map from regular
                                 expressions to module names or to arrays of
-                                modul
+                                module names that allow to stub out resources,
+                                like images or styles with a single module
+                                                                       
 
 </code></pre>
 <p>Prettier's help does a good job of categorizing different types of settings via a hierarchy.</p>
@@ -831,7 +761,8 @@ Config options:
   --plugin &lt;path&gt;          Add a plugin. Multiple plugins can be passed as separate `--plugin`s.
                            Defaults to [].
   --plugin-search-dir &lt;path&gt;
-                     
+                           Custom directory that contains prettier plugins in node_modules subdirectory.
+                           Overrides default behavior when plugins are searched relatively to the location of
 
 </code></pre>
 <p>I wrote this CLI, sure, but I think I did a pretty good job on offering a bunch of ways to go from here in the &quot;footer&quot; which hasn't really been represented other than Jest's mention of the website.</p>
