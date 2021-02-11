@@ -9,7 +9,12 @@
     <title>Help prompts for different compilers</title>
   </head>
   <body>
-    <h1>TypeScript</h1>
+    <h1>Help on the CLI</h1>
+<p>The <code>--help</code> on a CLI is often one of the first places someone looks for info after their first install.</p>
+<p>With help you have basically two goals; show the breadth of options and provide info on the set of of useful sub-commands.</p>
+<p>What seems to be really tricky is that the info in these commands can get very horizontally long. A terminal will wrap your text, but its unlikely that it's going to work well with your formatting without considerable work. We see a few different ways to align the tabular form of this kind of data. Rust and TypeScript</p>
+<p>It looks like generally a help prompts avoids using colour too much. I think <code>elm</code> does quite a good job of both color and personality, which is something I've seen pretty consistently throughout the errors too.</p>
+<h3>TypeScript</h3>
 <pre><code>
 Version 4.1.5
 Syntax:   tsc [options] [file...]
@@ -55,10 +60,10 @@ Options:
  --noFallthroughCasesInSwitch                       Report errors for fallthrough cases in switch statement.
  --types                                            Type declaration files to be included in compilation.
  --esModuleInterop                                  Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'.
- @<file>                                            Insert command line options and files from a file.
+ @&lt;file&gt;                                            Insert command line options and files from a file.
 
 </code></pre>
-<p>With a variant which includes all possible flags:</p>
+<p>There's a lot of tsconfig flags (and some more which are just for the CLI) so the TypeScript CLI includes a  version which lists all possible flags:</p>
 <pre><code>
 Version 4.1.5
 Syntax:   tsc [options] [file...]
@@ -175,20 +180,21 @@ Options:
  --useDefineForClassFields                          Emit class fields with Define instead of Set.
  -v, --version                                      Print the compiler's version.
  -w, --watch                                        Watch input files.
- @<file>                                            Insert command line options and files from a file.
+ @&lt;file&gt;                                            Insert command line options and files from a file.
 
 </code></pre>
-<h1>Elixir</h1>
+<h3>Elixir</h3>
 <pre><code>
 execvp(3) failed.: No such file or directory
 
 </code></pre>
-<h1>Elm</h1>
+<h3>Elm</h3>
+<p>Cool use of color (all the commands are blue, the 'read more' banner at the top is greyed out somewhat) and a pretty strong hierarchy of information.</p>
 <pre><code>
 Hi, thank you for trying out Elm<span style="font-weight:normal;opacity:1;color:#feffff;background:#040404;"> 0.19.1</span>. I hope you like it!
 
 <span style="color:#777;">-------------------------------------------------------------------------------<span style="font-weight:normal;opacity:1;color:#feffff;background:#040404;">
-</span>I highly recommend working through <https://guide.elm-lang.org> to get started.<span style="font-weight:normal;opacity:1;color:#feffff;background:#040404;">
+</span>I highly recommend working through &lt;https://guide.elm-lang.org&gt; to get started.<span style="font-weight:normal;opacity:1;color:#feffff;background:#040404;">
 </span>It teaches many important concepts, including how to use `elm` in the terminal.<span style="font-weight:normal;opacity:1;color:#feffff;background:#040404;">
 </span>-------------------------------------------------------------------------------<span style="font-weight:normal;opacity:1;color:#feffff;background:#040404;">
 
@@ -225,7 +231,48 @@ best results!
 
 </span></span></span>
 </code></pre>
-<h1>Rust</h1>
+<p>Given that most of the work happens in a sub-commands, here's <code>elm  make --help</code>:</p>
+<pre><code>
+The `make` command compiles Elm code into JS or HTML:
+
+    elm make &lt;zero-or-more-elm-files&gt;<span style="font-weight:normal;opacity:1;color:#feffff;background:#040404;">
+
+For example:
+
+    elm make src/Main.elm</span>
+
+This tries to compile an Elm file named src/Main.elm, generating an index.html
+file if possible.
+
+You can customize this command with the following flags:
+
+    <span style="color:#bdcfe5;">--debug<span style="font-weight:normal;opacity:1;color:#feffff;background:#040404;">
+        Turn on the time-travelling debugger. It allows you to rewind and replay
+        events. The events can be imported/exported into a file, which makes for
+        very precise bug reports!
+    
+    </span>--optimize<span style="font-weight:normal;opacity:1;color:#feffff;background:#040404;">
+        Turn on optimizations to make code smaller and faster. For example, the
+        compiler renames record fields to be as short as possible and unboxes
+        values to reduce allocation.
+    
+    </span>--output=&lt;output-file&gt;<span style="font-weight:normal;opacity:1;color:#feffff;background:#040404;">
+        Specify the name of the resulting JS file. For example
+        --output=assets/elm.js to generate the JS at assets/elm.js or
+        --output=/dev/null to generate no output at all!
+    
+    </span>--report=&lt;report-type&gt;<span style="font-weight:normal;opacity:1;color:#feffff;background:#040404;">
+        You can say --report=json to get error messages as JSON. This is only
+        really useful if you are an editor plugin. Humans should avoid it!
+    
+    </span>--docs=&lt;json-file&gt;<span style="font-weight:normal;opacity:1;color:#feffff;background:#040404;">
+        Generate a JSON file of documentation for a package. Eventually it will
+        be possible to preview docs with `reactor` because it is quite hard to
+        deal with these JSON files directly.
+
+</span></span>
+</code></pre>
+<h3>Rust</h3>
 <pre><code>
 Usage: rustc [OPTIONS] INPUT
 
@@ -253,8 +300,8 @@ Options:
                         Compiler information to print on stdout
     -g                  Equivalent to -C debuginfo=2
     -O                  Equivalent to -C opt-level=2
-    -o FILENAME         Write output to <filename>
-        --out-dir DIR   Write output to compiler-chosen filename in <dir>
+    -o FILENAME         Write output to &lt;filename&gt;
+        --out-dir DIR   Write output to compiler-chosen filename in &lt;dir&gt;
         --explain OPT   Provide a detailed explanation of an error message
         --test          Build a test harness
         --target TARGET Target triple for which the code is compiled
@@ -277,7 +324,15 @@ Additional help:
 
 
 </code></pre>
-<p>With codegen options:</p>
+<p>I found Rust's help a little confusing at first, because I though there was a sense of hierarchy in how the options were presented. E.g. <code>-l</code> has a series of related flags like <code>--crate-type</code> because visually it tabs across. This isn't true, there is just a consistent whitespace for single char aliases.</p>
+<pre><code>    -l [KIND=]NAME      Link the generated crate(s) to the specified native
+                        library NAME. The optional KIND can be one of
+                        static, framework, or dylib (the default).
+        --crate-type [bin|lib|rlib|dylib|cdylib|staticlib|proc-macro]
+                        Comma separated list of types of crates
+                        for the compiler to emit
+</code></pre>
+<p>Rust has additional options for codegen options:</p>
 <pre><code>
 
 Available codegen options:
@@ -324,14 +379,14 @@ Available codegen options:
     -C           target-feature=val -- target specific attributes. (`rustc --print target-features` for details). This feature is unsafe.
 
 </code></pre>
-<p>With linter options:</p>
+<p>As well as for linter options:</p>
 <pre><code>
 
 Available lint options:
-    -W <foo>           Warn about <foo>
-    -A <foo>           Allow <foo>
-    -D <foo>           Deny <foo>
-    -F <foo>           Forbid <foo> (deny <foo> and all attempts to override)
+    -W &lt;foo&gt;           Warn about &lt;foo&gt;
+    -A &lt;foo&gt;           Allow &lt;foo&gt;
+    -D &lt;foo&gt;           Deny &lt;foo&gt;
+    -F &lt;foo&gt;           Forbid &lt;foo&gt; (deny &lt;foo&gt; and all attempts to override)
 
 
 Lint checks provided by rustc:
@@ -471,9 +526,9 @@ Lint groups provided by rustc:
 Compiler plugins can provide additional lints and lint groups. To see a listing of these, re-run `rustc -W help` with a crate filename.
 
 </code></pre>
-<h1>ReScript</h1>
+<h3>ReScript</h3>
 <pre><code>
-Usage : bsb.exe <bsb-options> -- <ninja_options>
+Usage : bsb.exe &lt;bsb-options&gt; -- &lt;ninja_options&gt;
 For ninja options, try bsb.exe --  -h.  
 Note they are supposed to be internals and not reliable.
 ninja will be loaded either by just running `bsb.exe' or `bsb.exe .. -- ..`
@@ -499,6 +554,627 @@ Options:
                 specify a websocket number (and optionally, a host). 
                 When a build finishes, we send a message to that port. 
                 For tools that listen on build completion.
+
+</code></pre>
+<h3>ReScript</h3>
+<pre><code>
+Usage : bsb.exe &lt;bsb-options&gt; -- &lt;ninja_options&gt;
+For ninja options, try bsb.exe --  -h.  
+Note they are supposed to be internals and not reliable.
+ninja will be loaded either by just running `bsb.exe' or `bsb.exe .. -- ..`
+It is always recommended to run ninja via bsb.exe
+Options:
+  -v            Print version and exit
+  -version      Print version and exit
+  -verbose      Set the output(from bsb) to be verbose
+  -w            Watch mode
+  -clean-world  Clean all bs dependencies
+  -clean        Clean only current project
+  -make-world   Build all dependencies and itself 
+  -install      Install public interface files into lib/ocaml
+  -init         Init sample project to get started. 
+                Note (`bsb -init sample` will create a sample project while 
+                `bsb -init .` will reuse current directory)
+  -theme        The theme for project initialization. 
+                default is basic:
+                https://github.com/rescript-lang/rescript-compiler/tree/master/jscomp/bsb/templates
+  -themes       List all available themes
+  -where        Show where bsb.exe is located
+  -ws           [host:]port 
+                specify a websocket number (and optionally, a host). 
+                When a build finishes, we send a message to that port. 
+                For tools that listen on build completion.
+
+</code></pre>
+<h3>Other build tools</h3>
+<p>These aren't compilers, which means they're a bit less rigidly &quot;professional&quot; in their output and have a bit more style about themselves. Rome especially is very clear in its hierarchy and visual weighting, but it's also very long - trade-offs.</p>
+<p>Some tools of these are definitely pushing the ANSI to HTML in my tooling, so forgive some errors.</p>
+<pre><code>
+
+                                                                               
+$ /home/runner/work/compiler-error-messages/compiler-error-messages/node_modules/.bin/jest --help
+Usage: jest [--config=&lt;pathToConfigFile&gt;] [TestPathPattern]
+
+Options:
+  --help, -h                    Show help                              [boolean]
+  --version, -v                 Print the version and exit             [boolean]
+  --all                         The opposite of `onlyChanged`. If `onlyChanged`
+                                is set by default, running jest with `--all`
+                                will force Jest to run all tests instead of
+                                running only tests related to changed files.
+                                                                       [boolean]
+  --automock                    Automock all files by default.         [boolean]
+  --bail, -b                    Exit the test suite immediately after `n` number
+                                of failing tests.                      [boolean]
+  --browser                     Respect the "browser" field in package.json when
+                                resolving modules. Some packages export
+                                different versions based on whether they are
+                                operating in node.js or a browser.     [boolean]
+  --cache                       Whether to use the transform cache. Disable the
+                                cache using --no-cache.                [boolean]
+  --cacheDirectory              The directory where Jest should store its cached
+                                dependency information.                 [string]
+  --changedFilesWithAncestor    Runs tests related to the current changes and
+                                the changes made in the last commit. Behaves
+                                similarly to `--onlyChanged`.          [boolean]
+  --changedSince                Runs tests related to the changes since the
+                                provided branch. If the current branch has
+                                diverged from the given branch, then only
+                                changes made locally will be tested. Behaves
+                                similarly to `--onlyChanged`.           [string]
+  --ci                          Whether to run Jest in continuous integration
+                                (CI) mode. This option is on by default in most
+                                popular CI environments. It will prevent
+                                snapshots from being written unless explicitly
+                                requested.             [boolean] [default: true]
+  --clearCache                  Clears the configured Jest cache directory and
+                                then exits. Default directory can be found by
+                                calling jest --showConfig              [boolean]
+  --clearMocks                  Automatically clear mock calls and instances
+                                between every test. Equivalent to calling
+                                jest.clearAllMocks() between each test.[boolean]
+  --collectCoverage             Alias for --coverage.                  [boolean]
+  --collectCoverageFrom         A glob pattern relative to &lt;rootDir&gt; matching
+                                the files that coverage info needs to be
+                                collected from.                         [string]
+  --collectCoverageOnlyFrom     Explicit list of paths coverage will be
+                                restricted to.                           [array]
+  --color                       Forces test results output color highlighting
+                                (even if stdout is not a TTY). Set to false if
+                                you would like to have no colors.      [boolean]
+  --colors                      Alias for `--color`.                   [boolean]
+  --config, -c                  The path to a jest config file specifying how to
+                                find and execute tests. If no rootDir is set in
+                                the config, the directory containing the config
+                                file is assumed to be the rootDir for the
+                                project.This can also be a JSON encoded value
+                                which Jest will use as configuration.   [string]
+  --coverage                    Indicates that test coverage information should
+                                be collected and reported in the output.
+                                                                       [boolean]
+  --coverageDirectory           The directory where Jest should output its
+                                coverage files.                         [string]
+  --coveragePathIgnorePatterns  An array of regexp pattern strings that are
+                                matched against all file paths before executing
+                                the test. If the file pathmatches any of the
+                                patterns, coverage information will be skipped.
+                                                                         [array]
+  --coverageProvider            Select between Babel and V8 to collect coverage
+                                                        [choices: "babel", "v8"]
+  --coverageReporters           A list of reporter names that Jest uses when
+                                writing coverage reports. Any istanbul reporter
+                                can be used.                             [array]
+  --coverageThreshold           A JSON string with which will be used to
+                                configure minimum threshold enforcement for
+                                coverage results                        [string]
+  --debug                       Print debugging info about your jest config.
+                                                                       [boolean]
+  --detectLeaks                 **EXPERIMENTAL**: Detect memory leaks in tests.
+                                After executing a test, it will try to garbage
+                                collect the global object used, and fail if it
+                                was leaked            [boolean] [default: false]
+  --detectOpenHandles           Print out remaining open handles preventing Jest
+                                from exiting at the end of a test run. Implies
+                                `runInBand`.          [boolean] [default: false]
+  --env                         The test environment used for all tests. This
+                                can point to any file or node module. Examples:
+                                `jsdom`, `node` or `path/to/my-environment.js`
+                                                                        [string]
+  --errorOnDeprecated           Make calling deprecated APIs throw helpful error
+                                messages.             [boolean] [default: false]
+  --expand, -e                  Use this flag to show full diffs instead of a
+                                patch.                                 [boolean]
+  --filter                      Path to a module exporting a filtering function.
+                                This method receives a list of tests which can
+                                be manipulated to exclude tests from running.
+                                Especially useful when used in conjunction with
+                                a testing infrastructure to filter known broken
+                                tests.                                  [string]
+  --findRelatedTests            Find related tests for a list of source files
+                                that were passed in as arguments. Useful for
+                                pre-commit hook integration to run the minimal
+                                amount of tests necessary.             [boolean]
+  --forceExit                   Force Jest to exit after all tests have
+                                completed running. This is useful when resources
+                                set up by test code cannot be adequately cleaned
+                                up.                                    [boolean]
+  --globalSetup                 The path to a module that runs before All Tests.
+                                                                        [string]
+  --globalTeardown              The path to a module that runs after All Tests.
+                                                                        [string]
+  --globals                     A JSON string with map of global variables that
+                                need to be available in all test environments.
+                                                                        [string]
+  --haste                       A JSON string with map of variables for the
+                                haste module system                     [string]
+  --init                        Generate a basic configuration file    [boolean]
+  --injectGlobals               Should Jest inject global variables or not
+                                                                       [boolean]
+  --json                        Prints the test results in JSON. This mode will
+                                send all other test output and user messages to
+                                stderr.                                [boolean]
+  --lastCommit                  Run all tests affected by file changes in the
+                                last commit made. Behaves similarly to
+                                `--onlyChanged`.                       [boolean]
+  --listTests                   Lists all tests Jest will run given the
+                                arguments and exits. Most useful in a CI system
+                                together with `--findRelatedTests` to determine
+                                the tests Jest will run based on specific files
+                                                      [boolean] [default: false]
+  --logHeapUsage                Logs the heap usage after every test. Useful to
+                                debug memory leaks. Use together with
+                                `--runInBand` and `--expose-gc` in node.
+                                                                       [boolean]
+  --mapCoverage                 Maps code coverage reports against original
+                                source code when transformers supply source
+                                maps.
+
+                                DEPRECATED                             [boolean]
+  --maxConcurrency              Specifies the maximum number of tests that are
+                                allowed to runconcurrently. This only affects
+                                tests using `test.concurrent`.
+                                                           [number] [default: 5]
+  --maxWorkers, -w              Specifies the maximum number of workers the
+                                worker-pool will spawn for running tests. This
+                                defaults to the number of the cores available on
+                                your machine. (its usually best not to override
+                                this default)                           [string]
+  --moduleDirectories           An array of directory names to be searched
+                                recursively up from the requiring module's
+                                location.                                [array]
+  --moduleFileExtensions        An array of file extensions your modules use.
+                                If you require modules without specifying a
+                                file extension, these are the extensions Jest
+                                will look for.                           [array]
+  --moduleNameMapper            A JSON string with a map from regular
+                                expressions to module names or to arrays of
+                                module names that allow to stub out resources,
+                                like images or styles with a single module
+                                                                        [string]
+  --modulePathIgnorePatterns    An array of regexp pattern strings that are
+                                matched against all module paths before those
+                                paths are to be considered "visible" to the
+                                module loader.                           [array]
+  --modulePaths                 An alternative API to setting the NODE_PATH env
+                                variable, modulePaths is an array of absolute
+                                paths to additional locations to search when
+                                resolving modules.                       [array]
+  --noStackTrace                Disables stack trace in test results output
+                                                                       [boolean]
+  --notify                      Activates notifications for test results.
+                                                                       [boolean]
+  --notifyMode                  Specifies when notifications will appear for
+                                test results.
+                                            [string] [default: "failure-change"]
+  --onlyChanged, -o             Attempts to identify which tests to run based on
+                                which files have changed in the current
+                                repository. Only works if you're running tests
+                                in a git or hg repository at the moment.
+                                                                       [boolean]
+  --onlyFailures, -f            Run tests that failed in the previous execution.
+                                                                       [boolean]
+  --outputFile                  Write test results to a file when the --json
+                                option is also specified.               [string]
+  --passWithNoTests             Will not fail if no tests are found (for example
+                                while using `--testPathPattern`.)
+                                                      [boolean] [default: false]
+  --preset                      A preset that is used as a base for Jest's
+                                configuration.                          [string]
+  --prettierPath                The path to the "prettier" module used for
+                                inline snapshots.                       [string]
+  --projects                    A list of projects that use Jest to run all
+                                tests of all projects in a single instance of
+                                Jest.                                    [array]
+  --reporters                   A list of custom reporters for the test suite.
+                                                                         [array]
+  --resetMocks                  Automatically reset mock state between every
+                                test. Equivalent to calling jest.resetAllMocks()
+                                between each test.                     [boolean]
+  --resetModules                If enabled, the module registry for every test
+                                file will be reset before running each
+                                individual test.                       [boolean]
+  --resolver                    A JSON string which allows the use of a custom
+                                resolver.                               [string]
+  --restoreMocks                Automatically restore mock state and
+                                implementation between every test. Equivalent to
+                                calling jest.restoreAllMocks() between each
+                                test.                                  [boolean]
+  --rootDir                     The root directory that Jest should scan for
+                                tests and modules within.               [string]
+  --roots                       A list of paths to directories that Jest should
+                                use to search for files in.              [array]
+  --runInBand, -i               Run all tests serially in the current process
+                                (rather than creating a worker pool of child
+                                processes that run tests). This is sometimes
+                                useful for debugging, but such use cases are
+                                pretty rare.                           [boolean]
+  --runTestsByPath              Used when provided patterns are exact file
+                                paths. This avoids converting them into a
+                                regular expression and matching it against every
+                                single file.          [boolean] [default: false]
+  --runner                      Allows to use a custom runner instead of Jest's
+                                default test runner.                    [string]
+  --selectProjects              Run only the tests of the specified
+                                projects.Jest uses the attribute `displayName`
+                                in the configuration to identify each project.
+                                                                         [array]
+  --setupFiles                  A list of paths to modules that run some code
+                                to configure or set up the testing environment
+                                before each test.                        [array]
+  --setupFilesAfterEnv          A list of paths to modules that run some code
+                                to configure or set up the testing framework
+                                before each test                         [array]
+  --showConfig                  Print your jest config and then exits. [boolean]
+  --silent                      Prevent tests from printing messages through the
+                                console.                               [boolean]
+  --skipFilter                  Disables the filter provided by --filter. Useful
+                                for CI jobs, or local enforcement when fixing
+                                tests.                                 [boolean]
+  --snapshotSerializers         A list of paths to snapshot serializer modules
+                                Jest should use for snapshot testing.    [array]
+  --testEnvironment             Alias for --env                         [string]
+  --testEnvironmentOptions      Test environment options that will be passed to
+                                the testEnvironment. The relevant options depend
+                                on the environment.                     [string]
+  --testFailureExitCode         Exit code of `jest` command if the test run
+                                failed                                  [string]
+  --testLocationInResults       Add `location` information to the test results
+                                                      [boolean] [default: false]
+  --testMatch                   The glob patterns Jest uses to detect test
+                                files.                                   [array]
+  --testNamePattern, -t         Run only tests with a name that matches the
+                                regex pattern.                          [string]
+  --testPathIgnorePatterns      An array of regexp pattern strings that are
+                                matched against all test paths before executing
+                                the test. If the test path matches any of the
+                                patterns, it will be skipped.            [array]
+  --testPathPattern             A regexp pattern string that is matched against
+                                all tests paths before executing the test.
+                                                                         [array]
+  --testRegex                   A string or array of string regexp patterns that
+                                Jest uses to detect test files.          [array]
+  --testResultsProcessor        Allows the use of a custom results processor.
+                                This processor must be a node module that
+                                exports a function expecting as the first
+                                argument the result object.             [string]
+  --testRunner                  Allows to specify a custom test runner. The
+                                default is  `jasmine2`. A path to a custom test
+                                runner can be provided:
+                                `&lt;rootDir&gt;/path/to/testRunner.js`.      [string]
+  --testSequencer               Allows to specify a custom test sequencer. The
+                                default is `@jest/test-sequencer`. A path to a
+                                custom test sequencer can be provided:
+                                `&lt;rootDir&gt;/path/to/testSequencer.js`    [string]
+  --testTimeout                 This option sets the default timeouts of test
+                                cases.                                  [number]
+  --testURL                     This option sets the URL for the jsdom
+                                environment.                            [string]
+  --timers                      Setting this value to fake allows the use of
+                                fake timers for functions such as setTimeout.
+                                                                        [string]
+  --transform                   A JSON string which maps from regular
+                                expressions to paths to transformers.   [string]
+  --transformIgnorePatterns     An array of regexp pattern strings that are
+                                matched against all source file paths before
+                                transformation.                          [array]
+  --unmockedModulePathPatterns  An array of regexp pattern strings that are
+                                matched against all modules before the module
+                                loader will automatically return a mock for
+                                them.                                    [array]
+  --updateSnapshot, -u          Use this flag to re-record snapshots. Can be
+                                used together with a test suite pattern or with
+                                `--testNamePattern` to re-record snapshot for
+                                test matching the pattern              [boolean]
+  --useStderr                   Divert all output to stderr.           [boolean]
+  --verbose                     Display individual test results with the test
+                                suite hierarchy.                       [boolean]
+  --watch                       Watch files for changes and rerun tests related
+                                to changed files. If you want to re-run all
+                                tests when a file has changed, use the
+                                `--watchAll` option.                   [boolean]
+  --watchAll                    Watch files for changes and rerun all tests. If
+                                you want to re-run only the tests related to the
+                                changed files, use the `--watch` option.
+                                                                       [boolean]
+  --watchPathIgnorePatterns     An array of regexp pattern strings that are
+                                matched against all paths before trigger test
+                                re-run in watch mode. If the test path matches
+                                any of the patterns, it will be skipped. [array]
+  --watchman                    Whether to use watchman for file crawling.
+                                Disable using --no-watchman.           [boolean]
+
+Documentation: https://jestjs.io/
+
+</code></pre>
+<p>Jest has a static line width, and does a good job of trying to make long paragraphs</p>
+<pre><code>
+
+                                                                               
+$ /home/runner/work/compiler-error-messages/compiler-error-messages/node_modules/.bin/prettier --help
+Usage: prettier [options] [file/dir/glob ...]
+
+By default, output is written to stdout.
+Stdin is read if it is piped to Prettier and no files are given.
+
+Output options:
+
+  -c, --check              Check if the given files are formatted, print a human-friendly summary
+                           message and paths to unformatted files (see also --list-different).
+  -l, --list-different     Print the names of files that are different from Prettier's formatting (see also --check).
+  -w, --write              Edit files in-place. (Beware!)
+
+Format options:
+
+  --arrow-parens &lt;always|avoid&gt;
+                           Include parentheses around a sole arrow function parameter.
+                           Defaults to always.
+  --no-bracket-spacing     Do not print spaces between brackets.
+  --embedded-language-formatting &lt;auto|off&gt;
+                           Control how Prettier formats quoted code embedded in the file.
+                           Defaults to auto.
+  --end-of-line &lt;lf|crlf|cr|auto&gt;
+                           Which end of line characters to apply.
+                           Defaults to lf.
+  --html-whitespace-sensitivity &lt;css|strict|ignore&gt;
+                           How to handle whitespaces in HTML.
+                           Defaults to css.
+  --jsx-bracket-same-line  Put &gt; on the last line instead of at a new line.
+                           Defaults to false.
+  --jsx-single-quote       Use single quotes in JSX.
+                           Defaults to false.
+  --parser &lt;flow|babel|babel-flow|babel-ts|typescript|espree|meriyah|css|less|scss|json|json5|json-stringify|graphql|markdown|mdx|vue|yaml|html|angular|lwc&gt;
+                           Which parser to use.
+  --print-width &lt;int&gt;      The line length where Prettier will try wrap.
+                           Defaults to 80.
+  --prose-wrap &lt;always|never|preserve&gt;
+                           How to wrap prose.
+                           Defaults to preserve.
+  --quote-props &lt;as-needed|consistent|preserve&gt;
+                           Change when properties in objects are quoted.
+                           Defaults to as-needed.
+  --no-semi                Do not print semicolons, except at the beginning of lines which may need them.
+  --single-quote           Use single quotes instead of double quotes.
+                           Defaults to false.
+  --tab-width &lt;int&gt;        Number of spaces per indentation level.
+                           Defaults to 2.
+  --trailing-comma &lt;es5|none|all&gt;
+                           Print trailing commas wherever possible when multi-line.
+                           Defaults to es5.
+  --use-tabs               Indent with tabs instead of spaces.
+                           Defaults to false.
+  --vue-indent-script-and-style
+                           Indent script and style tags in Vue files.
+                           Defaults to false.
+
+Config options:
+
+  --config &lt;path&gt;          Path to a Prettier configuration file (.prettierrc, package.json, prettier.config.js).
+  --no-config              Do not look for a configuration file.
+  --config-precedence &lt;cli-override|file-override|prefer-file&gt;
+                           Define in which order config files and CLI options should be evaluated.
+                           Defaults to cli-override.
+  --no-editorconfig        Don't take .editorconfig into account when parsing configuration.
+  --find-config-path &lt;path&gt;
+                           Find and print the path to a configuration file for the given input file.
+  --ignore-path &lt;path&gt;     Path to a file with patterns describing files to ignore.
+                           Defaults to .prettierignore.
+  --plugin &lt;path&gt;          Add a plugin. Multiple plugins can be passed as separate `--plugin`s.
+                           Defaults to [].
+  --plugin-search-dir &lt;path&gt;
+                           Custom directory that contains prettier plugins in node_modules subdirectory.
+                           Overrides default behavior when plugins are searched relatively to the location of Prettier.
+                           Multiple values are accepted.
+                           Defaults to [].
+  --with-node-modules      Process files inside 'node_modules' directory.
+
+Editor options:
+
+  --cursor-offset &lt;int&gt;    Print (to stderr) where a cursor at the given position would move to after formatting.
+                           This option cannot be used with --range-start and --range-end.
+                           Defaults to -1.
+  --range-end &lt;int&gt;        Format code ending at a given character offset (exclusive).
+                           The range will extend forwards to the end of the selected statement.
+                           This option cannot be used with --cursor-offset.
+                           Defaults to Infinity.
+  --range-start &lt;int&gt;      Format code starting at a given character offset.
+                           The range will extend backwards to the start of the first line containing the selected statement.
+                           This option cannot be used with --cursor-offset.
+                           Defaults to 0.
+
+Other options:
+
+  --no-color               Do not colorize error messages.
+  --file-info &lt;path&gt;       Extract the following info (as JSON) for a given file path. Reported fields:
+                           * ignored (boolean) - true if file path is filtered by --ignore-path
+                           * inferredParser (string | null) - name of parser inferred from file path
+  -h, --help &lt;flag&gt;        Show CLI usage, or details about the given flag.
+                           Example: --help write
+  -u, --ignore-unknown     Ignore unknown files.
+  --insert-pragma          Insert @format pragma into file's first docblock comment.
+                           Defaults to false.
+  --loglevel &lt;silent|error|warn|log|debug&gt;
+                           What level of logs to report.
+                           Defaults to log.
+  --require-pragma         Require either '@prettier' or '@format' to be present in the file's first docblock comment
+                           in order for it to be formatted.
+                           Defaults to false.
+  --stdin-filepath &lt;path&gt;  Path to the file to pretend that stdin comes from.
+  --support-info           Print support information as JSON.
+  -v, --version            Print Prettier version.
+
+
+
+</code></pre>
+<pre><code>
+
+                                                                               
+$ /home/runner/work/compiler-error-messages/compiler-error-messages/node_modules/.bin/rome --help
+
+ Usage ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  rome [command] [flags]
+
+ Global Flags ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  --auxiliary-diagnostic-format &lt;input&gt; When printing diagnostics, output
+                                        another format alongside - values
+                                        "github-actions")
+  --benchmark                           Run a command multiple times,
+                                        calculating average
+  --benchmark-iterations &lt;num&gt;          The amount of benchmark iterations
+                                        to perform - default 10
+  --collect-markers                     Collect and write performance
+                                        markers to disk
+  --cwd &lt;path&gt;                          Specify a different working
+                                        directory
+  --fieri                               Head to flavortown
+  --grep &lt;input&gt;                        Only display diagnostics with
+                                        messages containing this string -
+                                        default ""
+  --help                                Show this help screen
+  --inverse-grep                        Flip grep match. Only display
+                                        diagnostics with messages that do
+                                        NOT contain the grep string
+  --log-path &lt;path&gt;                     Path where to output logs. When
+                                        omitted logs are not written
+                                        anywhere
+  --logs                                Output server logs
+  --log-shell-completions &lt;shell&gt;       Generate shell completion commands -
+                                        values "fish" "bash")
+  --log-workers                         Output worker logs
+  --markers-path &lt;path&gt;                 Path where to write markers. When
+                                        ommitted defaults to
+                                        Marker-TIMESTAMP.json
+  --max-diagnostics &lt;num&gt;               Cap the amount of diagnostics
+                                        displayed - default 20
+  --no-profile-workers                  Exclude workers from profile
+  --output-color-depth &lt;num&gt;            Change the display width. By default
+                                        it is automatically inferred and
+                                        updated from the terminal.
+  --output-columns &lt;num&gt;                Change the display width. By default
+                                        it is automatically inferred and
+                                        updated from the terminal.
+  --output-format &lt;input&gt;               Change the output format. By default
+                                        it is automatically inferred from
+                                        terminal settings. - values "ansi"
+                                        "html" "none")
+  --output-redirect-error               Redirect stderr to stdout.
+  --output-tty                          Treat output as TTY regardless of
+                                        terminal information. This will
+                                        enable things like ANSI cursor,
+                                        progress bars etc.
+  --profile                             Collect and write profile to disk.
+                                        Includes profiles for all processes.
+  --profile-path &lt;path&gt;                 Path where to write profile. When
+                                        omitted defaults to
+                                        Profile-TIMESTAMP.json
+  --profile-sampling &lt;microsec&gt;         Profiler sampling interval in
+                                        microseconds - default 100
+  --profile-timeout &lt;millisec&gt;          Stop the profile after the
+                                        milliseconds specified. When omitted
+                                        the profile is of the whole command
+  --rage                                Create a rage tarball of debug
+                                        information
+  --rage-path &lt;path&gt;                    Path where to write rage tarball.
+                                        When omitted defaults to
+                                        Rage-TIMESTAMP.tgz
+  --resolver-mocks                      Enable mocks for module resolution
+  --resolver-platform &lt;platform&gt;        Specify the platform for module
+                                        resolution - values "ios" "android"
+                                        "mobile" "electron" "web" "node")
+  --resolver-scale &lt;num&gt;                Specify the image scale for module
+                                        resolution
+  --review                              Display and perform actions on
+                                        diagnostics. Only some commands
+                                        support this.
+  --show-all-diagnostics                Display all diagnostics ignoring
+                                        caps
+  --silent                              Don't write anything to the console
+  --temporary-daemon                    Start a daemon, if one isn't already
+                                        running, for the lifetime of this
+                                        command
+  --timing                              Dump timing information after
+                                        running the command
+  --unsafe-writes                       When writing files, don't verify
+                                        mtime or existence. Potentially
+                                        dangerous and could lead to
+                                        unintended data loss
+  --verbose-diagnostics                 Display hidden and truncated
+                                        diagnostic information
+  --version                             Show the version
+  --watch                               Keep running command and update on
+                                        file changes. Only some commands
+                                        support this.
+  --write-shell-completions &lt;shell&gt;     Write shell completion commands -
+                                        values "fish" "bash")
+
+ Commands ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Code Quality Commands
+  - check run lint against a set of files
+
+  Internal Commands
+  - format formats a single file
+  - json dump an RJSON file to regular JSON
+  - logs view the logs stream
+  - noop do nothing
+  - rage create a rage archive for debugging
+
+  Process Management Commands
+  - init initialise the project
+  - restart restart daemon
+  - start start daemon (if none running)
+  - status get the current daemon status
+  - stop stop a running daemon if one exists
+
+  Project Management Commands
+  - config disable modify a project config- set the &lt;key&gt; to false
+  - config enable modify a project config- set the &lt;key&gt; to true
+  - config location show the config location
+  - config push modify a project config - push &lt;values&gt; to &lt;key&gt;
+  - config set modify a project config - set the &lt;key&gt; to &lt;value&gt;
+  - config set-directory modify a project config - set the &lt;key&gt; to &lt;value&gt;
+  - lsp connect to an lsp
+
+  Source Code Commands
+  - cache clear clear the cache directory
+  - cache dir show the location of the cache directory
+  - recover apply apply a specific patch from the recovery store
+  - recover clear clear the contents of the recovery store
+  - recover diff show the differences that would be applied for a given patch
+  - recover dir print the location of the recovery store
+  - recover list show all patches in the recovery store
+  - recover pop apply the most recent patch in the recovery story
+
+  ℹ To view help for a specific command run
+  $ rome command_name --help
+
+
+                                                                               
+error Command failed with exit code 1.
+
+                                                                               
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
 
 </code></pre>
 

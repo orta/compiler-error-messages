@@ -13,7 +13,7 @@ pre {
   overflow-x: scroll;
 }
 
-code {
+pre code {
   background-color: #040404;
   font-weight: normal;
   font-size: 0.8rem;
