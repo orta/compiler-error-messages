@@ -6,7 +6,6 @@ process.on('unhandledRejection', error => {
 const filter = process.argv[2] || "*"
 
 if (filter.startsWith("*") || filter.startsWith("elm")) {
-  // import("./elm/setup.js")
   import("./elm/runner.js")
 }
 
@@ -16,4 +15,16 @@ if (filter.startsWith("*") || filter.startsWith("tsc")) {
 
 if (filter.startsWith("*") || filter.startsWith("rust")) {
   import("./rust/runner.js")
+}
+
+if (filter.startsWith("*") || filter.startsWith("swift")) {
+  import("./swift/runner.js")
+}
+
+if (filter.startsWith("*") || filter.startsWith("rescript")) {
+  import("./rescript/runner.js")
+}
+
+if (filter.startsWith("*") || filter.startsWith("elixir")) {
+  import("./elixir/runner.js")
 }

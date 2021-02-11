@@ -1,11 +1,10 @@
 // @ts-check
 
 import { readdirSync } from "fs"
-import { basename, join } from "path"
+import { join } from "path"
 import { execToHTML } from "../lib/exec.js";
 import { writeFixture } from "../lib/write.js";
-import { scaffoldTemplate } from "../lib/scaffold.js";
-import { md } from "../lib/md.js";
+import { setupExamples } from "../lib/runExample.js";
 
 const go = async () => {
   const vanilla = await execToHTML("rustc", ["--help"], {})
@@ -21,27 +20,10 @@ const go = async () => {
   writeFixture("rust/help-all", all)
 
   const mdFiles = readdirSync(join(import.meta.url, "..", "errors").replace("file:", "")).filter(f => f.endsWith(".md"))
-  mdFiles.forEach(file => runExample(`rust/errors/${file}`))
+  const runner = setupExamples({ cmd: "rustc", args: [], env: "rust" })
+  mdFiles.forEach(file => runner(`errors/${file}`))
 }
 
 go()
-
-async function runExample(relativePath) {
-  const name = basename(relativePath, ".md")
-  const mdData = md(relativePath)
-  const project = scaffoldTemplate("rust", name, mdData.files)
-
-  const firstFile = Object.keys(mdData.files)[0]
-  const consoleResults = await execToHTML("rustc", [firstFile], { cwd: project })
-
-  const htmlWrapper = `
-<p>${mdData.blurb}</p>
-
-<pre><code>
-${consoleResults}
-</code></pre>
-`
-  writeFixture("rust/" + name, htmlWrapper)
-}
 
 export { }

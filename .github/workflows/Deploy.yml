@@ -15,7 +15,7 @@ jobs:
         with:
           node-version: '14'
       
-      - name: Install elm
+      - name: Setup | elm
         run: yarn global add elm
 
       - name: Setup | Rust
@@ -23,8 +23,13 @@ jobs:
         with:
           rust-version: 1.46.0
 
-      - name: Install TSC globally
+      - name: Setup | TSC
         run: yarn global add typescript
+
+      - uses: fwal/setup-swift@v1
+
+      - name: Setup | ReScript
+        run: yarn global add bs-platform
 
       - name: Install dependencies
         run: yarn

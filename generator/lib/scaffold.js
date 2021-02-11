@@ -10,9 +10,9 @@ export function scaffoldTemplate (template, name, files) {
   const to = join(tmpDir, template, name)
 
   if (existsSync(to)) shelljs.rm("-r", to)
-  else mkdirSync(to, {recursive: true})
+  else mkdirSync(to, { recursive: true })
 
-  shelljs.cp("-r", templates, to)
+  if (existsSync(templates)) shelljs.cp("-r", templates, to)
   
   Object.keys(files).forEach(f => {
     writeFileSync(join(to, f), files[f])
