@@ -17,170 +17,170 @@
 <h3>TypeScript</h3>
 <pre><code>
 Version 4.1.5
-Syntax:   tsc [options] [file...]
+Syntax: &#xa0; tsc [options] [file...]
 
 Examples: tsc hello.ts
-          tsc --outFile file.js file.ts
-          tsc @args.txt
-          tsc --build tsconfig.json
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;tsc --outFile file.js file.ts
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;tsc @args.txt
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;tsc --build tsconfig.json
 
 Options:
- -h, --help                                         Print this message.
- -w, --watch                                        Watch input files.
- --pretty                                           Stylize errors and messages using color and context (experimental).
- --all                                              Show all compiler options.
- -v, --version                                      Print the compiler's version.
- --init                                             Initializes a TypeScript project and creates a tsconfig.json file.
- -p FILE OR DIRECTORY, --project FILE OR DIRECTORY  Compile the project given the path to its configuration file, or to a folder with a 'tsconfig.json'.
- -b, --build                                        Build one or more projects and their dependencies, if out of date
- -t VERSION, --target VERSION                       Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019', 'ES2020', or 'ESNEXT'.
- -m KIND, --module KIND                             Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', 'es2020', or 'ESNext'.
- --lib                                              Specify library files to be included in the compilation.
-                                                      'es5' 'es6' 'es2015' 'es7' 'es2016' 'es2017' 'es2018' 'es2019' 'es2020' 'esnext' 'dom' 'dom.iterable' 'webworker' 'webworker.importscripts' 'webworker.iterable' 'scripthost' 'es2015.core' 'es2015.collection' 'es2015.generator' 'es2015.iterable' 'es2015.promise' 'es2015.proxy' 'es2015.reflect' 'es2015.symbol' 'es2015.symbol.wellknown' 'es2016.array.include' 'es2017.object' 'es2017.sharedmemory' 'es2017.string' 'es2017.intl' 'es2017.typedarrays' 'es2018.asyncgenerator' 'es2018.asynciterable' 'es2018.intl' 'es2018.promise' 'es2018.regexp' 'es2019.array' 'es2019.object' 'es2019.string' 'es2019.symbol' 'es2020.bigint' 'es2020.promise' 'es2020.sharedmemory' 'es2020.string' 'es2020.symbol.wellknown' 'es2020.intl' 'esnext.array' 'esnext.symbol' 'esnext.asynciterable' 'esnext.intl' 'esnext.bigint' 'esnext.string' 'esnext.promise' 'esnext.weakref' 
- --allowJs                                          Allow javascript files to be compiled.
- --jsx KIND                                         Specify JSX code generation: 'preserve', 'react-native', or 'react'.
- -d, --declaration                                  Generates corresponding '.d.ts' file.
- --declarationMap                                   Generates a sourcemap for each corresponding '.d.ts' file.
- --sourceMap                                        Generates corresponding '.map' file.
- --outFile FILE                                     Concatenate and emit output to single file.
- --outDir DIRECTORY                                 Redirect output structure to the directory.
- --removeComments                                   Do not emit comments to output.
- --noEmit                                           Do not emit outputs.
- --strict                                           Enable all strict type-checking options.
- --noImplicitAny                                    Raise error on expressions and declarations with an implied 'any' type.
- --strictNullChecks                                 Enable strict null checks.
- --strictFunctionTypes                              Enable strict checking of function types.
- --strictBindCallApply                              Enable strict 'bind', 'call', and 'apply' methods on functions.
- --strictPropertyInitialization                     Enable strict checking of property initialization in classes.
- --noImplicitThis                                   Raise error on 'this' expressions with an implied 'any' type.
- --alwaysStrict                                     Parse in strict mode and emit "use strict" for each source file.
- --noUnusedLocals                                   Report errors on unused locals.
- --noUnusedParameters                               Report errors on unused parameters.
- --noImplicitReturns                                Report error when not all code paths in function return a value.
- --noFallthroughCasesInSwitch                       Report errors for fallthrough cases in switch statement.
- --types                                            Type declaration files to be included in compilation.
- --esModuleInterop                                  Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'.
- @&lt;file&gt;                                            Insert command line options and files from a file.
+ -h, --help &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Print this message.
+ -w, --watch &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Watch input files.
+ --pretty &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Stylize errors and messages using color and context (experimental).
+ --all &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Show all compiler options.
+ -v, --version &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Print the compiler's version.
+ --init &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Initializes a TypeScript project and creates a tsconfig.json file.
+ -p FILE OR DIRECTORY, --project FILE OR DIRECTORY &#xa0;Compile the project given the path to its configuration file, or to a folder with a 'tsconfig.json'.
+ -b, --build &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Build one or more projects and their dependencies, if out of date
+ -t VERSION, --target VERSION &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019', 'ES2020', or 'ESNEXT'.
+ -m KIND, --module KIND &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', 'es2020', or 'ESNext'.
+ --lib &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Specify library files to be included in the compilation.
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;'es5' 'es6' 'es2015' 'es7' 'es2016' 'es2017' 'es2018' 'es2019' 'es2020' 'esnext' 'dom' 'dom.iterable' 'webworker' 'webworker.importscripts' 'webworker.iterable' 'scripthost' 'es2015.core' 'es2015.collection' 'es2015.generator' 'es2015.iterable' 'es2015.promise' 'es2015.proxy' 'es2015.reflect' 'es2015.symbol' 'es2015.symbol.wellknown' 'es2016.array.include' 'es2017.object' 'es2017.sharedmemory' 'es2017.string' 'es2017.intl' 'es2017.typedarrays' 'es2018.asyncgenerator' 'es2018.asynciterable' 'es2018.intl' 'es2018.promise' 'es2018.regexp' 'es2019.array' 'es2019.object' 'es2019.string' 'es2019.symbol' 'es2020.bigint' 'es2020.promise' 'es2020.sharedmemory' 'es2020.string' 'es2020.symbol.wellknown' 'es2020.intl' 'esnext.array' 'esnext.symbol' 'esnext.asynciterable' 'esnext.intl' 'esnext.bigint' 'esnext.string' 'esnext.promise' 'esnext.weakref' 
+ --allowJs &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Allow javascript files to be compiled.
+ --jsx KIND &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Specify JSX code generation: 'preserve', 'react-native', or 'react'.
+ -d, --declaration &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Generates corresponding '.d.ts' file.
+ --declarationMap &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Generates a sourcemap for each corresponding '.d.ts' file.
+ --sourceMap &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Generates corresponding '.map' file.
+ --outFile FILE &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Concatenate and emit output to single file.
+ --outDir DIRECTORY &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Redirect output structure to the directory.
+ --removeComments &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Do not emit comments to output.
+ --noEmit &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Do not emit outputs.
+ --strict &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Enable all strict type-checking options.
+ --noImplicitAny &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Raise error on expressions and declarations with an implied 'any' type.
+ --strictNullChecks &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Enable strict null checks.
+ --strictFunctionTypes &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Enable strict checking of function types.
+ --strictBindCallApply &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Enable strict 'bind', 'call', and 'apply' methods on functions.
+ --strictPropertyInitialization &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Enable strict checking of property initialization in classes.
+ --noImplicitThis &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Raise error on 'this' expressions with an implied 'any' type.
+ --alwaysStrict &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Parse in strict mode and emit "use strict" for each source file.
+ --noUnusedLocals &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Report errors on unused locals.
+ --noUnusedParameters &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Report errors on unused parameters.
+ --noImplicitReturns &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Report error when not all code paths in function return a value.
+ --noFallthroughCasesInSwitch &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Report errors for fallthrough cases in switch statement.
+ --types &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Type declaration files to be included in compilation.
+ --esModuleInterop &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'.
+ @&lt;file&gt; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Insert command line options and files from a file.
 
 </code></pre>
 <p>There's a lot of tsconfig flags (and some more which are just for the CLI) so the TypeScript CLI includes a  version which lists all possible flags:</p>
 <pre><code>
 Version 4.1.5
-Syntax:   tsc [options] [file...]
+Syntax: &#xa0; tsc [options] [file...]
 
 Examples: tsc hello.ts
-          tsc --outFile file.js file.ts
-          tsc @args.txt
-          tsc --build tsconfig.json
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;tsc --outFile file.js file.ts
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;tsc @args.txt
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;tsc --build tsconfig.json
 
 Options:
- --all                                              Show all compiler options.
- --allowJs                                          Allow javascript files to be compiled.
- --allowSyntheticDefaultImports                     Allow default imports from modules with no default export. This does not affect code emit, just typechecking.
- --allowUmdGlobalAccess                             Allow accessing UMD globals from modules.
- --allowUnreachableCode                             Do not report errors on unreachable code.
- --allowUnusedLabels                                Do not report errors on unused labels.
- --alwaysStrict                                     Parse in strict mode and emit "use strict" for each source file.
- --assumeChangesOnlyAffectDirectDependencies        Have recompiles in '--incremental' and '--watch' assume that changes within a file will only affect files directly depending on it.
- --baseUrl                                          Base directory to resolve non-absolute module names.
- -b, --build                                        Build one or more projects and their dependencies, if out of date
- --charset                                          The character set of the input files.
- --checkJs                                          Report errors in .js files.
- --composite                                        Enable project compilation
- -d, --declaration                                  Generates corresponding '.d.ts' file.
- --declarationDir DIRECTORY                         Output directory for generated declaration files.
- --declarationMap                                   Generates a sourcemap for each corresponding '.d.ts' file.
- --diagnostics                                      Show diagnostic information.
- --disableReferencedProjectLoad                     Disable loading referenced projects.
- --disableSizeLimit                                 Disable size limitations on JavaScript projects.
- --disableSolutionSearching                         Disable solution searching for this project.
- --disableSourceOfProjectReferenceRedirect          Disable use of source files instead of declaration files from referenced projects.
- --downlevelIteration                               Provide full support for iterables in 'for-of', spread, and destructuring when targeting 'ES5' or 'ES3'.
- --emitBOM                                          Emit a UTF-8 Byte Order Mark (BOM) in the beginning of output files.
- --emitDeclarationOnly                              Only emit '.d.ts' declaration files.
- --emitDecoratorMetadata                            Enables experimental support for emitting type metadata for decorators.
- --esModuleInterop                                  Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'.
- --experimentalDecorators                           Enables experimental support for ES7 decorators.
- --extendedDiagnostics                              Show verbose diagnostic information.
- --forceConsistentCasingInFileNames                 Disallow inconsistently-cased references to the same file.
- --generateCpuProfile FILE OR DIRECTORY             Generates a CPU profile.
- --generateTrace DIRECTORY                          Generates an event trace and a list of types.
- -h, --help                                         Print this message.
- --importHelpers                                    Import emit helpers from 'tslib'.
- --importsNotUsedAsValues                           Specify emit/checking behavior for imports that are only used for types
- -i, --incremental                                  Enable incremental compilation
- --init                                             Initializes a TypeScript project and creates a tsconfig.json file.
- --inlineSourceMap                                  Emit a single file with source maps instead of having a separate file.
- --inlineSources                                    Emit the source alongside the sourcemaps within a single file; requires '--inlineSourceMap' or '--sourceMap' to be set.
- --isolatedModules                                  Transpile each file as a separate module (similar to 'ts.transpileModule').
- --jsx KIND                                         Specify JSX code generation: 'preserve', 'react-native', or 'react'.
- --jsxFactory                                       Specify the JSX factory function to use when targeting 'react' JSX emit, e.g. 'React.createElement' or 'h'.
- --jsxFragmentFactory                               Specify the JSX fragment factory function to use when targeting 'react' JSX emit with 'jsxFactory' compiler option is specified, e.g. 'Fragment'.
- --jsxImportSource                                  Specify the module specifier to be used to import the `jsx` and `jsxs` factory functions from. eg, react
- --keyofStringsOnly                                 Resolve 'keyof' to string valued property names only (no numbers or symbols).
- --lib                                              Specify library files to be included in the compilation.
-                                                      'es5' 'es6' 'es2015' 'es7' 'es2016' 'es2017' 'es2018' 'es2019' 'es2020' 'esnext' 'dom' 'dom.iterable' 'webworker' 'webworker.importscripts' 'webworker.iterable' 'scripthost' 'es2015.core' 'es2015.collection' 'es2015.generator' 'es2015.iterable' 'es2015.promise' 'es2015.proxy' 'es2015.reflect' 'es2015.symbol' 'es2015.symbol.wellknown' 'es2016.array.include' 'es2017.object' 'es2017.sharedmemory' 'es2017.string' 'es2017.intl' 'es2017.typedarrays' 'es2018.asyncgenerator' 'es2018.asynciterable' 'es2018.intl' 'es2018.promise' 'es2018.regexp' 'es2019.array' 'es2019.object' 'es2019.string' 'es2019.symbol' 'es2020.bigint' 'es2020.promise' 'es2020.sharedmemory' 'es2020.string' 'es2020.symbol.wellknown' 'es2020.intl' 'esnext.array' 'esnext.symbol' 'esnext.asynciterable' 'esnext.intl' 'esnext.bigint' 'esnext.string' 'esnext.promise' 'esnext.weakref' 
- --listEmittedFiles                                 Print names of generated files part of the compilation.
- --listFiles                                        Print names of files part of the compilation.
- --listFilesOnly                                    Print names of files that are part of the compilation and then stop processing.
- --locale                                           The locale used when displaying messages to the user (e.g. 'en-us')
- --mapRoot LOCATION                                 Specify the location where debugger should locate map files instead of generated locations.
- --maxNodeModuleJsDepth                             The maximum dependency depth to search under node_modules and load JavaScript files.
- -m KIND, --module KIND                             Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', 'es2020', or 'ESNext'.
- --moduleResolution STRATEGY                        Specify module resolution strategy: 'node' (Node.js) or 'classic' (TypeScript pre-1.6).
- --newLine NEWLINE                                  Specify the end of line sequence to be used when emitting files: 'CRLF' (dos) or 'LF' (unix).
- --noEmit                                           Do not emit outputs.
- --noEmitHelpers                                    Do not generate custom helper functions like '__extends' in compiled output.
- --noEmitOnError                                    Do not emit outputs if any errors were reported.
- --noErrorTruncation                                Do not truncate error messages.
- --noFallthroughCasesInSwitch                       Report errors for fallthrough cases in switch statement.
- --noImplicitAny                                    Raise error on expressions and declarations with an implied 'any' type.
- --noImplicitReturns                                Report error when not all code paths in function return a value.
- --noImplicitThis                                   Raise error on 'this' expressions with an implied 'any' type.
- --noImplicitUseStrict                              Do not emit 'use strict' directives in module output.
- --noLib                                            Do not include the default library file (lib.d.ts).
- --noResolve                                        Do not add triple-slash references or imported modules to the list of compiled files.
- --noStrictGenericChecks                            Disable strict checking of generic signatures in function types.
- --noUncheckedIndexedAccess                         Include 'undefined' in index signature results
- --noUnusedLocals                                   Report errors on unused locals.
- --noUnusedParameters                               Report errors on unused parameters.
- --out FILE                                         [Deprecated] Use '--outFile' instead. Concatenate and emit output to single file
- --outDir DIRECTORY                                 Redirect output structure to the directory.
- --outFile FILE                                     Concatenate and emit output to single file.
- --paths                                            A series of entries which re-map imports to lookup locations relative to the 'baseUrl'.
- --plugins                                          List of language service plugins.
- --preserveConstEnums                               Do not erase const enum declarations in generated code.
- --preserveSymlinks                                 Do not resolve the real path of symlinks.
- --preserveWatchOutput                              Whether to keep outdated console output in watch mode instead of clearing the screen.
- --pretty                                           Stylize errors and messages using color and context (experimental).
- -p FILE OR DIRECTORY, --project FILE OR DIRECTORY  Compile the project given the path to its configuration file, or to a folder with a 'tsconfig.json'.
- --reactNamespace                                   [Deprecated] Use '--jsxFactory' instead. Specify the object invoked for createElement when targeting 'react' JSX emit
- --removeComments                                   Do not emit comments to output.
- --resolveJsonModule                                Include modules imported with '.json' extension
- --rootDir LOCATION                                 Specify the root directory of input files. Use to control the output directory structure with --outDir.
- --rootDirs                                         List of root folders whose combined content represents the structure of the project at runtime.
- --showConfig                                       Print the final configuration instead of building.
- --skipDefaultLibCheck                              [Deprecated] Use '--skipLibCheck' instead. Skip type checking of default library declaration files.
- --skipLibCheck                                     Skip type checking of declaration files.
- --sourceMap                                        Generates corresponding '.map' file.
- --sourceRoot LOCATION                              Specify the location where debugger should locate TypeScript files instead of source locations.
- --strict                                           Enable all strict type-checking options.
- --strictBindCallApply                              Enable strict 'bind', 'call', and 'apply' methods on functions.
- --strictFunctionTypes                              Enable strict checking of function types.
- --strictNullChecks                                 Enable strict null checks.
- --strictPropertyInitialization                     Enable strict checking of property initialization in classes.
- --stripInternal                                    Do not emit declarations for code that has an '@internal' annotation.
- --suppressExcessPropertyErrors                     Suppress excess property checks for object literals.
- --suppressImplicitAnyIndexErrors                   Suppress noImplicitAny errors for indexing objects lacking index signatures.
- -t VERSION, --target VERSION                       Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019', 'ES2020', or 'ESNEXT'.
- --traceResolution                                  Enable tracing of the name resolution process.
- --tsBuildInfoFile FILE                             Specify file to store incremental compilation information
- --typeRoots                                        List of folders to include type definitions from.
- --types                                            Type declaration files to be included in compilation.
- --useDefineForClassFields                          Emit class fields with Define instead of Set.
- -v, --version                                      Print the compiler's version.
- -w, --watch                                        Watch input files.
- @&lt;file&gt;                                            Insert command line options and files from a file.
+ --all &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Show all compiler options.
+ --allowJs &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Allow javascript files to be compiled.
+ --allowSyntheticDefaultImports &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Allow default imports from modules with no default export. This does not affect code emit, just typechecking.
+ --allowUmdGlobalAccess &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Allow accessing UMD globals from modules.
+ --allowUnreachableCode &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Do not report errors on unreachable code.
+ --allowUnusedLabels &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Do not report errors on unused labels.
+ --alwaysStrict &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Parse in strict mode and emit "use strict" for each source file.
+ --assumeChangesOnlyAffectDirectDependencies &#xa0; &#xa0; &#xa0; &#xa0;Have recompiles in '--incremental' and '--watch' assume that changes within a file will only affect files directly depending on it.
+ --baseUrl &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Base directory to resolve non-absolute module names.
+ -b, --build &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Build one or more projects and their dependencies, if out of date
+ --charset &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;The character set of the input files.
+ --checkJs &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Report errors in .js files.
+ --composite &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Enable project compilation
+ -d, --declaration &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Generates corresponding '.d.ts' file.
+ --declarationDir DIRECTORY &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Output directory for generated declaration files.
+ --declarationMap &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Generates a sourcemap for each corresponding '.d.ts' file.
+ --diagnostics &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Show diagnostic information.
+ --disableReferencedProjectLoad &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Disable loading referenced projects.
+ --disableSizeLimit &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Disable size limitations on JavaScript projects.
+ --disableSolutionSearching &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Disable solution searching for this project.
+ --disableSourceOfProjectReferenceRedirect &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Disable use of source files instead of declaration files from referenced projects.
+ --downlevelIteration &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Provide full support for iterables in 'for-of', spread, and destructuring when targeting 'ES5' or 'ES3'.
+ --emitBOM &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Emit a UTF-8 Byte Order Mark (BOM) in the beginning of output files.
+ --emitDeclarationOnly &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Only emit '.d.ts' declaration files.
+ --emitDecoratorMetadata &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Enables experimental support for emitting type metadata for decorators.
+ --esModuleInterop &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'.
+ --experimentalDecorators &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Enables experimental support for ES7 decorators.
+ --extendedDiagnostics &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Show verbose diagnostic information.
+ --forceConsistentCasingInFileNames &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Disallow inconsistently-cased references to the same file.
+ --generateCpuProfile FILE OR DIRECTORY &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Generates a CPU profile.
+ --generateTrace DIRECTORY &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Generates an event trace and a list of types.
+ -h, --help &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Print this message.
+ --importHelpers &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Import emit helpers from 'tslib'.
+ --importsNotUsedAsValues &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Specify emit/checking behavior for imports that are only used for types
+ -i, --incremental &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Enable incremental compilation
+ --init &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Initializes a TypeScript project and creates a tsconfig.json file.
+ --inlineSourceMap &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Emit a single file with source maps instead of having a separate file.
+ --inlineSources &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Emit the source alongside the sourcemaps within a single file; requires '--inlineSourceMap' or '--sourceMap' to be set.
+ --isolatedModules &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Transpile each file as a separate module (similar to 'ts.transpileModule').
+ --jsx KIND &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Specify JSX code generation: 'preserve', 'react-native', or 'react'.
+ --jsxFactory &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Specify the JSX factory function to use when targeting 'react' JSX emit, e.g. 'React.createElement' or 'h'.
+ --jsxFragmentFactory &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Specify the JSX fragment factory function to use when targeting 'react' JSX emit with 'jsxFactory' compiler option is specified, e.g. 'Fragment'.
+ --jsxImportSource &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Specify the module specifier to be used to import the `jsx` and `jsxs` factory functions from. eg, react
+ --keyofStringsOnly &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Resolve 'keyof' to string valued property names only (no numbers or symbols).
+ --lib &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Specify library files to be included in the compilation.
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;'es5' 'es6' 'es2015' 'es7' 'es2016' 'es2017' 'es2018' 'es2019' 'es2020' 'esnext' 'dom' 'dom.iterable' 'webworker' 'webworker.importscripts' 'webworker.iterable' 'scripthost' 'es2015.core' 'es2015.collection' 'es2015.generator' 'es2015.iterable' 'es2015.promise' 'es2015.proxy' 'es2015.reflect' 'es2015.symbol' 'es2015.symbol.wellknown' 'es2016.array.include' 'es2017.object' 'es2017.sharedmemory' 'es2017.string' 'es2017.intl' 'es2017.typedarrays' 'es2018.asyncgenerator' 'es2018.asynciterable' 'es2018.intl' 'es2018.promise' 'es2018.regexp' 'es2019.array' 'es2019.object' 'es2019.string' 'es2019.symbol' 'es2020.bigint' 'es2020.promise' 'es2020.sharedmemory' 'es2020.string' 'es2020.symbol.wellknown' 'es2020.intl' 'esnext.array' 'esnext.symbol' 'esnext.asynciterable' 'esnext.intl' 'esnext.bigint' 'esnext.string' 'esnext.promise' 'esnext.weakref' 
+ --listEmittedFiles &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Print names of generated files part of the compilation.
+ --listFiles &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Print names of files part of the compilation.
+ --listFilesOnly &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Print names of files that are part of the compilation and then stop processing.
+ --locale &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; The locale used when displaying messages to the user (e.g. 'en-us')
+ --mapRoot LOCATION &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Specify the location where debugger should locate map files instead of generated locations.
+ --maxNodeModuleJsDepth &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; The maximum dependency depth to search under node_modules and load JavaScript files.
+ -m KIND, --module KIND &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', 'es2020', or 'ESNext'.
+ --moduleResolution STRATEGY &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Specify module resolution strategy: 'node' (Node.js) or 'classic' (TypeScript pre-1.6).
+ --newLine NEWLINE &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Specify the end of line sequence to be used when emitting files: 'CRLF' (dos) or 'LF' (unix).
+ --noEmit &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Do not emit outputs.
+ --noEmitHelpers &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Do not generate custom helper functions like '__extends' in compiled output.
+ --noEmitOnError &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Do not emit outputs if any errors were reported.
+ --noErrorTruncation &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Do not truncate error messages.
+ --noFallthroughCasesInSwitch &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Report errors for fallthrough cases in switch statement.
+ --noImplicitAny &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Raise error on expressions and declarations with an implied 'any' type.
+ --noImplicitReturns &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Report error when not all code paths in function return a value.
+ --noImplicitThis &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Raise error on 'this' expressions with an implied 'any' type.
+ --noImplicitUseStrict &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Do not emit 'use strict' directives in module output.
+ --noLib &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Do not include the default library file (lib.d.ts).
+ --noResolve &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Do not add triple-slash references or imported modules to the list of compiled files.
+ --noStrictGenericChecks &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Disable strict checking of generic signatures in function types.
+ --noUncheckedIndexedAccess &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Include 'undefined' in index signature results
+ --noUnusedLocals &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Report errors on unused locals.
+ --noUnusedParameters &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Report errors on unused parameters.
+ --out FILE &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; [Deprecated] Use '--outFile' instead. Concatenate and emit output to single file
+ --outDir DIRECTORY &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Redirect output structure to the directory.
+ --outFile FILE &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Concatenate and emit output to single file.
+ --paths &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;A series of entries which re-map imports to lookup locations relative to the 'baseUrl'.
+ --plugins &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;List of language service plugins.
+ --preserveConstEnums &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Do not erase const enum declarations in generated code.
+ --preserveSymlinks &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Do not resolve the real path of symlinks.
+ --preserveWatchOutput &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Whether to keep outdated console output in watch mode instead of clearing the screen.
+ --pretty &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Stylize errors and messages using color and context (experimental).
+ -p FILE OR DIRECTORY, --project FILE OR DIRECTORY &#xa0;Compile the project given the path to its configuration file, or to a folder with a 'tsconfig.json'.
+ --reactNamespace &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; [Deprecated] Use '--jsxFactory' instead. Specify the object invoked for createElement when targeting 'react' JSX emit
+ --removeComments &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Do not emit comments to output.
+ --resolveJsonModule &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Include modules imported with '.json' extension
+ --rootDir LOCATION &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Specify the root directory of input files. Use to control the output directory structure with --outDir.
+ --rootDirs &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; List of root folders whose combined content represents the structure of the project at runtime.
+ --showConfig &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Print the final configuration instead of building.
+ --skipDefaultLibCheck &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;[Deprecated] Use '--skipLibCheck' instead. Skip type checking of default library declaration files.
+ --skipLibCheck &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Skip type checking of declaration files.
+ --sourceMap &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Generates corresponding '.map' file.
+ --sourceRoot LOCATION &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Specify the location where debugger should locate TypeScript files instead of source locations.
+ --strict &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Enable all strict type-checking options.
+ --strictBindCallApply &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Enable strict 'bind', 'call', and 'apply' methods on functions.
+ --strictFunctionTypes &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Enable strict checking of function types.
+ --strictNullChecks &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Enable strict null checks.
+ --strictPropertyInitialization &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Enable strict checking of property initialization in classes.
+ --stripInternal &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Do not emit declarations for code that has an '@internal' annotation.
+ --suppressExcessPropertyErrors &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Suppress excess property checks for object literals.
+ --suppressImplicitAnyIndexErrors &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Suppress noImplicitAny errors for indexing objects lacking index signatures.
+ -t VERSION, --target VERSION &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019', 'ES2020', or 'ESNEXT'.
+ --traceResolution &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Enable tracing of the name resolution process.
+ --tsBuildInfoFile FILE &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Specify file to store incremental compilation information
+ --typeRoots &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;List of folders to include type definitions from.
+ --types &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Type declaration files to be included in compilation.
+ --useDefineForClassFields &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Emit class fields with Define instead of Set.
+ -v, --version &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Print the compiler's version.
+ -w, --watch &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Watch input files.
+ @&lt;file&gt; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Insert command line options and files from a file.
 
 </code></pre>
 <h3>Elixir</h3>
@@ -189,22 +189,22 @@ Usage: elixir [options] [.exs file] [data]
 
 ## General options
 
-  -e "COMMAND"                 Evaluates the given command (*)
-  -h, --help                   Prints this message and exits
-  -r "FILE"                    Requires the given files/patterns (*)
-  -S SCRIPT                    Finds and executes the given script in $PATH
-  -pr "FILE"                   Requires the given files/patterns in parallel (*)
-  -pa "PATH"                   Prepends the given path to Erlang code path (*)
-  -pz "PATH"                   Appends the given path to Erlang code path (*)
-  -v, --version                Prints Elixir version and exits
+ &#xa0;-e "COMMAND" &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Evaluates the given command (*)
+ &#xa0;-h, --help &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Prints this message and exits
+ &#xa0;-r "FILE" &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Requires the given files/patterns (*)
+ &#xa0;-S SCRIPT &#xa0;   &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Finds and executes the given script in $PATH
+ &#xa0;-pr "FILE" &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Requires the given files/patterns in parallel (*)
+ &#xa0;-pa "PATH" &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Prepends the given path to Erlang code path (*)
+ &#xa0;-pz "PATH" &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Appends the given path to Erlang code path (*)
+ &#xa0;-v, --version &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Prints Elixir version and exits
 
-  --app APP                    Starts the given app and its dependencies (*)
-  --erl "SWITCHES"             Switches to be passed down to Erlang (*)
-  --eval "COMMAND"             Evaluates the given command, same as -e (*)
-  --logger-otp-reports BOOL    Enables or disables OTP reporting
-  --logger-sasl-reports BOOL   Enables or disables SASL reporting
-  --no-halt                    Does not halt the Erlang VM after execution
-  --werl                       Uses Erlang's Windows shell GUI (Windows only)
+ &#xa0;--app APP &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Starts the given app and its dependencies (*)
+ &#xa0;--erl "SWITCHES" &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Switches to be passed down to Erlang (*)
+ &#xa0;--eval "COMMAND" &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Evaluates the given command, same as -e (*)
+ &#xa0;--logger-otp-reports BOOL &#xa0; &#xa0;Enables or disables OTP reporting
+ &#xa0;--logger-sasl-reports BOOL &#xa0; Enables or disables SASL reporting
+ &#xa0;--no-halt &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Does not halt the Erlang VM after execution
+ &#xa0;--werl &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Uses Erlang's Windows shell GUI (Windows only)
 
 Options given after the .exs file or -- are passed down to the executed code.
 Options can be passed to the Erlang runtime using $ELIXIR_ERL_OPTIONS or --erl.
@@ -213,21 +213,21 @@ Options can be passed to the Erlang runtime using $ELIXIR_ERL_OPTIONS or --erl.
 
 The following options are related to node distribution.
 
-  --cookie COOKIE              Sets a cookie for this distributed node
-  --hidden                     Makes a hidden node
-  --name NAME                  Makes and assigns a name to the distributed node
-  --rpc-eval NODE "COMMAND"    Evaluates the given command on the given remote node (*)
-  --sname NAME                 Makes and assigns a short name to the distributed node
+ &#xa0;--cookie COOKIE &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Sets a cookie for this distributed node
+ &#xa0;--hidden &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Makes a hidden node
+ &#xa0;--name NAME &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Makes and assigns a name to the distributed node
+ &#xa0;--rpc-eval NODE "COMMAND" &#xa0; &#xa0;Evaluates the given command on the given remote node (*)
+ &#xa0;--sname NAME &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Makes and assigns a short name to the distributed node
 
 ## Release options
 
 The following options are generally used under releases.
 
-  --boot "FILE"                Uses the given FILE.boot to start the system
-  --boot-var VAR "VALUE"       Makes $VAR available as VALUE to FILE.boot (*)
-  --erl-config "FILE"          Loads configuration in FILE.config written in Erlang (*)
-  --pipe-to "PIPEDIR" "LOGDIR" Starts the Erlang VM as a named PIPEDIR and LOGDIR
-  --vm-args "FILE"             Passes the contents in file as arguments to the VM
+ &#xa0;--boot "FILE" &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Uses the given FILE.boot to start the system
+ &#xa0;--boot-var VAR "VALUE" &#xa0; &#xa0; &#xa0; Makes $VAR available as VALUE to FILE.boot (*)
+ &#xa0;--erl-config "FILE" &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Loads configuration in FILE.config written in Erlang (*)
+ &#xa0;--pipe-to "PIPEDIR" "LOGDIR" Starts the Erlang VM as a named PIPEDIR and LOGDIR
+ &#xa0;--vm-args "FILE" &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Passes the contents in file as arguments to the VM
 
 --pipe-to starts Elixir detached from console (Unix-like only).
 It will attempt to create PIPEDIR and LOGDIR if they don't exist.
@@ -239,37 +239,37 @@ See run_erl to learn more. To reattach, run: to_erl PIPEDIR.
 <h3>Elm</h3>
 <p>Cool use of color (all the commands are blue, the 'read more' banner at the top is greyed out somewhat) and a pretty strong hierarchy of information.</p>
 <pre><code>
-Hi, thank you for trying out Elm<span style="font-weight:normal;opacity:1;color:#feffff;background:#040404;"> 0.19.1</span>. I hope you like it!
+Hi, thank you for trying out <a style="color:#99b52c">Elm</a> <a style="color:#99b52c">0.19.1</a>. I hope you like it!
 
-<span style="color:#777;">-------------------------------------------------------------------------------<span style="font-weight:normal;opacity:1;color:#feffff;background:#040404;">
-</span>I highly recommend working through &lt;https://guide.elm-lang.org&gt; to get started.<span style="font-weight:normal;opacity:1;color:#feffff;background:#040404;">
-</span>It teaches many important concepts, including how to use `elm` in the terminal.<span style="font-weight:normal;opacity:1;color:#feffff;background:#040404;">
-</span>-------------------------------------------------------------------------------<span style="font-weight:normal;opacity:1;color:#feffff;background:#040404;">
+<a style="color:#685656">-------------------------------------------------------------------------------</a>
+<a style="color:#685656">I highly recommend working through &lt;https://guide.elm-lang.org&gt; to get started.</a>
+<a style="color:#685656">It teaches many important concepts, including how to use `elm` in the terminal.</a>
+<a style="color:#685656">-------------------------------------------------------------------------------</a>
 
 The most common commands are:
 
-    elm repl</span>
-        Open up an interactive programming session. Type in Elm expressions like
-        (2 + 2) or (String.length "test") and see if they equal four!
-    
-    elm init<span style="font-weight:normal;opacity:1;color:#feffff;background:#040404;">
-        Start an Elm project. It creates a starter elm.json file and provides a
-        link explaining what to do from there.
-    
-    elm reactor</span>
-        Compile code with a click. It opens a file viewer in your browser, and
-        when you click on an Elm file, it compiles and you see the result.
+ &#xa0; &#xa0;<a style="color:#bdcfe5">elm repl</a>
+ &#xa0; &#xa0; &#xa0; &#xa0;Open up an interactive programming session. Type in Elm expressions like
+ &#xa0; &#xa0; &#xa0; &#xa0;(2 + 2) or (String.length "test") and see if they equal four!
+ &#xa0; &#xa0;
+ &#xa0; &#xa0;<a style="color:#bdcfe5">elm init</a>
+ &#xa0; &#xa0; &#xa0; &#xa0;Start an Elm project. It creates a starter elm.json file and provides a
+ &#xa0; &#xa0; &#xa0; &#xa0;link explaining what to do from there.
+ &#xa0; &#xa0;
+ &#xa0; &#xa0;<a style="color:#bdcfe5">elm reactor</a>
+ &#xa0; &#xa0; &#xa0; &#xa0;Compile code with a click. It opens a file viewer in your browser, and
+ &#xa0; &#xa0; &#xa0; &#xa0;when you click on an Elm file, it compiles and you see the result.
 
 There are a bunch of other commands as well though. Here is a full list:
 
-    <span style="color:#bdcfe5;">elm repl    --help
-    elm init    --help
-    elm reactor --help
-    elm make    --help
-    elm install --help
-    elm bump    --help
-    elm diff    --help
-    elm publish --help<span style="font-weight:normal;opacity:1;color:#feffff;background:#040404;">
+ &#xa0; &#xa0;<a style="color:#bdcfe5">elm repl &#xa0; &#xa0;--help
+ &#xa0; &#xa0;elm init &#xa0; &#xa0;--help
+ &#xa0; &#xa0;elm reactor --help
+ &#xa0; &#xa0;elm make &#xa0; &#xa0;--help
+ &#xa0; &#xa0;elm install --help
+ &#xa0; &#xa0;elm bump &#xa0; &#xa0;--help
+ &#xa0; &#xa0;elm diff &#xa0; &#xa0;--help
+ &#xa0; &#xa0;elm publish --help</a>
 
 Adding the --help flag gives a bunch of additional details about each one.
 
@@ -277,98 +277,98 @@ Be sure to ask on the Elm slack if you run into trouble! Folks are friendly and
 happy to help out. They hang out there because it is fun, so be kind to get the
 best results!
 
-</span></span></span>
+
 </code></pre>
 <p>Given that most of the work happens in a sub-commands, here's <code>elm  make --help</code>:</p>
 <pre><code>
 The `make` command compiles Elm code into JS or HTML:
 
-    elm make &lt;zero-or-more-elm-files&gt;<span style="font-weight:normal;opacity:1;color:#feffff;background:#040404;">
+ &#xa0; &#xa0;<a style="color:#bdcfe5">elm make &lt;zero-or-more-elm-files&gt;</a>
 
 For example:
 
-    elm make src/Main.elm</span>
+ &#xa0; &#xa0;<a style="color:#99b52c">elm make src/Main.elm</a>
 
 This tries to compile an Elm file named src/Main.elm, generating an index.html
 file if possible.
 
 You can customize this command with the following flags:
 
-    <span style="color:#bdcfe5;">--debug<span style="font-weight:normal;opacity:1;color:#feffff;background:#040404;">
-        Turn on the time-travelling debugger. It allows you to rewind and replay
-        events. The events can be imported/exported into a file, which makes for
-        very precise bug reports!
-    
-    </span>--optimize<span style="font-weight:normal;opacity:1;color:#feffff;background:#040404;">
-        Turn on optimizations to make code smaller and faster. For example, the
-        compiler renames record fields to be as short as possible and unboxes
-        values to reduce allocation.
-    
-    </span>--output=&lt;output-file&gt;<span style="font-weight:normal;opacity:1;color:#feffff;background:#040404;">
-        Specify the name of the resulting JS file. For example
-        --output=assets/elm.js to generate the JS at assets/elm.js or
-        --output=/dev/null to generate no output at all!
-    
-    </span>--report=&lt;report-type&gt;<span style="font-weight:normal;opacity:1;color:#feffff;background:#040404;">
-        You can say --report=json to get error messages as JSON. This is only
-        really useful if you are an editor plugin. Humans should avoid it!
-    
-    </span>--docs=&lt;json-file&gt;<span style="font-weight:normal;opacity:1;color:#feffff;background:#040404;">
-        Generate a JSON file of documentation for a package. Eventually it will
-        be possible to preview docs with `reactor` because it is quite hard to
-        deal with these JSON files directly.
+ &#xa0; &#xa0;<a style="color:#bdcfe5">--debug</a>
+ &#xa0; &#xa0; &#xa0; &#xa0;Turn on the time-travelling debugger. It allows you to rewind and replay
+ &#xa0; &#xa0; &#xa0; &#xa0;events. The events can be imported/exported into a file, which makes for
+ &#xa0; &#xa0; &#xa0; &#xa0;very precise bug reports!
+ &#xa0; &#xa0;
+ &#xa0; &#xa0;<a style="color:#bdcfe5">--optimize</a>
+ &#xa0; &#xa0; &#xa0; &#xa0;Turn on optimizations to make code smaller and faster. For example, the
+ &#xa0; &#xa0; &#xa0; &#xa0;compiler renames record fields to be as short as possible and unboxes
+ &#xa0; &#xa0; &#xa0; &#xa0;values to reduce allocation.
+ &#xa0; &#xa0;
+ &#xa0; &#xa0;<a style="color:#bdcfe5">--output=&lt;output-file&gt;</a>
+ &#xa0; &#xa0; &#xa0; &#xa0;Specify the name of the resulting JS file. For example
+ &#xa0; &#xa0; &#xa0; &#xa0;--output=assets/elm.js to generate the JS at assets/elm.js or
+ &#xa0; &#xa0; &#xa0; &#xa0;--output=/dev/null to generate no output at all!
+ &#xa0; &#xa0;
+ &#xa0; &#xa0;<a style="color:#bdcfe5">--report=&lt;report-type&gt;</a>
+ &#xa0; &#xa0; &#xa0; &#xa0;You can say --report=json to get error messages as JSON. This is only
+ &#xa0; &#xa0; &#xa0; &#xa0;really useful if you are an editor plugin. Humans should avoid it!
+ &#xa0; &#xa0;
+ &#xa0; &#xa0;<a style="color:#bdcfe5">--docs=&lt;json-file&gt;</a>
+ &#xa0; &#xa0; &#xa0; &#xa0;Generate a JSON file of documentation for a package. Eventually it will
+ &#xa0; &#xa0; &#xa0; &#xa0;be possible to preview docs with `reactor` because it is quite hard to
+ &#xa0; &#xa0; &#xa0; &#xa0;deal with these JSON files directly.
 
-</span></span>
+
 </code></pre>
 <h3>Rust</h3>
 <pre><code>
 Usage: rustc [OPTIONS] INPUT
 
 Options:
-    -h, --help          Display this message
-        --cfg SPEC      Configure the compilation environment
-    -L [KIND=]PATH      Add a directory to the library search path. The
-                        optional KIND can be one of dependency, crate, native,
-                        framework, or all (the default).
-    -l [KIND=]NAME      Link the generated crate(s) to the specified native
-                        library NAME. The optional KIND can be one of
-                        static, framework, or dylib (the default).
-        --crate-type [bin|lib|rlib|dylib|cdylib|staticlib|proc-macro]
-                        Comma separated list of types of crates
-                        for the compiler to emit
-        --crate-name NAME
-                        Specify the name of the crate being built
-        --edition 2015|2018
-                        Specify which edition of the compiler to use when
-                        compiling code.
-        --emit [asm|llvm-bc|llvm-ir|obj|metadata|link|dep-info|mir]
-                        Comma separated list of types of output for the
-                        compiler to emit
-        --print [crate-name|file-names|sysroot|target-libdir|cfg|target-list|target-cpus|target-features|relocation-models|code-models|tls-models|target-spec-json|native-static-libs]
-                        Compiler information to print on stdout
-    -g                  Equivalent to -C debuginfo=2
-    -O                  Equivalent to -C opt-level=2
-    -o FILENAME         Write output to &lt;filename&gt;
-        --out-dir DIR   Write output to compiler-chosen filename in &lt;dir&gt;
-        --explain OPT   Provide a detailed explanation of an error message
-        --test          Build a test harness
-        --target TARGET Target triple for which the code is compiled
-    -W, --warn OPT      Set lint warnings
-    -A, --allow OPT     Set lint allowed
-    -D, --deny OPT      Set lint denied
-    -F, --forbid OPT    Set lint forbidden
-        --cap-lints LEVEL
-                        Set the most restrictive lint level. More restrictive
-                        lints are capped at this level
-    -C, --codegen OPT[=VALUE]
-                        Set a codegen option
-    -V, --version       Print version info and exit
-    -v, --verbose       Use verbose output
+ &#xa0; &#xa0;-h, --help &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Display this message
+ &#xa0; &#xa0; &#xa0; &#xa0;--cfg SPEC &#xa0; &#xa0; &#xa0;Configure the compilation environment
+ &#xa0; &#xa0;-L [KIND=]PATH &#xa0; &#xa0; &#xa0;Add a directory to the library search path. The
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;optional KIND can be one of dependency, crate, native,
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;framework, or all (the default).
+ &#xa0; &#xa0;-l [KIND=]NAME &#xa0; &#xa0; &#xa0;Link the generated crate(s) to the specified native
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;library NAME. The optional KIND can be one of
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;static, framework, or dylib (the default).
+ &#xa0; &#xa0; &#xa0; &#xa0;--crate-type [bin|lib|rlib|dylib|cdylib|staticlib|proc-macro]
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Comma separated list of types of crates
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;for the compiler to emit
+ &#xa0; &#xa0; &#xa0; &#xa0;--crate-name NAME
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Specify the name of the crate being built
+ &#xa0; &#xa0; &#xa0; &#xa0;--edition 2015|2018
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Specify which edition of the compiler to use when
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;compiling code.
+ &#xa0; &#xa0; &#xa0; &#xa0;--emit [asm|llvm-bc|llvm-ir|obj|metadata|link|dep-info|mir]
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Comma separated list of types of output for the
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;compiler to emit
+ &#xa0; &#xa0; &#xa0; &#xa0;--print [crate-name|file-names|sysroot|target-libdir|cfg|target-list|target-cpus|target-features|relocation-models|code-models|tls-models|target-spec-json|native-static-libs]
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Compiler information to print on stdout
+ &#xa0; &#xa0;-g &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Equivalent to -C debuginfo=2
+ &#xa0; &#xa0;-O &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Equivalent to -C opt-level=2
+ &#xa0; &#xa0;-o FILENAME &#xa0; &#xa0; &#xa0; &#xa0; Write output to &lt;filename&gt;
+ &#xa0; &#xa0; &#xa0; &#xa0;--out-dir DIR &#xa0; Write output to compiler-chosen filename in &lt;dir&gt;
+ &#xa0; &#xa0; &#xa0; &#xa0;--explain OPT &#xa0; Provide a detailed explanation of an error message
+ &#xa0; &#xa0; &#xa0; &#xa0;--test &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Build a test harness
+ &#xa0; &#xa0; &#xa0; &#xa0;--target TARGET Target triple for which the code is compiled
+ &#xa0; &#xa0;-W, --warn OPT &#xa0; &#xa0; &#xa0;Set lint warnings
+ &#xa0; &#xa0;-A, --allow OPT &#xa0; &#xa0; Set lint allowed
+ &#xa0; &#xa0;-D, --deny OPT &#xa0; &#xa0; &#xa0;Set lint denied
+ &#xa0; &#xa0;-F, --forbid OPT &#xa0; &#xa0;Set lint forbidden
+ &#xa0; &#xa0; &#xa0; &#xa0;--cap-lints LEVEL
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Set the most restrictive lint level. More restrictive
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;lints are capped at this level
+ &#xa0; &#xa0;-C, --codegen OPT[=VALUE]
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Set a codegen option
+ &#xa0; &#xa0;-V, --version &#xa0; &#xa0; &#xa0; Print version info and exit
+ &#xa0; &#xa0;-v, --verbose &#xa0; &#xa0; &#xa0; Use verbose output
 
 Additional help:
-    -C help             Print codegen options
-    -W help             Print 'lint' options and default settings
-    --help -v           Print the full set of options rustc accepts
+ &#xa0; &#xa0;-C help &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Print codegen options
+ &#xa0; &#xa0;-W help &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Print 'lint' options and default settings
+ &#xa0; &#xa0;--help -v &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Print the full set of options rustc accepts
 
 
 </code></pre>
@@ -385,190 +385,190 @@ Additional help:
 
 Available codegen options:
 
-    -C                       ar=val -- this option is deprecated and does nothing
-    -C               code-model=val -- choose the code model to use (`rustc --print code-models` for details)
-    -C            codegen-units=val -- divide crate into N units to optimize in parallel
-    -C         debug-assertions=val -- explicitly enable the `cfg(debug_assertions)` directive
-    -C                debuginfo=val -- debug info emission level (0 = no debug info, 1 = line tables only, 2 = full debug info with variable and type information; default: 0)
-    -C default-linker-libraries=val -- allow the linker to link its default libraries (default: no)
-    -C            embed-bitcode=val -- emit bitcode in rlibs (default: yes)
-    -C           extra-filename=val -- extra data to put in each output filename
-    -C     force-frame-pointers=val -- force use of the frame pointers
-    -C      force-unwind-tables=val -- force use of unwind tables
-    -C              incremental=val -- enable incremental compilation
-    -C         inline-threshold=val -- set the threshold for inlining a function
-    -C                 link-arg=val -- a single extra argument to append to the linker invocation (can be used several times)
-    -C                link-args=val -- extra arguments to append to the linker invocation (space separated)
-    -C           link-dead-code=val -- keep dead code at link time (useful for code coverage) (default: no)
-    -C                   linker=val -- system linker to link outputs with
-    -C            linker-flavor=val -- linker flavor
-    -C        linker-plugin-lto=val -- generate build artifacts that are compatible with linker-based LTO
-    -C                llvm-args=val -- a list of arguments to pass to LLVM (space separated)
-    -C                      lto=val -- perform LLVM link-time optimizations
-    -C                 metadata=val -- metadata to mangle symbol names with
-    -C    no-prepopulate-passes=val -- give an empty list of passes to the pass manager
-    -C               no-redzone=val -- disable the use of the redzone
-    -C           no-stack-check=val -- this option is deprecated and does nothing
-    -C       no-vectorize-loops=val -- disable loop vectorization optimization passes
-    -C         no-vectorize-slp=val -- disable LLVM's SLP vectorization pass
-    -C                opt-level=val -- optimization level (0-3, s, or z; default: 0)
-    -C          overflow-checks=val -- use overflow checks for integer arithmetic
-    -C                    panic=val -- panic strategy to compile crate with
-    -C                   passes=val -- a list of extra LLVM passes to run (space separated)
-    -C           prefer-dynamic=val -- prefer dynamic linking to static linking (default: no)
-    -C         profile-generate=val -- compile the program with profiling instrumentation
-    -C              profile-use=val -- use the given `.profdata` file for profile-guided optimization
-    -C         relocation-model=val -- control generation of position-independent code (PIC) (`rustc --print relocation-models` for details)
-    -C                   remark=val -- print remarks for these optimization passes (space separated, or "all")
-    -C                    rpath=val -- set rpath values in libs/exes (default: no)
-    -C               save-temps=val -- save all temporary output files during compilation (default: no)
-    -C               soft-float=val -- use soft float ABI (*eabihf targets only) (default: no)
-    -C               target-cpu=val -- select target processor (`rustc --print target-cpus` for details)
-    -C           target-feature=val -- target specific attributes. (`rustc --print target-features` for details). This feature is unsafe.
+ &#xa0; &#xa0;-C &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; ar=val -- this option is deprecated and does nothing
+ &#xa0; &#xa0;-C &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; code-model=val -- choose the code model to use (`rustc --print code-models` for details)
+ &#xa0; &#xa0;-C &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;codegen-units=val -- divide crate into N units to optimize in parallel
+ &#xa0; &#xa0;-C &#xa0; &#xa0; &#xa0; &#xa0; debug-assertions=val -- explicitly enable the `cfg(debug_assertions)` directive
+ &#xa0; &#xa0;-C &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;debuginfo=val -- debug info emission level (0 = no debug info, 1 = line tables only, 2 = full debug info with variable and type information; default: 0)
+ &#xa0; &#xa0;-C default-linker-libraries=val -- allow the linker to link its default libraries (default: no)
+ &#xa0; &#xa0;-C &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;embed-bitcode=val -- emit bitcode in rlibs (default: yes)
+ &#xa0; &#xa0;-C &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; extra-filename=val -- extra data to put in each output filename
+ &#xa0; &#xa0;-C &#xa0; &#xa0; force-frame-pointers=val -- force use of the frame pointers
+ &#xa0; &#xa0;-C &#xa0; &#xa0; &#xa0;force-unwind-tables=val -- force use of unwind tables
+ &#xa0; &#xa0;-C &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;incremental=val -- enable incremental compilation
+ &#xa0; &#xa0;-C &#xa0; &#xa0; &#xa0; &#xa0; inline-threshold=val -- set the threshold for inlining a function
+ &#xa0; &#xa0;-C &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; link-arg=val -- a single extra argument to append to the linker invocation (can be used several times)
+ &#xa0; &#xa0;-C &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;link-args=val -- extra arguments to append to the linker invocation (space separated)
+ &#xa0; &#xa0;-C &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; link-dead-code=val -- keep dead code at link time (useful for code coverage) (default: no)
+ &#xa0; &#xa0;-C &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; linker=val -- system linker to link outputs with
+ &#xa0; &#xa0;-C &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;linker-flavor=val -- linker flavor
+ &#xa0; &#xa0;-C &#xa0; &#xa0; &#xa0; &#xa0;linker-plugin-lto=val -- generate build artifacts that are compatible with linker-based LTO
+ &#xa0; &#xa0;-C &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;llvm-args=val -- a list of arguments to pass to LLVM (space separated)
+ &#xa0; &#xa0;-C &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;lto=val -- perform LLVM link-time optimizations
+ &#xa0; &#xa0;-C &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; metadata=val -- metadata to mangle symbol names with
+ &#xa0; &#xa0;-C &#xa0; &#xa0;no-prepopulate-passes=val -- give an empty list of passes to the pass manager
+ &#xa0; &#xa0;-C &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; no-redzone=val -- disable the use of the redzone
+ &#xa0; &#xa0;-C &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; no-stack-check=val -- this option is deprecated and does nothing
+ &#xa0; &#xa0;-C &#xa0; &#xa0; &#xa0; no-vectorize-loops=val -- disable loop vectorization optimization passes
+ &#xa0; &#xa0;-C &#xa0; &#xa0; &#xa0; &#xa0; no-vectorize-slp=val -- disable LLVM's SLP vectorization pass
+ &#xa0; &#xa0;-C &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;opt-level=val -- optimization level (0-3, s, or z; default: 0)
+ &#xa0; &#xa0;-C &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;overflow-checks=val -- use overflow checks for integer arithmetic
+ &#xa0; &#xa0;-C &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;panic=val -- panic strategy to compile crate with
+ &#xa0; &#xa0;-C &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; passes=val -- a list of extra LLVM passes to run (space separated)
+ &#xa0; &#xa0;-C &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; prefer-dynamic=val -- prefer dynamic linking to static linking (default: no)
+ &#xa0; &#xa0;-C &#xa0; &#xa0; &#xa0; &#xa0; profile-generate=val -- compile the program with profiling instrumentation
+ &#xa0; &#xa0;-C &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;profile-use=val -- use the given `.profdata` file for profile-guided optimization
+ &#xa0; &#xa0;-C &#xa0; &#xa0; &#xa0; &#xa0; relocation-model=val -- control generation of position-independent code (PIC) (`rustc --print relocation-models` for details)
+ &#xa0; &#xa0;-C &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; remark=val -- print remarks for these optimization passes (space separated, or "all")
+ &#xa0; &#xa0;-C &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;rpath=val -- set rpath values in libs/exes (default: no)
+ &#xa0; &#xa0;-C &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; save-temps=val -- save all temporary output files during compilation (default: no)
+ &#xa0; &#xa0;-C &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; soft-float=val -- use soft float ABI (*eabihf targets only) (default: no)
+ &#xa0; &#xa0;-C &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; target-cpu=val -- select target processor (`rustc --print target-cpus` for details)
+ &#xa0; &#xa0;-C &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; target-feature=val -- target specific attributes. (`rustc --print target-features` for details). This feature is unsafe.
 
 </code></pre>
 <p>As well as for linter options:</p>
 <pre><code>
 
 Available lint options:
-    -W &lt;foo&gt;           Warn about &lt;foo&gt;
-    -A &lt;foo&gt;           Allow &lt;foo&gt;
-    -D &lt;foo&gt;           Deny &lt;foo&gt;
-    -F &lt;foo&gt;           Forbid &lt;foo&gt; (deny &lt;foo&gt; and all attempts to override)
+ &#xa0; &#xa0;-W &lt;foo&gt; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Warn about &lt;foo&gt;
+ &#xa0; &#xa0;-A &lt;foo&gt; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Allow &lt;foo&gt;
+ &#xa0; &#xa0;-D &lt;foo&gt; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Deny &lt;foo&gt;
+ &#xa0; &#xa0;-F &lt;foo&gt; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; Forbid &lt;foo&gt; (deny &lt;foo&gt; and all attempts to override)
 
 
 Lint checks provided by rustc:
 
-                                                       name  default  meaning
-                                                       ----  -------  -------
-                     absolute-paths-not-starting-with-crate  allow    fully qualified paths that start with a module name instead of `crate`, `self`, or an extern crate name
-                                       anonymous-parameters  allow    detects anonymous parameters
-                                               box-pointers  allow    use of owned (Box type) heap memory
-                               clashing-extern-declarations  allow    detects when an extern fn has been declared with the same name but different types
-                                       deprecated-in-future  allow    detects use of items that will be deprecated in a future version
-                                  elided-lifetimes-in-paths  allow    hidden lifetime parameters in types are deprecated
-                             explicit-outlives-requirements  allow    outlives requirements can be inferred
-                                  indirect-structural-match  allow    pattern with const indirectly referencing non-structural-match type
-                                             keyword-idents  allow    detects edition keywords being used as an identifier
-                                     macro-use-extern-crate  allow    the `#[macro_use]` attribute is now deprecated in favor of using macros via the module system
-                                       meta-variable-misuse  allow    possible meta-variable misuse at macro definition
-                               missing-copy-implementations  allow    detects potentially-forgotten implementations of `Copy`
-                                   missing-crate-level-docs  allow    detects crates with no crate-level documentation
-                              missing-debug-implementations  allow    detects missing implementations of Debug
-                                               missing-docs  allow    detects missing documentation for public members
-                                  missing-doc-code-examples  allow    detects publicly-exported items without code samples in their documentation
-                                           non-ascii-idents  allow    detects non-ASCII identifiers
-                                          private-doc-tests  allow    detects code samples in docs of private items not documented by rustdoc
-                                       single-use-lifetimes  allow    detects lifetime parameters that are only used once
-                                              trivial-casts  allow    detects trivial casts which could be removed
-                                      trivial-numeric-casts  allow    detects trivial casts of numeric types which could be removed
-                                       unaligned-references  allow    detects unaligned references to fields of packed structs
-                                            unreachable-pub  allow    `pub` items not reachable from crate root
-                                                unsafe-code  allow    usage of `unsafe` code
-                                     unsafe-op-in-unsafe-fn  allow    unsafe operations in unsafe functions without an explicit unsafe block are deprecated
-                                          unstable-features  allow    enabling unstable features (deprecated. do not use)
-                                  unused-crate-dependencies  allow    crate dependencies that are never used
-                                       unused-extern-crates  allow    extern crates that are never used
-                                       unused-import-braces  allow    unnecessary braces around an imported item
-                                           unused-lifetimes  allow    detects lifetime parameters that are never used
-                                      unused-qualifications  allow    detects unnecessarily qualified names
-                                             unused-results  allow    unused result of an expression in a statement
-                                   variant-size-differences  allow    detects enums with widely varying variant sizes
-                                            array-into-iter  warn     detects calling `into_iter` on arrays
-                                           asm-sub-register  warn     using only a subset of a register for inline asm inputs
-                                         bare-trait-objects  warn     suggest using `dyn Trait` for trait objects
-                                 bindings-with-variant-name  warn     detects pattern bindings with the same name as one of the matched variants
-                                       cenum-impl-drop-cast  warn     a C-like enum implementing Drop is cast
-                                       coherence-leak-check  warn     distinct impls distinguished only by the leak-check code
-                                          confusable-idents  warn     detects visually confusable pairs between identifiers
-                                                  dead-code  warn     detect unused, unexported items
-                                                 deprecated  warn     detects use of deprecated items
-                          ellipsis-inclusive-range-patterns  warn     `...` range patterns are deprecated
-                              exported-private-dependencies  warn     public interface leaks type from a private dependency
-                     illegal-floating-point-literal-pattern  warn     floating-point literals cannot be used in patterns
-                                            improper-ctypes  warn     proper use of libc types in foreign modules
-                                improper-ctypes-definitions  warn     proper use of libc types in foreign item definitions
-                                        incomplete-features  warn     incomplete features that may function improperly in some or all cases
-                                         inline-no-sanitize  warn     detects incompatible use of `#[inline(always)]` and `#[no_sanitize(...)]`
-                          intra-doc-link-resolution-failure  warn     failures in resolving intra-doc link targets
-                               invalid-codeblock-attributes  warn     codeblock attribute looks a lot like a known one
-                                              invalid-value  warn     an invalid value is being created (such as a NULL reference)
-                                   irrefutable-let-patterns  warn     detects irrefutable patterns in if-let and while-let statements
-                              late-bound-lifetime-arguments  warn     detects generic lifetime arguments in path segments with late bound lifetime parameters
-                                   mixed-script-confusables  warn     detects Unicode scripts whose mixed script confusables codepoints are solely used
-                        mutable-borrow-reservation-conflict  warn     reservation of a two-phased borrow conflicts with other shared borrows
-                                       non-camel-case-types  warn     types, variants, traits and type parameters should have camel case names
-                               non-shorthand-field-patterns  warn     using `Struct { x: x }` instead of `Struct { x }` in a pattern
-                                             non-snake-case  warn     variables, methods, functions, lifetime parameters and modules should have snake case names
-                                     non-upper-case-globals  warn     static constants should have uppercase identifiers
-                                    no-mangle-generic-items  warn     generic items must be mangled
-                                       overlapping-patterns  warn     detects overlapping patterns
-                                            path-statements  warn     path statements with no effect
-                                          private-in-public  warn     detect private items in public interfaces not caught by the old implementation
-                      proc-macro-derive-resolution-fallback  warn     detects proc macro derives using inaccessible names from parent modules
-                                       redundant-semicolons  warn     detects unnecessary trailing semicolons
-                                  renamed-and-removed-lints  warn     lints that have been renamed or removed
-                                        safe-packed-borrows  warn     safe borrows of fields of packed structs were erroneously allowed
-                                            stable-features  warn     stable features found in `#[feature]` directive
-                                             trivial-bounds  warn     these bounds don't depend on an type parameters
-                                          type-alias-bounds  warn     bounds in type aliases are not enforced
-                                   tyvar-behind-raw-pointer  warn     raw pointer to an inference variable
-                                        uncommon-codepoints  warn     detects uncommon Unicode codepoints in identifiers
-                                    unconditional-recursion  warn     functions that cannot return without calling themselves
-                                              unknown-lints  warn     unrecognized lint attribute
-                                      unnameable-test-items  warn     detects an item that cannot be named being marked as `#[test_case]`
-                                           unreachable-code  warn     detects unreachable code paths
-                                       unreachable-patterns  warn     detects unreachable patterns
-                                   unstable-name-collisions  warn     detects name collision with an existing but unstable method
-                                          unused-allocation  warn     detects unnecessary allocations that can be eliminated
-                                         unused-assignments  warn     detect assignments that will never be read
-                                          unused-attributes  warn     detects attributes that were not used by the compiler
-                                              unused-braces  warn     unnecessary braces around an expression
-                                         unused-comparisons  warn     comparisons made useless by limits of the types involved
-                                        unused-doc-comments  warn     detects doc comments that aren't used by rustdoc
-                                            unused-features  warn     unused features found in crate-level `#[feature]` directives
-                                             unused-imports  warn     imports that are never used
-                                              unused-labels  warn     detects labels that are never used
-                                              unused-macros  warn     detects macros that were not used
-                                            unused-must-use  warn     unused result of a type flagged as `#[must_use]`
-                                                 unused-mut  warn     detect mut variables which don't need to be mutable
-                                              unused-parens  warn     `if`, `match`, `while` and `return` do not need parentheses
-                                              unused-unsafe  warn     unnecessary use of an `unsafe` block
-                                           unused-variables  warn     detect variables which are not used in any way
-                                                   warnings  warn     mass-change the level for lints which produce warnings
-                                where-clauses-object-safety  warn     checks the object safety of where clauses
-                                                 while-true  warn     suggest using `loop { }` instead of `while true { }`
-                                 ambiguous-associated-items  deny     ambiguous associated items
-                                        arithmetic-overflow  deny     arithmetic operation overflows
-                                     conflicting-repr-hints  deny     conflicts between `#[repr(..)]` hints that were previously accepted and used in practice
-                                                  const-err  deny     constant evaluation detected erroneous expression
-                                 ill-formed-attribute-input  deny     ill-formed attribute inputs that were previously accepted and used in practice
-                                         incomplete-include  deny     trailing content in included file
-                                 invalid-type-param-default  deny     type parameter default erroneously allowed in invalid location
-    macro-expanded-macro-exports-accessed-by-absolute-paths  deny     macro-expanded `macro_export` macros from the current crate cannot be referred to by absolute paths
-                                 missing-fragment-specifier  deny     detects missing fragment specifiers in unused `macro_rules!` patterns
-                                         mutable-transmutes  deny     mutating transmuted &mut T from &T may cause undefined behavior
-                                      no-mangle-const-items  deny     const items will not have their symbols exported
-                              order-dependent-trait-objects  deny     trait-object types were treated as different depending on marker-trait order
-                                       overflowing-literals  deny     literal out of range for its type
-                               patterns-in-fns-without-body  deny     patterns in functions without body were erroneously allowed
-                            pub-use-of-private-extern-crate  deny     detect public re-exports of private extern crates
-                                              soft-unstable  deny     a feature gate that doesn't break dependent crates
-                                        unconditional-panic  deny     operation will cause a panic at runtime
-                                        unknown-crate-types  deny     unknown crate type found in `#[crate_type]` directive
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; name &#xa0;default &#xa0;meaning
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; ---- &#xa0;------- &#xa0;-------
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; absolute-paths-not-starting-with-crate &#xa0;allow &#xa0; &#xa0;fully qualified paths that start with a module name instead of `crate`, `self`, or an extern crate name
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; anonymous-parameters &#xa0;allow &#xa0; &#xa0;detects anonymous parameters
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; box-pointers &#xa0;allow &#xa0; &#xa0;use of owned (Box type) heap memory
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; clashing-extern-declarations &#xa0;allow &#xa0; &#xa0;detects when an extern fn has been declared with the same name but different types
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; deprecated-in-future &#xa0;allow &#xa0; &#xa0;detects use of items that will be deprecated in a future version
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;elided-lifetimes-in-paths &#xa0;allow &#xa0; &#xa0;hidden lifetime parameters in types are deprecated
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; explicit-outlives-requirements &#xa0;allow &#xa0; &#xa0;outlives requirements can be inferred
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;indirect-structural-match &#xa0;allow &#xa0; &#xa0;pattern with const indirectly referencing non-structural-match type
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; keyword-idents &#xa0;allow &#xa0; &#xa0;detects edition keywords being used as an identifier
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; macro-use-extern-crate &#xa0;allow &#xa0; &#xa0;the `#[macro_use]` attribute is now deprecated in favor of using macros via the module system
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; meta-variable-misuse &#xa0;allow &#xa0; &#xa0;possible meta-variable misuse at macro definition
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; missing-copy-implementations &#xa0;allow &#xa0; &#xa0;detects potentially-forgotten implementations of `Copy`
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; missing-crate-level-docs &#xa0;allow &#xa0; &#xa0;detects crates with no crate-level documentation
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;missing-debug-implementations &#xa0;allow &#xa0; &#xa0;detects missing implementations of Debug
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; missing-docs &#xa0;allow &#xa0; &#xa0;detects missing documentation for public members
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;missing-doc-code-examples &#xa0;allow &#xa0; &#xa0;detects publicly-exported items without code samples in their documentation
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; non-ascii-idents &#xa0;allow &#xa0; &#xa0;detects non-ASCII identifiers
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;private-doc-tests &#xa0;allow &#xa0; &#xa0;detects code samples in docs of private items not documented by rustdoc
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; single-use-lifetimes &#xa0;allow &#xa0; &#xa0;detects lifetime parameters that are only used once
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;trivial-casts &#xa0;allow &#xa0; &#xa0;detects trivial casts which could be removed
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;trivial-numeric-casts &#xa0;allow &#xa0; &#xa0;detects trivial casts of numeric types which could be removed
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; unaligned-references &#xa0;allow &#xa0; &#xa0;detects unaligned references to fields of packed structs
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;unreachable-pub &#xa0;allow &#xa0; &#xa0;`pub` items not reachable from crate root
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;unsafe-code &#xa0;allow &#xa0; &#xa0;usage of `unsafe` code
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; unsafe-op-in-unsafe-fn &#xa0;allow &#xa0; &#xa0;unsafe operations in unsafe functions without an explicit unsafe block are deprecated
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;unstable-features &#xa0;allow &#xa0; &#xa0;enabling unstable features (deprecated. do not use)
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;unused-crate-dependencies &#xa0;allow &#xa0; &#xa0;crate dependencies that are never used
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; unused-extern-crates &#xa0;allow &#xa0; &#xa0;extern crates that are never used
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; unused-import-braces &#xa0;allow &#xa0; &#xa0;unnecessary braces around an imported item
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; unused-lifetimes &#xa0;allow &#xa0; &#xa0;detects lifetime parameters that are never used
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;unused-qualifications &#xa0;allow &#xa0; &#xa0;detects unnecessarily qualified names
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; unused-results &#xa0;allow &#xa0; &#xa0;unused result of an expression in a statement
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; variant-size-differences &#xa0;allow &#xa0; &#xa0;detects enums with widely varying variant sizes
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;array-into-iter &#xa0;warn &#xa0; &#xa0; detects calling `into_iter` on arrays
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; asm-sub-register &#xa0;warn &#xa0; &#xa0; using only a subset of a register for inline asm inputs
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; bare-trait-objects &#xa0;warn &#xa0; &#xa0; suggest using `dyn Trait` for trait objects
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; bindings-with-variant-name &#xa0;warn &#xa0; &#xa0; detects pattern bindings with the same name as one of the matched variants
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; cenum-impl-drop-cast &#xa0;warn &#xa0; &#xa0; a C-like enum implementing Drop is cast
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; coherence-leak-check &#xa0;warn &#xa0; &#xa0; distinct impls distinguished only by the leak-check code
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;confusable-idents &#xa0;warn &#xa0; &#xa0; detects visually confusable pairs between identifiers
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;dead-code &#xa0;warn &#xa0; &#xa0; detect unused, unexported items
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; deprecated &#xa0;warn &#xa0; &#xa0; detects use of deprecated items
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;ellipsis-inclusive-range-patterns &#xa0;warn &#xa0; &#xa0; `...` range patterns are deprecated
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;exported-private-dependencies &#xa0;warn &#xa0; &#xa0; public interface leaks type from a private dependency
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; illegal-floating-point-literal-pattern &#xa0;warn &#xa0; &#xa0; floating-point literals cannot be used in patterns
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;improper-ctypes &#xa0;warn &#xa0; &#xa0; proper use of libc types in foreign modules
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;improper-ctypes-definitions &#xa0;warn &#xa0; &#xa0; proper use of libc types in foreign item definitions
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;incomplete-features &#xa0;warn &#xa0; &#xa0; incomplete features that may function improperly in some or all cases
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; inline-no-sanitize &#xa0;warn &#xa0; &#xa0; detects incompatible use of `#[inline(always)]` and `#[no_sanitize(...)]`
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;intra-doc-link-resolution-failure &#xa0;warn &#xa0; &#xa0; failures in resolving intra-doc link targets
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; invalid-codeblock-attributes &#xa0;warn &#xa0; &#xa0; codeblock attribute looks a lot like a known one
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;invalid-value &#xa0;warn &#xa0; &#xa0; an invalid value is being created (such as a NULL reference)
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; irrefutable-let-patterns &#xa0;warn &#xa0; &#xa0; detects irrefutable patterns in if-let and while-let statements
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;late-bound-lifetime-arguments &#xa0;warn &#xa0; &#xa0; detects generic lifetime arguments in path segments with late bound lifetime parameters
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; mixed-script-confusables &#xa0;warn &#xa0; &#xa0; detects Unicode scripts whose mixed script confusables codepoints are solely used
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;mutable-borrow-reservation-conflict &#xa0;warn &#xa0; &#xa0; reservation of a two-phased borrow conflicts with other shared borrows
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; non-camel-case-types &#xa0;warn &#xa0; &#xa0; types, variants, traits and type parameters should have camel case names
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; non-shorthand-field-patterns &#xa0;warn &#xa0; &#xa0; using `Struct { x: x }` instead of `Struct { x }` in a pattern
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; non-snake-case &#xa0;warn &#xa0; &#xa0; variables, methods, functions, lifetime parameters and modules should have snake case names
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; non-upper-case-globals &#xa0;warn &#xa0; &#xa0; static constants should have uppercase identifiers
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;no-mangle-generic-items &#xa0;warn &#xa0; &#xa0; generic items must be mangled
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; overlapping-patterns &#xa0;warn &#xa0; &#xa0; detects overlapping patterns
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;path-statements &#xa0;warn &#xa0; &#xa0; path statements with no effect
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;private-in-public &#xa0;warn &#xa0; &#xa0; detect private items in public interfaces not caught by the old implementation
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;proc-macro-derive-resolution-fallback &#xa0;warn &#xa0; &#xa0; detects proc macro derives using inaccessible names from parent modules
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; redundant-semicolons &#xa0;warn &#xa0; &#xa0; detects unnecessary trailing semicolons
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;renamed-and-removed-lints &#xa0;warn &#xa0; &#xa0; lints that have been renamed or removed
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;safe-packed-borrows &#xa0;warn &#xa0; &#xa0; safe borrows of fields of packed structs were erroneously allowed
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;stable-features &#xa0;warn &#xa0; &#xa0; stable features found in `#[feature]` directive
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; trivial-bounds &#xa0;warn &#xa0; &#xa0; these bounds don't depend on an type parameters
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;type-alias-bounds &#xa0;warn &#xa0; &#xa0; bounds in type aliases are not enforced
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; tyvar-behind-raw-pointer &#xa0;warn &#xa0; &#xa0; raw pointer to an inference variable
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;uncommon-codepoints &#xa0;warn &#xa0; &#xa0; detects uncommon Unicode codepoints in identifiers
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;unconditional-recursion &#xa0;warn &#xa0; &#xa0; functions that cannot return without calling themselves
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;unknown-lints &#xa0;warn &#xa0; &#xa0; unrecognized lint attribute
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;unnameable-test-items &#xa0;warn &#xa0; &#xa0; detects an item that cannot be named being marked as `#[test_case]`
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; unreachable-code &#xa0;warn &#xa0; &#xa0; detects unreachable code paths
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; unreachable-patterns &#xa0;warn &#xa0; &#xa0; detects unreachable patterns
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; unstable-name-collisions &#xa0;warn &#xa0; &#xa0; detects name collision with an existing but unstable method
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;unused-allocation &#xa0;warn &#xa0; &#xa0; detects unnecessary allocations that can be eliminated
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; unused-assignments &#xa0;warn &#xa0; &#xa0; detect assignments that will never be read
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;unused-attributes &#xa0;warn &#xa0; &#xa0; detects attributes that were not used by the compiler
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;unused-braces &#xa0;warn &#xa0; &#xa0; unnecessary braces around an expression
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; unused-comparisons &#xa0;warn &#xa0; &#xa0; comparisons made useless by limits of the types involved
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;unused-doc-comments &#xa0;warn &#xa0; &#xa0; detects doc comments that aren't used by rustdoc
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;unused-features &#xa0;warn &#xa0; &#xa0; unused features found in crate-level `#[feature]` directives
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; unused-imports &#xa0;warn &#xa0; &#xa0; imports that are never used
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;unused-labels &#xa0;warn &#xa0; &#xa0; detects labels that are never used
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;unused-macros &#xa0;warn &#xa0; &#xa0; detects macros that were not used
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;unused-must-use &#xa0;warn &#xa0; &#xa0; unused result of a type flagged as `#[must_use]`
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; unused-mut &#xa0;warn &#xa0; &#xa0; detect mut variables which don't need to be mutable
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;unused-parens &#xa0;warn &#xa0; &#xa0; `if`, `match`, `while` and `return` do not need parentheses
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;unused-unsafe &#xa0;warn &#xa0; &#xa0; unnecessary use of an `unsafe` block
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; unused-variables &#xa0;warn &#xa0; &#xa0; detect variables which are not used in any way
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; warnings &#xa0;warn &#xa0; &#xa0; mass-change the level for lints which produce warnings
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;where-clauses-object-safety &#xa0;warn &#xa0; &#xa0; checks the object safety of where clauses
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; while-true &#xa0;warn &#xa0; &#xa0; suggest using `loop { }` instead of `while true { }`
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; ambiguous-associated-items &#xa0;deny &#xa0; &#xa0; ambiguous associated items
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;arithmetic-overflow &#xa0;deny &#xa0; &#xa0; arithmetic operation overflows
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; conflicting-repr-hints &#xa0;deny &#xa0; &#xa0; conflicts between `#[repr(..)]` hints that were previously accepted and used in practice
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;const-err &#xa0;deny &#xa0; &#xa0; constant evaluation detected erroneous expression
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; ill-formed-attribute-input &#xa0;deny &#xa0; &#xa0; ill-formed attribute inputs that were previously accepted and used in practice
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; incomplete-include &#xa0;deny &#xa0; &#xa0; trailing content in included file
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; invalid-type-param-default &#xa0;deny &#xa0; &#xa0; type parameter default erroneously allowed in invalid location
+ &#xa0; &#xa0;macro-expanded-macro-exports-accessed-by-absolute-paths &#xa0;deny &#xa0; &#xa0; macro-expanded `macro_export` macros from the current crate cannot be referred to by absolute paths
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; missing-fragment-specifier &#xa0;deny &#xa0; &#xa0; detects missing fragment specifiers in unused `macro_rules!` patterns
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; mutable-transmutes &#xa0;deny &#xa0; &#xa0; mutating transmuted &mut T from &T may cause undefined behavior
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;no-mangle-const-items &#xa0;deny &#xa0; &#xa0; const items will not have their symbols exported
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;order-dependent-trait-objects &#xa0;deny &#xa0; &#xa0; trait-object types were treated as different depending on marker-trait order
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; overflowing-literals &#xa0;deny &#xa0; &#xa0; literal out of range for its type
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; patterns-in-fns-without-body &#xa0;deny &#xa0; &#xa0; patterns in functions without body were erroneously allowed
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;pub-use-of-private-extern-crate &#xa0;deny &#xa0; &#xa0; detect public re-exports of private extern crates
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;soft-unstable &#xa0;deny &#xa0; &#xa0; a feature gate that doesn't break dependent crates
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;unconditional-panic &#xa0;deny &#xa0; &#xa0; operation will cause a panic at runtime
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;unknown-crate-types &#xa0;deny &#xa0; &#xa0; unknown crate type found in `#[crate_type]` directive
 
 
 Lint groups provided by rustc:
 
-                       name  sub-lints
-                       ----  ---------
-                   warnings  all lints that are set to issue warnings
-        future-incompatible  keyword-idents, anonymous-parameters, illegal-floating-point-literal-pattern, private-in-public, pub-use-of-private-extern-crate, invalid-type-param-default, safe-packed-borrows, patterns-in-fns-without-body, missing-fragment-specifier, late-bound-lifetime-arguments, order-dependent-trait-objects, coherence-leak-check, tyvar-behind-raw-pointer, absolute-paths-not-starting-with-crate, unstable-name-collisions, where-clauses-object-safety, proc-macro-derive-resolution-fallback, macro-expanded-macro-exports-accessed-by-absolute-paths, ill-formed-attribute-input, conflicting-repr-hints, ambiguous-associated-items, mutable-borrow-reservation-conflict, indirect-structural-match, soft-unstable, cenum-impl-drop-cast, array-into-iter
-          nonstandard-style  non-camel-case-types, non-snake-case, non-upper-case-globals
-    rust-2018-compatibility  keyword-idents, anonymous-parameters, tyvar-behind-raw-pointer, absolute-paths-not-starting-with-crate
-           rust-2018-idioms  bare-trait-objects, unused-extern-crates, ellipsis-inclusive-range-patterns, elided-lifetimes-in-paths, explicit-outlives-requirements
-                    rustdoc  intra-doc-link-resolution-failure, invalid-codeblock-attributes, missing-doc-code-examples, private-doc-tests
-                     unused  unused-imports, unused-variables, unused-assignments, dead-code, unused-mut, unreachable-code, unreachable-patterns, overlapping-patterns, unused-must-use, unused-unsafe, path-statements, unused-attributes, unused-macros, unused-allocation, unused-doc-comments, unused-extern-crates, unused-features, unused-labels, unused-parens, unused-braces, redundant-semicolons
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; name &#xa0;sub-lints
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; ---- &#xa0;---------
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; warnings &#xa0;all lints that are set to issue warnings
+ &#xa0; &#xa0; &#xa0; &#xa0;future-incompatible &#xa0;keyword-idents, anonymous-parameters, illegal-floating-point-literal-pattern, private-in-public, pub-use-of-private-extern-crate, invalid-type-param-default, safe-packed-borrows, patterns-in-fns-without-body, missing-fragment-specifier, late-bound-lifetime-arguments, order-dependent-trait-objects, coherence-leak-check, tyvar-behind-raw-pointer, absolute-paths-not-starting-with-crate, unstable-name-collisions, where-clauses-object-safety, proc-macro-derive-resolution-fallback, macro-expanded-macro-exports-accessed-by-absolute-paths, ill-formed-attribute-input, conflicting-repr-hints, ambiguous-associated-items, mutable-borrow-reservation-conflict, indirect-structural-match, soft-unstable, cenum-impl-drop-cast, array-into-iter
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;nonstandard-style &#xa0;non-camel-case-types, non-snake-case, non-upper-case-globals
+ &#xa0; &#xa0;rust-2018-compatibility &#xa0;keyword-idents, anonymous-parameters, tyvar-behind-raw-pointer, absolute-paths-not-starting-with-crate
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; rust-2018-idioms &#xa0;bare-trait-objects, unused-extern-crates, ellipsis-inclusive-range-patterns, elided-lifetimes-in-paths, explicit-outlives-requirements
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;rustdoc &#xa0;intra-doc-link-resolution-failure, invalid-codeblock-attributes, missing-doc-code-examples, private-doc-tests
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; unused &#xa0;unused-imports, unused-variables, unused-assignments, dead-code, unused-mut, unreachable-code, unreachable-patterns, overlapping-patterns, unused-must-use, unused-unsafe, path-statements, unused-attributes, unused-macros, unused-allocation, unused-doc-comments, unused-extern-crates, unused-features, unused-labels, unused-parens, unused-braces, redundant-semicolons
 
 
 Compiler plugins can provide additional lints and lint groups. To see a listing of these, re-run `rustc -W help` with a crate filename.
@@ -577,713 +577,123 @@ Compiler plugins can provide additional lints and lint groups. To see a listing 
 <h3>ReScript</h3>
 <pre><code>
 Usage : bsb.exe &lt;bsb-options&gt; -- &lt;ninja_options&gt;
-For ninja options, try bsb.exe --  -h.  
+For ninja options, try bsb.exe -- &#xa0;-h. &#xa0;
 Note they are supposed to be internals and not reliable.
 ninja will be loaded either by just running `bsb.exe' or `bsb.exe .. -- ..`
 It is always recommended to run ninja via bsb.exe
 Options:
-  -v            Print version and exit
-  -version      Print version and exit
-  -verbose      Set the output(from bsb) to be verbose
-  -w            Watch mode
-  -clean-world  Clean all bs dependencies
-  -clean        Clean only current project
-  -make-world   Build all dependencies and itself 
-  -install      Install public interface files into lib/ocaml
-  -init         Init sample project to get started. 
-                Note (`bsb -init sample` will create a sample project while 
-                `bsb -init .` will reuse current directory)
-  -theme        The theme for project initialization. 
-                default is basic:
-                https://github.com/rescript-lang/rescript-compiler/tree/master/jscomp/bsb/templates
-  -themes       List all available themes
-  -where        Show where bsb.exe is located
-  -ws           [host:]port 
-                specify a websocket number (and optionally, a host). 
-                When a build finishes, we send a message to that port. 
-                For tools that listen on build completion.
+ &#xa0;-v &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Print version and exit
+ &#xa0;-version &#xa0; &#xa0; &#xa0;Print version and exit
+ &#xa0;-verbose &#xa0; &#xa0; &#xa0;Set the output(from bsb) to be verbose
+ &#xa0;-w &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Watch mode
+ &#xa0;-clean-world &#xa0;Clean all bs dependencies
+ &#xa0;-clean &#xa0; &#xa0; &#xa0; &#xa0;Clean only current project
+ &#xa0;-make-world &#xa0; Build all dependencies and itself 
+ &#xa0;-install &#xa0; &#xa0; &#xa0;Install public interface files into lib/ocaml
+ &#xa0;-init &#xa0; &#xa0; &#xa0; &#xa0; Init sample project to get started. 
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Note (`bsb -init sample` will create a sample project while 
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;`bsb -init .` will reuse current directory)
+ &#xa0;-theme &#xa0; &#xa0; &#xa0; &#xa0;The theme for project initialization. 
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;default is basic:
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;https://github.com/rescript-lang/rescript-compiler/tree/master/jscomp/bsb/templates
+ &#xa0;-themes &#xa0; &#xa0; &#xa0; List all available themes
+ &#xa0;-where &#xa0; &#xa0; &#xa0; &#xa0;Show where bsb.exe is located
+ &#xa0;-ws &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; [host:]port 
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;specify a websocket number (and optionally, a host). 
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;When a build finishes, we send a message to that port. 
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;For tools that listen on build completion.
 
 </code></pre>
 <h3>ReScript</h3>
 <pre><code>
 Usage : bsb.exe &lt;bsb-options&gt; -- &lt;ninja_options&gt;
-For ninja options, try bsb.exe --  -h.  
+For ninja options, try bsb.exe -- &#xa0;-h. &#xa0;
 Note they are supposed to be internals and not reliable.
 ninja will be loaded either by just running `bsb.exe' or `bsb.exe .. -- ..`
 It is always recommended to run ninja via bsb.exe
 Options:
-  -v            Print version and exit
-  -version      Print version and exit
-  -verbose      Set the output(from bsb) to be verbose
-  -w            Watch mode
-  -clean-world  Clean all bs dependencies
-  -clean        Clean only current project
-  -make-world   Build all dependencies and itself 
-  -install      Install public interface files into lib/ocaml
-  -init         Init sample project to get started. 
-                Note (`bsb -init sample` will create a sample project while 
-                `bsb -init .` will reuse current directory)
-  -theme        The theme for project initialization. 
-                default is basic:
-                https://github.com/rescript-lang/rescript-compiler/tree/master/jscomp/bsb/templates
-  -themes       List all available themes
-  -where        Show where bsb.exe is located
-  -ws           [host:]port 
-                specify a websocket number (and optionally, a host). 
-                When a build finishes, we send a message to that port. 
-                For tools that listen on build completion.
+ &#xa0;-v &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Print version and exit
+ &#xa0;-version &#xa0; &#xa0; &#xa0;Print version and exit
+ &#xa0;-verbose &#xa0; &#xa0; &#xa0;Set the output(from bsb) to be verbose
+ &#xa0;-w &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Watch mode
+ &#xa0;-clean-world &#xa0;Clean all bs dependencies
+ &#xa0;-clean &#xa0; &#xa0; &#xa0; &#xa0;Clean only current project
+ &#xa0;-make-world &#xa0; Build all dependencies and itself 
+ &#xa0;-install &#xa0; &#xa0; &#xa0;Install public interface files into lib/ocaml
+ &#xa0;-init &#xa0; &#xa0; &#xa0; &#xa0; Init sample project to get started. 
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;Note (`bsb -init sample` will create a sample project while 
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;`bsb -init .` will reuse current directory)
+ &#xa0;-theme &#xa0; &#xa0; &#xa0; &#xa0;The theme for project initialization. 
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;default is basic:
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;https://github.com/rescript-lang/rescript-compiler/tree/master/jscomp/bsb/templates
+ &#xa0;-themes &#xa0; &#xa0; &#xa0; List all available themes
+ &#xa0;-where &#xa0; &#xa0; &#xa0; &#xa0;Show where bsb.exe is located
+ &#xa0;-ws &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; [host:]port 
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;specify a websocket number (and optionally, a host). 
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;When a build finishes, we send a message to that port. 
+ &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0; &#xa0;For tools that listen on build completion.
 
 </code></pre>
 <h3>Other build tools</h3>
 <p>These aren't compilers, which means they're a bit less rigidly &quot;professional&quot; in their output and have a bit more style about themselves. Rome especially is very clear in its hierarchy and visual weighting, but it's also very long - trade-offs.</p>
-<p>Some of these tools of these are definitely pushing the ANSI to HTML systems in my tooling, so forgive some ASCII errors. I'll get to them with time.</p>
+<p>Some of these tools of these are definitely pushing the ANSI to HTML systems in my tooling, so forgive some ASCII errors. I'll send some PRs with time.</p>
 <p>Rome's help output next is probably my favourite of the whole set, the use of bold, lines and taking the width into account all make for a very polished introduction to the tool.</p>
 <pre><code>
-
-                                                                                         
-$ /home/runner/work/compiler-error-messages/compiler-error-messages/node_modules/.bin/rome --help
-
- Usage ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-  rome [command] [flags]
-
- Global Flags ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-  --auxiliary-diagnostic-format &lt;input&gt; When printing diagnostics, output another
-                                        format alongside - values "github-actions")
-  --benchmark                           Run a command multiple times, calculating
-                                        average
-  --benchmark-iterations &lt;num&gt;          The amount of benchmark iterations to perform
-                                        - default 10
-  --collect-markers                     Collect and write performance markers to disk
-  --cwd &lt;path&gt;                          Specify a different working directory
-  --fieri                               Head to flavortown
-  --grep &lt;input&gt;                        Only display diagnostics with messages
-                                        containing this string - default ""
-  --help                                Show this help screen
-  --inverse-grep                        Flip grep match. Only display diagnostics with
-                                        messages that do NOT contain the grep string
-  --log-path &lt;path&gt;                     Path where to output logs. When omitted logs
-                                        are not written anywhere
-  --logs                                Output server logs
-  --log-shell-completions &lt;shell&gt;       Generate shell completion commands - values
-                                        "fish" "bash")
-  --log-workers                         Output worker logs
-  --markers-path &lt;path&gt;                 Path where to write markers. When ommitted
-                                        defaults to Marker-TIMESTAMP.json
-  --max-diagnostics &lt;num&gt;               Cap the amount of diagnostics displayed -
-                                        default 20
-  --no-profile-workers                  Exclude workers from profile
-  --output-color-depth &lt;num&gt;            Change the display width. By default it is
-                                        automatically inferred and updated from the
-                                        terminal.
-  --output-columns &lt;num&gt;                Change the display width. By default it is
-                                        automatically inferred and updated from the
-                                        terminal.
-  --output-format &lt;input&gt;               Change the output format. By default it is
-                                        automatically inferred from terminal settings.
-                                        - values "ansi" "html" "none")
-  --output-redirect-error               Redirect stderr to stdout.
-  --output-tty                          Treat output as TTY regardless of terminal
-                                        information. This will enable things like ANSI
-                                        cursor, progress bars etc.
-  --profile                             Collect and write profile to disk. Includes
-                                        profiles for all processes.
-  --profile-path &lt;path&gt;                 Path where to write profile. When omitted
-                                        defaults to Profile-TIMESTAMP.json
-  --profile-sampling &lt;microsec&gt;         Profiler sampling interval in microseconds -
-                                        default 100
-  --profile-timeout &lt;millisec&gt;          Stop the profile after the milliseconds
-                                        specified. When omitted the profile is of the
-                                        whole command
-  --rage                                Create a rage tarball of debug information
-  --rage-path &lt;path&gt;                    Path where to write rage tarball. When omitted
-                                        defaults to Rage-TIMESTAMP.tgz
-  --resolver-mocks                      Enable mocks for module resolution
-  --resolver-platform &lt;platform&gt;        Specify the platform for module resolution -
-                                        values "ios" "android" "mobile" "electron"
-                                        "web" "node")
-  --resolver-scale &lt;num&gt;                Specify the image scale for module resolution
-  --review                              Display and perform actions on diagnostics.
-                                        Only some commands support this.
-  --show-all-diagnostics                Display all diagnostics ignoring caps
-  --silent                              Don't write anything to the console
-  --temporary-daemon                    Start a daemon, if one isn't already running,
-                                        for the lifetime of this command
-  --timing                              Dump timing information after running the
-                                        command
-  --unsafe-writes                       When writing files, don't verify mtime or
-                                        existence. Potentially dangerous and could
-                                        lead to unintended data loss
-  --verbose-diagnostics                 Display hidden and truncated diagnostic
-                                        information
-  --version                             Show the version
-  --watch                               Keep running command and update on file
-                                        changes. Only some commands support this.
-  --write-shell-completions &lt;shell&gt;     Write shell completion commands - values
-                                        "fish" "bash")
-
- Commands ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-  Code Quality Commands
-  - check run lint against a set of files
-
-  Internal Commands
-  - format formats a single file
-  - json dump an RJSON file to regular JSON
-  - logs view the logs stream
-  - noop do nothing
-  - rage create a rage archive for debugging
-
-  Process Management Commands
-  - init initialise the project
-  - restart restart daemon
-  - start start daemon (if none running)
-  - status get the current daemon status
-  - stop stop a running daemon if one exists
-
-  Project Management Commands
-  - config disable modify a project config- set the &lt;key&gt; to false
-  - config enable modify a project config- set the &lt;key&gt; to true
-  - config location show the config location
-  - config push modify a project config - push &lt;values&gt; to &lt;key&gt;
-  - config set modify a project config - set the &lt;key&gt; to &lt;value&gt;
-  - config set-directory modify a project config - set the &lt;key&gt; to &lt;value&gt;
-  - lsp connect to an lsp
-
-  Source Code Commands
-  - cache clear clear the cache directory
-  - cache dir show the location of the cache directory
-  - recover apply apply a specific patch from the recovery store
-  - recover clear clear the contents of the recovery store
-  - recover diff show the differences that would be applied for a given patch
-  - recover dir print the location of the recovery store
-  - recover list show all patches in the recovery store
-  - recover pop apply the most recent patch in the recovery story
-
-  ℹ To view help for a specific command run
-  $ rome command_name --help
-
-
-                                                                                         
-error Command failed with exit code 1.
-
-                                                                                         
-info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
 
 </code></pre>
 <p>Jest has a static line width, and does a good job of wrapping the long paragraphs for the bazillion config options.</p>
 <pre><code>
 
-                                                                                         
-$ /home/runner/work/compiler-error-messages/compiler-error-messages/node_modules/.bin/jest --help
-Usage: jest [--config=&lt;pathToConfigFile&gt;] [TestPathPattern]
-
-Options:
-  --help, -h                    Show help                              [boolean]
-  --version, -v                 Print the version and exit             [boolean]
-  --all                         The opposite of `onlyChanged`. If `onlyChanged`
-                                is set by default, running jest with `--all`
-                                will force Jest to run all tests instead of
-                                running only tests related to changed files.
-                                                                       [boolean]
-  --automock                    Automock all files by default.         [boolean]
-  --bail, -b                    Exit the test suite immediately after `n` number
-                                of failing tests.                      [boolean]
-  --browser                     Respect the "browser" field in package.json when
-                                resolving modules. Some packages export
-                                different versions based on whether they are
-                                operating in node.js or a browser.     [boolean]
-  --cache                       Whether to use the transform cache. Disable the
-                                cache using --no-cache.                [boolean]
-  --cacheDirectory              The directory where Jest should store its cached
-                                dependency information.                 [string]
-  --changedFilesWithAncestor    Runs tests related to the current changes and
-                                the changes made in the last commit. Behaves
-                                similarly to `--onlyChanged`.          [boolean]
-  --changedSince                Runs tests related to the changes since the
-                                provided branch. If the current branch has
-                                diverged from the given branch, then only
-                                changes made locally will be tested. Behaves
-                                similarly to `--onlyChanged`.           [string]
-  --ci                          Whether to run Jest in continuous integration
-                                (CI) mode. This option is on by default in most
-                                popular CI environments. It will prevent
-                                snapshots from being written unless explicitly
-                                requested.             [boolean] [default: true]
-  --clearCache                  Clears the configured Jest cache directory and
-                                then exits. Default directory can be found by
-                                calling jest --showConfig              [boolean]
-  --clearMocks                  Automatically clear mock calls and instances
-                                between every test. Equivalent to calling
-                                jest.clearAllMocks() between each test.[boolean]
-  --collectCoverage             Alias for --coverage.                  [boolean]
-  --collectCoverageFrom         A glob pattern relative to &lt;rootDir&gt; matching
-                                the files that coverage info needs to be
-                                collected from.                         [string]
-  --collectCoverageOnlyFrom     Explicit list of paths coverage will be
-                                restricted to.                           [array]
-  --color                       Forces test results output color highlighting
-                                (even if stdout is not a TTY). Set to false if
-                                you would like to have no colors.      [boolean]
-  --colors                      Alias for `--color`.                   [boolean]
-  --config, -c                  The path to a jest config file specifying how to
-                                find and execute tests. If no rootDir is set in
-                                the config, the directory containing the config
-                                file is assumed to be the rootDir for the
-                                project.This can also be a JSON encoded value
-                                which Jest will use as configuration.   [string]
-  --coverage                    Indicates that test coverage information should
-                                be collected and reported in the output.
-                                                                       [boolean]
-  --coverageDirectory           The directory where Jest should output its
-                                coverage files.                         [string]
-  --coveragePathIgnorePatterns  An array of regexp pattern strings that are
-                                matched against all file paths before executing
-                                the test. If the file pathmatches any of the
-                                patterns, coverage information will be skipped.
-                                                                         [array]
-  --coverageProvider            Select between Babel and V8 to collect coverage
-                                                        [choices: "babel", "v8"]
-  --coverageReporters           A list of reporter names that Jest uses when
-                                writing coverage reports. Any istanbul reporter
-                                can be used.                             [array]
-  --coverageThreshold           A JSON string with which will be used to
-                                configure minimum threshold enforcement for
-                                coverage results                        [string]
-  --debug                       Print debugging info about your jest config.
-                                                                       [boolean]
-  --detectLeaks                 **EXPERIMENTAL**: Detect memory leaks in tests.
-                                After executing a test, it will try to garbage
-                                collect the global object used, and fail if it
-                                was leaked            [boolean] [default: false]
-  --detectOpenHandles           Print out remaining open handles preventing Jest
-                                from exiting at the end of a test run. Implies
-                                `runInBand`.          [boolean] [default: false]
-  --env                         The test environment used for all tests. This
-                                can point to any file or node module. Examples:
-                                `jsdom`, `node` or `path/to/my-environment.js`
-                                                                        [string]
-  --errorOnDeprecated           Make calling deprecated APIs throw helpful error
-                                messages.             [boolean] [default: false]
-  --expand, -e                  Use this flag to show full diffs instead of a
-                                patch.                                 [boolean]
-  --filter                      Path to a module exporting a filtering function.
-                                This method receives a list of tests which can
-                                be manipulated to exclude tests from running.
-                                Especially useful when used in conjunction with
-                                a testing infrastructure to filter known broken
-                                tests.                                  [string]
-  --findRelatedTests            Find related tests for a list of source files
-                                that were passed in as arguments. Useful for
-                                pre-commit hook integration to run the minimal
-                                amount of tests necessary.             [boolean]
-  --forceExit                   Force Jest to exit after all tests have
-                                completed running. This is useful when resources
-                                set up by test code cannot be adequately cleaned
-                                up.                                    [boolean]
-  --globalSetup                 The path to a module that runs before All Tests.
-                                                                        [string]
-  --globalTeardown              The path to a module that runs after All Tests.
-                                                                        [string]
-  --globals                     A JSON string with map of global variables that
-                                need to be available in all test environments.
-                                                                        [string]
-  --haste                       A JSON string with map of variables for the
-                                haste module system                     [string]
-  --init                        Generate a basic configuration file    [boolean]
-  --injectGlobals               Should Jest inject global variables or not
-                                                                       [boolean]
-  --json                        Prints the test results in JSON. This mode will
-                                send all other test output and user messages to
-                                stderr.                                [boolean]
-  --lastCommit                  Run all tests affected by file changes in the
-                                last commit made. Behaves similarly to
-                                `--onlyChanged`.                       [boolean]
-  --listTests                   Lists all tests Jest will run given the
-                                arguments and exits. Most useful in a CI system
-                                together with `--findRelatedTests` to determine
-                                the tests Jest will run based on specific files
-                                                      [boolean] [default: false]
-  --logHeapUsage                Logs the heap usage after every test. Useful to
-                                debug memory leaks. Use together with
-                                `--runInBand` and `--expose-gc` in node.
-                                                                       [boolean]
-  --mapCoverage                 Maps code coverage reports against original
-                                source code when transformers supply source
-                                maps.
-
-                                DEPRECATED                             [boolean]
-  --maxConcurrency              Specifies the maximum number of tests that are
-                                allowed to runconcurrently. This only affects
-                                tests using `test.concurrent`.
-                                                           [number] [default: 5]
-  --maxWorkers, -w              Specifies the maximum number of workers the
-                                worker-pool will spawn for running tests. This
-                                defaults to the number of the cores available on
-                                your machine. (its usually best not to override
-                                this default)                           [string]
-  --moduleDirectories           An array of directory names to be searched
-                                recursively up from the requiring module's
-                                location.                                [array]
-  --moduleFileExtensions        An array of file extensions your modules use.
-                                If you require modules without specifying a
-                                file extension, these are the extensions Jest
-                                will look for.                           [array]
-  --moduleNameMapper            A JSON string with a map from regular
-                                expressions to module names or to arrays of
-                                module names that allow to stub out resources,
-                                like images or styles with a single module
-                                                                        [string]
-  --modulePathIgnorePatterns    An array of regexp pattern strings that are
-                                matched against all module paths before those
-                                paths are to be considered "visible" to the
-                                module loader.                           [array]
-  --modulePaths                 An alternative API to setting the NODE_PATH env
-                                variable, modulePaths is an array of absolute
-                                paths to additional locations to search when
-                                resolving modules.                       [array]
-  --noStackTrace                Disables stack trace in test results output
-                                                                       [boolean]
-  --notify                      Activates notifications for test results.
-                                                                       [boolean]
-  --notifyMode                  Specifies when notifications will appear for
-                                test results.
-                                            [string] [default: "failure-change"]
-  --onlyChanged, -o             Attempts to identify which tests to run based on
-                                which files have changed in the current
-                                repository. Only works if you're running tests
-                                in a git or hg repository at the moment.
-                                                                       [boolean]
-  --onlyFailures, -f            Run tests that failed in the previous execution.
-                                                                       [boolean]
-  --outputFile                  Write test results to a file when the --json
-                                option is also specified.               [string]
-  --passWithNoTests             Will not fail if no tests are found (for example
-                                while using `--testPathPattern`.)
-                                                      [boolean] [default: false]
-  --preset                      A preset that is used as a base for Jest's
-                                configuration.                          [string]
-  --prettierPath                The path to the "prettier" module used for
-                                inline snapshots.                       [string]
-  --projects                    A list of projects that use Jest to run all
-                                tests of all projects in a single instance of
-                                Jest.                                    [array]
-  --reporters                   A list of custom reporters for the test suite.
-                                                                         [array]
-  --resetMocks                  Automatically reset mock state between every
-                                test. Equivalent to calling jest.resetAllMocks()
-                                between each test.                     [boolean]
-  --resetModules                If enabled, the module registry for every test
-                                file will be reset before running each
-                                individual test.                       [boolean]
-  --resolver                    A JSON string which allows the use of a custom
-                                resolver.                               [string]
-  --restoreMocks                Automatically restore mock state and
-                                implementation between every test. Equivalent to
-                                calling jest.restoreAllMocks() between each
-                                test.                                  [boolean]
-  --rootDir                     The root directory that Jest should scan for
-                                tests and modules within.               [string]
-  --roots                       A list of paths to directories that Jest should
-                                use to search for files in.              [array]
-  --runInBand, -i               Run all tests serially in the current process
-                                (rather than creating a worker pool of child
-                                processes that run tests). This is sometimes
-                                useful for debugging, but such use cases are
-                                pretty rare.                           [boolean]
-  --runTestsByPath              Used when provided patterns are exact file
-                                paths. This avoids converting them into a
-                                regular expression and matching it against every
-                                single file.          [boolean] [default: false]
-  --runner                      Allows to use a custom runner instead of Jest's
-                                default test runner.                    [string]
-  --selectProjects              Run only the tests of the specified
-                                projects.Jest uses the attribute `displayName`
-                                in the configuration to identify each project.
-                                                                         [array]
-  --setupFiles                  A list of paths to modules that run some code
-                                to configure or set up the testing environment
-                                before each test.                        [array]
-  --setupFilesAfterEnv          A list of paths to modules that run some code
-                                to configure or set up the testing framework
-                                before each test                         [array]
-  --showConfig                  Print your jest config and then exits. [boolean]
-  --silent                      Prevent tests from printing messages through the
-                                console.                               [boolean]
-  --skipFilter                  Disables the filter provided by --filter. Useful
-                                for CI jobs, or local enforcement when fixing
-                                tests.                                 [boolean]
-  --snapshotSerializers         A list of paths to snapshot serializer modules
-                                Jest should use for snapshot testing.    [array]
-  --testEnvironment             Alias for --env                         [string]
-  --testEnvironmentOptions      Test environment options that will be passed to
-                                the testEnvironment. The relevant options depend
-                                on the environment.                     [string]
-  --testFailureExitCode         Exit code of `jest` command if the test run
-                                failed                                  [string]
-  --testLocationInResults       Add `location` information to the test results
-                                                      [boolean] [default: false]
-  --testMatch                   The glob patterns Jest uses to detect test
-                                files.                                   [array]
-  --testNamePattern, -t         Run only tests with a name that matches the
-                                regex pattern.                          [string]
-  --testPathIgnorePatterns      An array of regexp pattern strings that are
-                                matched against all test paths before executing
-                                the test. If the test path matches any of the
-                                patterns, it will be skipped.            [array]
-  --testPathPattern             A regexp pattern string that is matched against
-                                all tests paths before executing the test.
-                                                                         [array]
-  --testRegex                   A string or array of string regexp patterns that
-                                Jest uses to detect test files.          [array]
-  --testResultsProcessor        Allows the use of a custom results processor.
-                                This processor must be a node module that
-                                exports a function expecting as the first
-                                argument the result object.             [string]
-  --testRunner                  Allows to specify a custom test runner. The
-                                default is  `jasmine2`. A path to a custom test
-                                runner can be provided:
-                                `&lt;rootDir&gt;/path/to/testRunner.js`.      [string]
-  --testSequencer               Allows to specify a custom test sequencer. The
-                                default is `@jest/test-sequencer`. A path to a
-                                custom test sequencer can be provided:
-                                `&lt;rootDir&gt;/path/to/testSequencer.js`    [string]
-  --testTimeout                 This option sets the default timeouts of test
-                                cases.                                  [number]
-  --testURL                     This option sets the URL for the jsdom
-                                environment.                            [string]
-  --timers                      Setting this value to fake allows the use of
-                                fake timers for functions such as setTimeout.
-                                                                        [string]
-  --transform                   A JSON string which maps from regular
-                                expressions to paths to transformers.   [string]
-  --transformIgnorePatterns     An array of regexp pattern strings that are
-                                matched against all source file paths before
-                                transformation.                          [array]
-  --unmockedModulePathPatterns  An array of regexp pattern strings that are
-                                matched against all modules before the module
-                                loader will automatically return a mock for
-                                them.                                    [array]
-  --updateSnapshot, -u          Use this flag to re-record snapshots. Can be
-                                used together with a test suite pattern or with
-                                `--testNamePattern` to re-record snapshot for
-                                test matching the pattern              [boolean]
-  --useStderr                   Divert all output to stderr.           [boolean]
-  --verbose                     Display individual test results with the test
-                                suite hierarchy.                       [boolean]
-  --watch                       Watch files for changes and rerun tests related
-                                to changed files. If you want to re-run all
-                                tests when a file has changed, use the
-                                `--watchAll` option.                   [boolean]
-  --watchAll                    Watch files for changes and rerun all tests. If
-                                you want to re-run only the tests related to the
-                                changed files, use the `--watch` option.
-                                                                       [boolean]
-  --watchPathIgnorePatterns     An array of regexp pattern strings that are
-                                matched against all paths before trigger test
-                                re-run in watch mode. If the test path matches
-                                any of the patterns, it will be skipped. [array]
-  --watchman                    Whether to use watchman for file crawling.
-                                Disable using --no-watchman.           [boolean]
-
-Documentation: https://jestjs.io/
-
 </code></pre>
 <p>Prettier's help does a good job of categorizing different types of settings via a hierarchy.</p>
 <pre><code>
 
-                                                                                         
-$ /home/runner/work/compiler-error-messages/compiler-error-messages/node_modules/.bin/prettier --help
-Usage: prettier [options] [file/dir/glob ...]
-
-By default, output is written to stdout.
-Stdin is read if it is piped to Prettier and no files are given.
-
-Output options:
-
-  -c, --check              Check if the given files are formatted, print a human-friendly summary
-                           message and paths to unformatted files (see also --list-different).
-  -l, --list-different     Print the names of files that are different from Prettier's formatting (see also --check).
-  -w, --write              Edit files in-place. (Beware!)
-
-Format options:
-
-  --arrow-parens &lt;always|avoid&gt;
-                           Include parentheses around a sole arrow function parameter.
-                           Defaults to always.
-  --no-bracket-spacing     Do not print spaces between brackets.
-  --embedded-language-formatting &lt;auto|off&gt;
-                           Control how Prettier formats quoted code embedded in the file.
-                           Defaults to auto.
-  --end-of-line &lt;lf|crlf|cr|auto&gt;
-                           Which end of line characters to apply.
-                           Defaults to lf.
-  --html-whitespace-sensitivity &lt;css|strict|ignore&gt;
-                           How to handle whitespaces in HTML.
-                           Defaults to css.
-  --jsx-bracket-same-line  Put &gt; on the last line instead of at a new line.
-                           Defaults to false.
-  --jsx-single-quote       Use single quotes in JSX.
-                           Defaults to false.
-  --parser &lt;flow|babel|babel-flow|babel-ts|typescript|espree|meriyah|css|less|scss|json|json5|json-stringify|graphql|markdown|mdx|vue|yaml|html|angular|lwc&gt;
-                           Which parser to use.
-  --print-width &lt;int&gt;      The line length where Prettier will try wrap.
-                           Defaults to 80.
-  --prose-wrap &lt;always|never|preserve&gt;
-                           How to wrap prose.
-                           Defaults to preserve.
-  --quote-props &lt;as-needed|consistent|preserve&gt;
-                           Change when properties in objects are quoted.
-                           Defaults to as-needed.
-  --no-semi                Do not print semicolons, except at the beginning of lines which may need them.
-  --single-quote           Use single quotes instead of double quotes.
-                           Defaults to false.
-  --tab-width &lt;int&gt;        Number of spaces per indentation level.
-                           Defaults to 2.
-  --trailing-comma &lt;es5|none|all&gt;
-                           Print trailing commas wherever possible when multi-line.
-                           Defaults to es5.
-  --use-tabs               Indent with tabs instead of spaces.
-                           Defaults to false.
-  --vue-indent-script-and-style
-                           Indent script and style tags in Vue files.
-                           Defaults to false.
-
-Config options:
-
-  --config &lt;path&gt;          Path to a Prettier configuration file (.prettierrc, package.json, prettier.config.js).
-  --no-config              Do not look for a configuration file.
-  --config-precedence &lt;cli-override|file-override|prefer-file&gt;
-                           Define in which order config files and CLI options should be evaluated.
-                           Defaults to cli-override.
-  --no-editorconfig        Don't take .editorconfig into account when parsing configuration.
-  --find-config-path &lt;path&gt;
-                           Find and print the path to a configuration file for the given input file.
-  --ignore-path &lt;path&gt;     Path to a file with patterns describing files to ignore.
-                           Defaults to .prettierignore.
-  --plugin &lt;path&gt;          Add a plugin. Multiple plugins can be passed as separate `--plugin`s.
-                           Defaults to [].
-  --plugin-search-dir &lt;path&gt;
-                           Custom directory that contains prettier plugins in node_modules subdirectory.
-                           Overrides default behavior when plugins are searched relatively to the location of Prettier.
-                           Multiple values are accepted.
-                           Defaults to [].
-  --with-node-modules      Process files inside 'node_modules' directory.
-
-Editor options:
-
-  --cursor-offset &lt;int&gt;    Print (to stderr) where a cursor at the given position would move to after formatting.
-                           This option cannot be used with --range-start and --range-end.
-                           Defaults to -1.
-  --range-end &lt;int&gt;        Format code ending at a given character offset (exclusive).
-                           The range will extend forwards to the end of the selected statement.
-                           This option cannot be used with --cursor-offset.
-                           Defaults to Infinity.
-  --range-start &lt;int&gt;      Format code starting at a given character offset.
-                           The range will extend backwards to the start of the first line containing the selected statement.
-                           This option cannot be used with --cursor-offset.
-                           Defaults to 0.
-
-Other options:
-
-  --no-color               Do not colorize error messages.
-  --file-info &lt;path&gt;       Extract the following info (as JSON) for a given file path. Reported fields:
-                           * ignored (boolean) - true if file path is filtered by --ignore-path
-                           * inferredParser (string | null) - name of parser inferred from file path
-  -h, --help &lt;flag&gt;        Show CLI usage, or details about the given flag.
-                           Example: --help write
-  -u, --ignore-unknown     Ignore unknown files.
-  --insert-pragma          Insert @format pragma into file's first docblock comment.
-                           Defaults to false.
-  --loglevel &lt;silent|error|warn|log|debug&gt;
-                           What level of logs to report.
-                           Defaults to log.
-  --require-pragma         Require either '@prettier' or '@format' to be present in the file's first docblock comment
-                           in order for it to be formatted.
-                           Defaults to false.
-  --stdin-filepath &lt;path&gt;  Path to the file to pretend that stdin comes from.
-  --support-info           Print support information as JSON.
-  -v, --version            Print Prettier version.
-
-
-
 </code></pre>
 <p>I wrote this CLI, sure, but I think I did a pretty good job on offering a bunch of ways to go from here in the &quot;footer&quot; which hasn't really been represented other than Jest's mention of the website.</p>
 <pre><code>
-
-                                                                                         
-$ /home/runner/work/compiler-error-messages/compiler-error-messages/node_modules/.bin/danger --help
-Usage: danger [options] [command]
-
-Options:
-  -V, --version  output the version number
-  -h, --help     output usage information
-
-Commands:
-  init           Helps you get started with Danger
-  ci             Runs Danger on CI
-  process        Like `ci` but lets another process handle evaluating a Dangerfile
-  pr             Runs your local Dangerfile against an existing GitHub PR. Will not post on the PR
-  runner         Runs a dangerfile against a DSL passed in via STDIN [You probably don't need this]
-  local          Runs danger standalone on a repo, useful for git hooks
-  reset-status   Set the status of a PR to pending when a new CI run starts
-  help [cmd]     display help for [cmd]
-
-
-  Docs:
-
-    -&gt; Getting started:
-       http://danger.systems/js/guides/getting_started.html
-
-    -&gt; The Dangerfile
-       http://danger.systems/js/guides/the_dangerfile.html
-
-    -&gt; API Reference
-       http://danger.systems/js/reference.html
 
 </code></pre>
 <p>The GitHub CLI does a good job of using <strong>BOLD CAPS</strong> to indicate categories, and then very predictable text output for the rest. They must have really thought about the copy for these commands because they are very terse!</p>
 <pre><code>
 Work seamlessly with GitHub from the command line.
 
-[0;1;39mUSAGE<span style="font-weight:normal;opacity:1;color:#feffff;background:#040404;">
-  gh &lt;command&gt; &lt;subcommand&gt; [flags]
+<a style="font-weight:bold;"><a style="color:feffff">USAGE</a></a>
+ &#xa0;gh &lt;command&gt; &lt;subcommand&gt; [flags]
 
-[0;1;39mCORE COMMANDS</span>
-  gist:       Manage gists
-  issue:      Manage issues
-  pr:         Manage pull requests
-  release:    Manage GitHub releases
-  repo:       Create, clone, fork, and view repositories
+<a style="font-weight:bold;"><a style="color:feffff">CORE COMMANDS</a></a>
+ &#xa0;gist: &#xa0; &#xa0; &#xa0; Manage gists
+ &#xa0;issue: &#xa0; &#xa0; &#xa0;Manage issues
+ &#xa0;pr: &#xa0; &#xa0; &#xa0; &#xa0; Manage pull requests
+ &#xa0;release: &#xa0; &#xa0;Manage GitHub releases
+ &#xa0;repo: &#xa0; &#xa0; &#xa0; Create, clone, fork, and view repositories
 
-[0;1;39mADDITIONAL COMMANDS<span style="font-weight:normal;opacity:1;color:#feffff;background:#040404;">
-  alias:      Create command shortcuts
-  api:        Make an authenticated GitHub API request
-  auth:       Login, logout, and refresh your authentication
-  completion: Generate shell completion scripts
-  config:     Manage configuration for gh
-  help:       Help about any command
-  secret:     Manage GitHub secrets
+<a style="font-weight:bold;"><a style="color:feffff">ADDITIONAL COMMANDS</a></a>
+ &#xa0;alias: &#xa0; &#xa0; &#xa0;Create command shortcuts
+ &#xa0;api: &#xa0; &#xa0; &#xa0; &#xa0;Make an authenticated GitHub API request
+ &#xa0;auth: &#xa0; &#xa0; &#xa0; Login, logout, and refresh your authentication
+ &#xa0;completion: Generate shell completion scripts
+ &#xa0;config: &#xa0; &#xa0; Manage configuration for gh
+ &#xa0;help: &#xa0; &#xa0; &#xa0; Help about any command
+ &#xa0;secret: &#xa0; &#xa0; Manage GitHub secrets
 
-[0;1;39mFLAGS</span>
-  --help      Show help for command
-  --version   Show gh version
+<a style="font-weight:bold;"><a style="color:feffff">FLAGS</a></a>
+ &#xa0;--help &#xa0; &#xa0; &#xa0;Show help for command
+ &#xa0;--version &#xa0; Show gh version
 
-[0;1;39mEXAMPLES<span style="font-weight:normal;opacity:1;color:#feffff;background:#040404;">
-  $ gh issue create
-  $ gh repo clone cli/cli
-  $ gh pr checkout 321
+<a style="font-weight:bold;"><a style="color:feffff">EXAMPLES</a></a>
+ &#xa0;$ gh issue create
+ &#xa0;$ gh repo clone cli/cli
+ &#xa0;$ gh pr checkout 321
 
-[0;1;39mENVIRONMENT VARIABLES</span>
-  See 'gh help environment' for the list of supported environment variables.
+<a style="font-weight:bold;"><a style="color:feffff">ENVIRONMENT VARIABLES</a></a>
+ &#xa0;See 'gh help environment' for the list of supported environment variables.
 
-[0;1;39mLEARN MORE<span style="font-weight:normal;opacity:1;color:#feffff;background:#040404;">
-  Use 'gh &lt;command&gt; &lt;subcommand&gt; --help' for more information about a command.
-  Read the manual at https://cli.github.com/manual
+<a style="font-weight:bold;"><a style="color:feffff">LEARN MORE</a></a>
+ &#xa0;Use 'gh &lt;command&gt; &lt;subcommand&gt; --help' for more information about a command.
+ &#xa0;Read the manual at https://cli.github.com/manual
 
-[0;1;39mFEEDBACK</span>
-  Open an issue using 'gh issue create -R github.com/cli/cli'
+<a style="font-weight:bold;"><a style="color:feffff">FEEDBACK</a></a>
+ &#xa0;Open an issue using 'gh issue create -R github.com/cli/cli'
 
 
 </code></pre>
