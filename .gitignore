@@ -59,3 +59,5 @@ tests.json
 
 /*.sh
 output
+
+_site
