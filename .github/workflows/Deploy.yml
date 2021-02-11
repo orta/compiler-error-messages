@@ -37,6 +37,11 @@ jobs:
       - name: Build Examples
         run: yarn generate
 
+      - name: Echo output
+        run: |
+          sudo apt-get install tree
+          tree output
+
       - name: Build Site
         run: yarn build-site
 

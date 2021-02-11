@@ -31,7 +31,18 @@ export function execToHTML (cmd, args, opts) {
 
     run.onExit(() => {
       // debugger
-      // @ts-ignore
+      ansiHTML.setColors({
+        reset: ['feffff', '040404'],
+        black: '040404',	// String
+        red: 'd76b42',
+        green: '99b52c',
+        yellow: 'ffb670',
+        blue: '417ab3',
+        magenta: 'aa7900',
+        cyan: 'bdcfe5',
+        lightgrey: '888',
+        darkgrey: '777'
+      });
       const html = ansiHTML(ansi)
       // console.log({ html, ansi })
       done(html)

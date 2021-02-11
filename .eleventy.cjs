@@ -5,7 +5,7 @@ const { join } = require("path");
 
 module.exports = function (eleventyConfig) {
 
-  eleventyConfig.setTemplateFormats(["css"]);
+  eleventyConfig.setTemplateFormats(["css", "md", "njk", "md"]);
 
   // Grabs a html file
   eleventyConfig.addShortcode("example", function (path) {
