@@ -11,15 +11,16 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Install elm
+        run: yarn global add elm
+
       - name: Use Node.js
         uses: actions/setup-node@v1
 
-      - uses: jorelali/setup-elm@v2
-        with:
-          elm-version: 0.19.1
-
       - name: Setup | Rust
         uses: ATiltedTree/setup-rust@v1
+        with:
+          rust-version: 1.46.0
 
       - name: Install TSC globally
         run: yarn global add typescript
