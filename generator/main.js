@@ -1,7 +1,12 @@
+process.on('unhandledRejection', error => {
+  console.error('unhandledRejection', error);
+  process.exitCode = 1
+});
+
 const filter = process.argv[2] || "*"
 
 if (filter.startsWith("*") || filter.startsWith("elm")) {
-  import("./elm/setup.js")
+  // import("./elm/setup.js")
   import("./elm/runner.js")
 }
 
