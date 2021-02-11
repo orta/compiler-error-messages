@@ -18,6 +18,12 @@ jobs:
         with:
           elm-version: 0.19.1
 
+      - name: Setup | Rust
+        uses: ATiltedTree/setup-rust@v1
+
+      - name: Install TSC globally
+        run: yarn global add typescript
+
       - name: Install dependencies
         run: yarn
 

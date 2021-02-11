@@ -3,6 +3,8 @@
   "compilerOptions": {
     "moduleResolution": "node",
     "checkJs": true,
-    "module": "esnext"
+    "module": "esnext",
+    "target": "esnext",
+    "allowSyntheticDefaultImports": true
   } 
 }
