@@ -11,9 +11,9 @@
   <body>
     <h1>Help on the CLI</h1>
 <p>The <code>--help</code> on a CLI is often one of the first places someone looks for info after their first install.</p>
-<p>With help you have basically two goals; show the breadth of options and provide info on the set of of useful sub-commands.</p>
-<p>What seems to be really tricky is that the info in these commands can get very horizontally long. A terminal will wrap your text, but its unlikely that it's going to work well with your formatting without considerable work. We see a few different ways to align the tabular form of this kind of data. Rust and TypeScript</p>
-<p>It looks like generally a help prompts avoids using colour too much. I think <code>elm</code> does quite a good job of both color and personality, which is something I've seen pretty consistently throughout the errors too.</p>
+<p>With a help command you have basically two goals; show the breadth of options and provide info on the set of of useful sub-commands. What seems to be really tricky is that the info in these commands can get very horizontally long and the heirarchy of that information can get a bit muddied.</p>
+<p>For a long description, you can safely rely on a terminal wrapping your text, but its unlikely that it's going to work well with any left-edge formatting without considerable work. We see a few different ways to align the tabular form of this kind of data. For these examples, I mock out the width of the terminal at 90 chars, which should be the same width as the code samples below.</p>
+<p>It looks like generally a help prompts from compilers avoids using colour too much. I think <code>elm</code> does quite a good job of both color and personality, which is something I've seen pretty consistently throughout the errors too.</p>
 <h3>TypeScript</h3>
 <pre><code>
 Version 4.1.5
@@ -185,7 +185,55 @@ Options:
 </code></pre>
 <h3>Elixir</h3>
 <pre><code>
-execvp(3) failed.: No such file or directory
+Usage: elixir [options] [.exs file] [data]
+
+## General options
+
+  -e "COMMAND"                 Evaluates the given command (*)
+  -h, --help                   Prints this message and exits
+  -r "FILE"                    Requires the given files/patterns (*)
+  -S SCRIPT                    Finds and executes the given script in $PATH
+  -pr "FILE"                   Requires the given files/patterns in parallel (*)
+  -pa "PATH"                   Prepends the given path to Erlang code path (*)
+  -pz "PATH"                   Appends the given path to Erlang code path (*)
+  -v, --version                Prints Elixir version and exits
+
+  --app APP                    Starts the given app and its dependencies (*)
+  --erl "SWITCHES"             Switches to be passed down to Erlang (*)
+  --eval "COMMAND"             Evaluates the given command, same as -e (*)
+  --logger-otp-reports BOOL    Enables or disables OTP reporting
+  --logger-sasl-reports BOOL   Enables or disables SASL reporting
+  --no-halt                    Does not halt the Erlang VM after execution
+  --werl                       Uses Erlang's Windows shell GUI (Windows only)
+
+Options given after the .exs file or -- are passed down to the executed code.
+Options can be passed to the Erlang runtime using $ELIXIR_ERL_OPTIONS or --erl.
+
+## Distribution options
+
+The following options are related to node distribution.
+
+  --cookie COOKIE              Sets a cookie for this distributed node
+  --hidden                     Makes a hidden node
+  --name NAME                  Makes and assigns a name to the distributed node
+  --rpc-eval NODE "COMMAND"    Evaluates the given command on the given remote node (*)
+  --sname NAME                 Makes and assigns a short name to the distributed node
+
+## Release options
+
+The following options are generally used under releases.
+
+  --boot "FILE"                Uses the given FILE.boot to start the system
+  --boot-var VAR "VALUE"       Makes $VAR available as VALUE to FILE.boot (*)
+  --erl-config "FILE"          Loads configuration in FILE.config written in Erlang (*)
+  --pipe-to "PIPEDIR" "LOGDIR" Starts the Erlang VM as a named PIPEDIR and LOGDIR
+  --vm-args "FILE"             Passes the contents in file as arguments to the VM
+
+--pipe-to starts Elixir detached from console (Unix-like only).
+It will attempt to create PIPEDIR and LOGDIR if they don't exist.
+See run_erl to learn more. To reattach, run: to_erl PIPEDIR.
+
+** Options marked with (*) can be given more than once.
 
 </code></pre>
 <h3>Elm</h3>
@@ -588,10 +636,146 @@ Options:
 </code></pre>
 <h3>Other build tools</h3>
 <p>These aren't compilers, which means they're a bit less rigidly &quot;professional&quot; in their output and have a bit more style about themselves. Rome especially is very clear in its hierarchy and visual weighting, but it's also very long - trade-offs.</p>
-<p>Some tools of these are definitely pushing the ANSI to HTML in my tooling, so forgive some errors.</p>
+<p>Some of these tools of these are definitely pushing the ANSI to HTML systems in my tooling, so forgive some ASCII errors. I'll get to them with time.</p>
+<p>Rome's help output next is probably my favourite of the whole set, the use of bold, lines and taking the width into account all make for a very polished introduction to the tool.</p>
 <pre><code>
 
-                                                                               
+                                                                                         
+$ /home/runner/work/compiler-error-messages/compiler-error-messages/node_modules/.bin/rome --help
+
+ Usage ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  rome [command] [flags]
+
+ Global Flags ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  --auxiliary-diagnostic-format &lt;input&gt; When printing diagnostics, output another
+                                        format alongside - values "github-actions")
+  --benchmark                           Run a command multiple times, calculating
+                                        average
+  --benchmark-iterations &lt;num&gt;          The amount of benchmark iterations to perform
+                                        - default 10
+  --collect-markers                     Collect and write performance markers to disk
+  --cwd &lt;path&gt;                          Specify a different working directory
+  --fieri                               Head to flavortown
+  --grep &lt;input&gt;                        Only display diagnostics with messages
+                                        containing this string - default ""
+  --help                                Show this help screen
+  --inverse-grep                        Flip grep match. Only display diagnostics with
+                                        messages that do NOT contain the grep string
+  --log-path &lt;path&gt;                     Path where to output logs. When omitted logs
+                                        are not written anywhere
+  --logs                                Output server logs
+  --log-shell-completions &lt;shell&gt;       Generate shell completion commands - values
+                                        "fish" "bash")
+  --log-workers                         Output worker logs
+  --markers-path &lt;path&gt;                 Path where to write markers. When ommitted
+                                        defaults to Marker-TIMESTAMP.json
+  --max-diagnostics &lt;num&gt;               Cap the amount of diagnostics displayed -
+                                        default 20
+  --no-profile-workers                  Exclude workers from profile
+  --output-color-depth &lt;num&gt;            Change the display width. By default it is
+                                        automatically inferred and updated from the
+                                        terminal.
+  --output-columns &lt;num&gt;                Change the display width. By default it is
+                                        automatically inferred and updated from the
+                                        terminal.
+  --output-format &lt;input&gt;               Change the output format. By default it is
+                                        automatically inferred from terminal settings.
+                                        - values "ansi" "html" "none")
+  --output-redirect-error               Redirect stderr to stdout.
+  --output-tty                          Treat output as TTY regardless of terminal
+                                        information. This will enable things like ANSI
+                                        cursor, progress bars etc.
+  --profile                             Collect and write profile to disk. Includes
+                                        profiles for all processes.
+  --profile-path &lt;path&gt;                 Path where to write profile. When omitted
+                                        defaults to Profile-TIMESTAMP.json
+  --profile-sampling &lt;microsec&gt;         Profiler sampling interval in microseconds -
+                                        default 100
+  --profile-timeout &lt;millisec&gt;          Stop the profile after the milliseconds
+                                        specified. When omitted the profile is of the
+                                        whole command
+  --rage                                Create a rage tarball of debug information
+  --rage-path &lt;path&gt;                    Path where to write rage tarball. When omitted
+                                        defaults to Rage-TIMESTAMP.tgz
+  --resolver-mocks                      Enable mocks for module resolution
+  --resolver-platform &lt;platform&gt;        Specify the platform for module resolution -
+                                        values "ios" "android" "mobile" "electron"
+                                        "web" "node")
+  --resolver-scale &lt;num&gt;                Specify the image scale for module resolution
+  --review                              Display and perform actions on diagnostics.
+                                        Only some commands support this.
+  --show-all-diagnostics                Display all diagnostics ignoring caps
+  --silent                              Don't write anything to the console
+  --temporary-daemon                    Start a daemon, if one isn't already running,
+                                        for the lifetime of this command
+  --timing                              Dump timing information after running the
+                                        command
+  --unsafe-writes                       When writing files, don't verify mtime or
+                                        existence. Potentially dangerous and could
+                                        lead to unintended data loss
+  --verbose-diagnostics                 Display hidden and truncated diagnostic
+                                        information
+  --version                             Show the version
+  --watch                               Keep running command and update on file
+                                        changes. Only some commands support this.
+  --write-shell-completions &lt;shell&gt;     Write shell completion commands - values
+                                        "fish" "bash")
+
+ Commands ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Code Quality Commands
+  - check run lint against a set of files
+
+  Internal Commands
+  - format formats a single file
+  - json dump an RJSON file to regular JSON
+  - logs view the logs stream
+  - noop do nothing
+  - rage create a rage archive for debugging
+
+  Process Management Commands
+  - init initialise the project
+  - restart restart daemon
+  - start start daemon (if none running)
+  - status get the current daemon status
+  - stop stop a running daemon if one exists
+
+  Project Management Commands
+  - config disable modify a project config- set the &lt;key&gt; to false
+  - config enable modify a project config- set the &lt;key&gt; to true
+  - config location show the config location
+  - config push modify a project config - push &lt;values&gt; to &lt;key&gt;
+  - config set modify a project config - set the &lt;key&gt; to &lt;value&gt;
+  - config set-directory modify a project config - set the &lt;key&gt; to &lt;value&gt;
+  - lsp connect to an lsp
+
+  Source Code Commands
+  - cache clear clear the cache directory
+  - cache dir show the location of the cache directory
+  - recover apply apply a specific patch from the recovery store
+  - recover clear clear the contents of the recovery store
+  - recover diff show the differences that would be applied for a given patch
+  - recover dir print the location of the recovery store
+  - recover list show all patches in the recovery store
+  - recover pop apply the most recent patch in the recovery story
+
+  ℹ To view help for a specific command run
+  $ rome command_name --help
+
+
+                                                                                         
+error Command failed with exit code 1.
+
+                                                                                         
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+</code></pre>
+<p>Jest has a static line width, and does a good job of wrapping the long paragraphs for the bazillion config options.</p>
+<pre><code>
+
+                                                                                         
 $ /home/runner/work/compiler-error-messages/compiler-error-messages/node_modules/.bin/jest --help
 Usage: jest [--config=&lt;pathToConfigFile&gt;] [TestPathPattern]
 
@@ -906,10 +1090,10 @@ Options:
 Documentation: https://jestjs.io/
 
 </code></pre>
-<p>Jest has a static line width, and does a good job of trying to make long paragraphs</p>
+<p>Prettier's help does a good job of categorizing different types of settings via a hierarchy.</p>
 <pre><code>
 
-                                                                               
+                                                                                         
 $ /home/runner/work/compiler-error-messages/compiler-error-messages/node_modules/.bin/prettier --help
 Usage: prettier [options] [file/dir/glob ...]
 
@@ -1025,158 +1209,85 @@ Other options:
 
 
 </code></pre>
+<p>I wrote this CLI, sure, but I think I did a pretty good job on offering a bunch of ways to go from here in the &quot;footer&quot; which hasn't really been represented other than Jest's mention of the website.</p>
 <pre><code>
 
-                                                                               
-$ /home/runner/work/compiler-error-messages/compiler-error-messages/node_modules/.bin/rome --help
+                                                                                         
+$ /home/runner/work/compiler-error-messages/compiler-error-messages/node_modules/.bin/danger --help
+Usage: danger [options] [command]
 
- Usage ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Options:
+  -V, --version  output the version number
+  -h, --help     output usage information
 
-  rome [command] [flags]
-
- Global Flags ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-  --auxiliary-diagnostic-format &lt;input&gt; When printing diagnostics, output
-                                        another format alongside - values
-                                        "github-actions")
-  --benchmark                           Run a command multiple times,
-                                        calculating average
-  --benchmark-iterations &lt;num&gt;          The amount of benchmark iterations
-                                        to perform - default 10
-  --collect-markers                     Collect and write performance
-                                        markers to disk
-  --cwd &lt;path&gt;                          Specify a different working
-                                        directory
-  --fieri                               Head to flavortown
-  --grep &lt;input&gt;                        Only display diagnostics with
-                                        messages containing this string -
-                                        default ""
-  --help                                Show this help screen
-  --inverse-grep                        Flip grep match. Only display
-                                        diagnostics with messages that do
-                                        NOT contain the grep string
-  --log-path &lt;path&gt;                     Path where to output logs. When
-                                        omitted logs are not written
-                                        anywhere
-  --logs                                Output server logs
-  --log-shell-completions &lt;shell&gt;       Generate shell completion commands -
-                                        values "fish" "bash")
-  --log-workers                         Output worker logs
-  --markers-path &lt;path&gt;                 Path where to write markers. When
-                                        ommitted defaults to
-                                        Marker-TIMESTAMP.json
-  --max-diagnostics &lt;num&gt;               Cap the amount of diagnostics
-                                        displayed - default 20
-  --no-profile-workers                  Exclude workers from profile
-  --output-color-depth &lt;num&gt;            Change the display width. By default
-                                        it is automatically inferred and
-                                        updated from the terminal.
-  --output-columns &lt;num&gt;                Change the display width. By default
-                                        it is automatically inferred and
-                                        updated from the terminal.
-  --output-format &lt;input&gt;               Change the output format. By default
-                                        it is automatically inferred from
-                                        terminal settings. - values "ansi"
-                                        "html" "none")
-  --output-redirect-error               Redirect stderr to stdout.
-  --output-tty                          Treat output as TTY regardless of
-                                        terminal information. This will
-                                        enable things like ANSI cursor,
-                                        progress bars etc.
-  --profile                             Collect and write profile to disk.
-                                        Includes profiles for all processes.
-  --profile-path &lt;path&gt;                 Path where to write profile. When
-                                        omitted defaults to
-                                        Profile-TIMESTAMP.json
-  --profile-sampling &lt;microsec&gt;         Profiler sampling interval in
-                                        microseconds - default 100
-  --profile-timeout &lt;millisec&gt;          Stop the profile after the
-                                        milliseconds specified. When omitted
-                                        the profile is of the whole command
-  --rage                                Create a rage tarball of debug
-                                        information
-  --rage-path &lt;path&gt;                    Path where to write rage tarball.
-                                        When omitted defaults to
-                                        Rage-TIMESTAMP.tgz
-  --resolver-mocks                      Enable mocks for module resolution
-  --resolver-platform &lt;platform&gt;        Specify the platform for module
-                                        resolution - values "ios" "android"
-                                        "mobile" "electron" "web" "node")
-  --resolver-scale &lt;num&gt;                Specify the image scale for module
-                                        resolution
-  --review                              Display and perform actions on
-                                        diagnostics. Only some commands
-                                        support this.
-  --show-all-diagnostics                Display all diagnostics ignoring
-                                        caps
-  --silent                              Don't write anything to the console
-  --temporary-daemon                    Start a daemon, if one isn't already
-                                        running, for the lifetime of this
-                                        command
-  --timing                              Dump timing information after
-                                        running the command
-  --unsafe-writes                       When writing files, don't verify
-                                        mtime or existence. Potentially
-                                        dangerous and could lead to
-                                        unintended data loss
-  --verbose-diagnostics                 Display hidden and truncated
-                                        diagnostic information
-  --version                             Show the version
-  --watch                               Keep running command and update on
-                                        file changes. Only some commands
-                                        support this.
-  --write-shell-completions &lt;shell&gt;     Write shell completion commands -
-                                        values "fish" "bash")
-
- Commands ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-  Code Quality Commands
-  - check run lint against a set of files
-
-  Internal Commands
-  - format formats a single file
-  - json dump an RJSON file to regular JSON
-  - logs view the logs stream
-  - noop do nothing
-  - rage create a rage archive for debugging
-
-  Process Management Commands
-  - init initialise the project
-  - restart restart daemon
-  - start start daemon (if none running)
-  - status get the current daemon status
-  - stop stop a running daemon if one exists
-
-  Project Management Commands
-  - config disable modify a project config- set the &lt;key&gt; to false
-  - config enable modify a project config- set the &lt;key&gt; to true
-  - config location show the config location
-  - config push modify a project config - push &lt;values&gt; to &lt;key&gt;
-  - config set modify a project config - set the &lt;key&gt; to &lt;value&gt;
-  - config set-directory modify a project config - set the &lt;key&gt; to &lt;value&gt;
-  - lsp connect to an lsp
-
-  Source Code Commands
-  - cache clear clear the cache directory
-  - cache dir show the location of the cache directory
-  - recover apply apply a specific patch from the recovery store
-  - recover clear clear the contents of the recovery store
-  - recover diff show the differences that would be applied for a given patch
-  - recover dir print the location of the recovery store
-  - recover list show all patches in the recovery store
-  - recover pop apply the most recent patch in the recovery story
-
-  ℹ To view help for a specific command run
-  $ rome command_name --help
+Commands:
+  init           Helps you get started with Danger
+  ci             Runs Danger on CI
+  process        Like `ci` but lets another process handle evaluating a Dangerfile
+  pr             Runs your local Dangerfile against an existing GitHub PR. Will not post on the PR
+  runner         Runs a dangerfile against a DSL passed in via STDIN [You probably don't need this]
+  local          Runs danger standalone on a repo, useful for git hooks
+  reset-status   Set the status of a PR to pending when a new CI run starts
+  help [cmd]     display help for [cmd]
 
 
-                                                                               
-error Command failed with exit code 1.
+  Docs:
 
-                                                                               
-info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+    -&gt; Getting started:
+       http://danger.systems/js/guides/getting_started.html
+
+    -&gt; The Dangerfile
+       http://danger.systems/js/guides/the_dangerfile.html
+
+    -&gt; API Reference
+       http://danger.systems/js/reference.html
 
 </code></pre>
+<p>The GitHub CLI does a good job of using <strong>BOLD CAPS</strong> to indicate categories, and then very predictable text output for the rest. They must have really thought about the copy for these commands because they are very terse!</p>
+<pre><code>
+Work seamlessly with GitHub from the command line.
+
+[0;1;39mUSAGE<span style="font-weight:normal;opacity:1;color:#feffff;background:#040404;">
+  gh &lt;command&gt; &lt;subcommand&gt; [flags]
+
+[0;1;39mCORE COMMANDS</span>
+  gist:       Manage gists
+  issue:      Manage issues
+  pr:         Manage pull requests
+  release:    Manage GitHub releases
+  repo:       Create, clone, fork, and view repositories
+
+[0;1;39mADDITIONAL COMMANDS<span style="font-weight:normal;opacity:1;color:#feffff;background:#040404;">
+  alias:      Create command shortcuts
+  api:        Make an authenticated GitHub API request
+  auth:       Login, logout, and refresh your authentication
+  completion: Generate shell completion scripts
+  config:     Manage configuration for gh
+  help:       Help about any command
+  secret:     Manage GitHub secrets
+
+[0;1;39mFLAGS</span>
+  --help      Show help for command
+  --version   Show gh version
+
+[0;1;39mEXAMPLES<span style="font-weight:normal;opacity:1;color:#feffff;background:#040404;">
+  $ gh issue create
+  $ gh repo clone cli/cli
+  $ gh pr checkout 321
+
+[0;1;39mENVIRONMENT VARIABLES</span>
+  See 'gh help environment' for the list of supported environment variables.
+
+[0;1;39mLEARN MORE<span style="font-weight:normal;opacity:1;color:#feffff;background:#040404;">
+  Use 'gh &lt;command&gt; &lt;subcommand&gt; --help' for more information about a command.
+  Read the manual at https://cli.github.com/manual
+
+[0;1;39mFEEDBACK</span>
+  Open an issue using 'gh issue create -R github.com/cli/cli'
+
+
+</code></pre>
+<p>Including the 'give us feedback' command at the end is a nice touch too.</p>
 
   </body>
 </html>
