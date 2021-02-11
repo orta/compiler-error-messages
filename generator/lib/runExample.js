@@ -18,10 +18,12 @@ export const setupExamples = ({ cmd, args, env }) => {
     const htmlWrapper = `
 <p>${mdData.blurb}</p>
 
-<pre><code>
-${consoleResults}
-</code></pre>
+${codify(consoleResults)}
   `
     writeFixture(join(env, name), htmlWrapper)
   }
 }
+
+export const codify = (str) => `<pre><code>
+${str}
+</code></pre>`

@@ -1,0 +1,10 @@
+body {
+  margin: 0 auto;
+  max-width: 50rem;
+}
+a code {
+  padding: 0.2rem 0.2rem;
+}
+ul {
+  padding: 0;
+}

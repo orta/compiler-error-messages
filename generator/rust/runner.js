@@ -4,20 +4,20 @@ import { readdirSync } from "fs"
 import { join } from "path"
 import { execToHTML } from "../lib/exec.js";
 import { writeFixture } from "../lib/write.js";
-import { setupExamples } from "../lib/runExample.js";
+import { codify, setupExamples } from "../lib/runExample.js";
 
 const go = async () => {
   const vanilla = await execToHTML("rustc", ["--help"], {})
-  writeFixture("rust/help", vanilla)
+  writeFixture("rust/help", codify(vanilla))
 
   const codegen = await execToHTML("rustc", ["-C", "help"], {})
-  writeFixture("rust/help-codegen", codegen)
+  writeFixture("rust/help-codegen", codify(codegen))
 
   const lint = await execToHTML("rustc", ["-W", "help"], {})
-  writeFixture("rust/help-lint-and-settings", lint)
+  writeFixture("rust/help-lint-and-settings", codify(lint))
 
   const all = await execToHTML("rustc", ["--help", "-v"], {})
-  writeFixture("rust/help-all", all)
+  writeFixture("rust/help-all", codify(all))
 
   const mdFiles = readdirSync(join(import.meta.url, "..", "errors").replace("file:", "")).filter(f => f.endsWith(".md"))
   const runner = setupExamples({ cmd: "rustc", args: [], env: "rust" })

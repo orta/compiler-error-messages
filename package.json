@@ -8,7 +8,8 @@
   "scripts": {
     "build": "yarn generate && yarn build-site",
     "generate": "node generator/main.js",
-    "build-site": "env NODE_ENV=production yarn eleventy --input=./site --pathprefix 'compiler-error-messages'"
+    "build-site": "env NODE_ENV=production yarn eleventy --config=.eleventy.cjs --input=./site --pathprefix 'compiler-error-messages'",
+    "watch-site": "yarn eleventy --input=./site --serve --config=.eleventy.cjs"
   },
   "dependencies": {
     "@11ty/eleventy": "^0.11.1",

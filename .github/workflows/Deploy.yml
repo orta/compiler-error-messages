@@ -15,7 +15,7 @@ jobs:
         with:
           node-version: '14'
       
-      - name: Setup | elm
+      - name: Setup | Elm
         run: yarn global add elm
 
       - name: Setup | Rust

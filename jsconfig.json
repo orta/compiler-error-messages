@@ -1,5 +1,5 @@
 {
-  "include": ["**/*.js"],
+  "include": ["**/*.js", "site/.eleventy.cjs"],
   "compilerOptions": {
     "moduleResolution": "node",
     "checkJs": true,
