@@ -1,6 +1,7 @@
 // @ts-check
 
-import { basename } from "path"
+import { basename, join } from "path"
+import { readdirSync } from "fs"
 import { execToHTML } from "../lib/exec.mjs";
 import { writeFixture } from "../lib/write.mjs";
 import { scaffoldTemplate } from "../lib/scaffold.mjs";
@@ -10,7 +11,8 @@ const go = async () => {
   const html = await execToHTML("elm", ["--help"])
   writeFixture("elm/help", html)
 
-  runExample("elm/errors/ambiguous-type-name.md")
+  const mdFiles = readdirSync(join(import.meta.url, "..", "errors").replace("file:", "")).filter(f => f.endsWith(".md"))
+  mdFiles.forEach(file => runExample(`elm/errors/${file}`))
 }
 
 go()

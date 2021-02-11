@@ -4,9 +4,9 @@
   "main": "index.js",
   "author": "Orta Therox",
   "license": "MIT",
-
   "dependencies": {
-    "ansi-to-html": "^0.6.14",
+    "@types/node": "^14.14.25",
+    "ansi-html": "^0.0.7",
     "gray-matter": "^4.0.2",
     "node-pty": "^0.10.0",
     "shelljs": "^0.8.4"
