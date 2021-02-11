@@ -1,6 +1,6 @@
 ---
 layout: vanilla
-title: My Rad Markdown Blog Post
+title: Help prompts for different compilers
 lang: rust
 tags: ["conflicts", "imports"]
 ---
@@ -9,7 +9,7 @@ tags: ["conflicts", "imports"]
 
 {% example "tsc/help" %}
 
-With a varient which includes all possible flags
+With a variant which includes all possible flags:
 
 {% example "tsc/help-all" %}
 
