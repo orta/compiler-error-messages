@@ -4,7 +4,12 @@
   "main": "index.js",
   "author": "Orta Therox",
   "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build-site": "env NODE_ENV=production yarn eleventy --pathprefix 'compiler-error-messages'"
+  },
   "dependencies": {
+    "@11ty/eleventy": "^0.11.1",
     "@types/node": "^14.14.25",
     "ansi-html": "^0.0.7",
     "gray-matter": "^4.0.2",

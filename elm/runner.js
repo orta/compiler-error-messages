@@ -2,13 +2,13 @@
 
 import { basename, join } from "path"
 import { readdirSync } from "fs"
-import { execToHTML } from "../lib/exec.mjs";
-import { writeFixture } from "../lib/write.mjs";
-import { scaffoldTemplate } from "../lib/scaffold.mjs";
-import { md } from "../lib/md.mjs";
+import { execToHTML } from "../lib/exec.js";
+import { writeFixture } from "../lib/write.js";
+import { scaffoldTemplate } from "../lib/scaffold.js";
+import { md } from "../lib/md.js";
 
 const go = async () => {
-  const html = await execToHTML("elm", ["--help"])
+  const html = await execToHTML("elm", ["--help"], {})
   writeFixture("elm/help", html)
 
   const mdFiles = readdirSync(join(import.meta.url, "..", "errors").replace("file:", "")).filter(f => f.endsWith(".md"))
