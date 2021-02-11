@@ -1,4 +1,4 @@
-name: Build Eleventy
+name: Deploy Site
 
 on:
   push:

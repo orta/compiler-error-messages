@@ -28,3 +28,7 @@ if (filter.startsWith("*") || filter.startsWith("rescript")) {
 if (filter.startsWith("*") || filter.startsWith("elixir")) {
   import("./elixir/runner.js")
 }
+
+if (filter.startsWith("*") || filter.startsWith("js")) {
+  import("./js/runner.js")
+}

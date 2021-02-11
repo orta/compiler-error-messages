@@ -43,7 +43,9 @@ export function execToHTML (cmd, args, opts) {
         lightgrey: '888',
         darkgrey: '777'
       });
-      const html = ansiHTML(ansi)
+
+      const encoded = ansi.replace(/</g, "&lt;").replace(/>/g, "&gt;")
+      const html = ansiHTML(encoded)
       // console.log({ html, ansi })
       done(html)
     })
