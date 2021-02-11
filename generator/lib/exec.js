@@ -1,32 +1,10 @@
 // @ts-check
 
 import pty  from 'node-pty';
-import ansiHTML from 'ansi-html'
+import { join } from 'path';
+import shelljs from "shelljs"
 
-import Convert  from '@orta/ansi-to-html'
- const convert = new Convert({ 
-   fg: 'feffff',  
-   bg: '040404', 
-   space: true,
-   colors: [
-    "#040404",
-    "#d84a33",
-    "#5da602",
-    "#eebb6e",
-    "#417ab3",
-    "#e5c499",
-    "#bdcfe5",
-    "#dbded8",
-    "#685656",
-    "#d76b42",
-    "#99b52c",
-    "#ffb670",
-    "#97d7ef",
-    "#aa7900",
-    "#bdcfe5",
-    "#e4d5c7",
-   ]
-});
+import { writeFixture } from './write.js';
 
 /**
  * @param cmd string
@@ -54,29 +32,12 @@ export function execToHTML (cmd, args, opts) {
     });
 
     run.onExit(() => {
-      const encoded = ansi.replace(/</g, "&lt;").replace(/>/g, "&gt;")
-      
-      ansiHTML.setColors({
-        reset: ['#feffff', '#040404'],
-        black: '#040404',	// String
-        red: '#d76b42',
-        green: '#99b52c',
-        yellow: '#ffb670',
-        blue: '#417ab3',
-        magenta: '#aa7900',
-        cyan: '#bdcfe5',
-        lightgrey: '#888',
-        darkgrey: '#777'
-      });
-      
-      let html = convert.toHtml(encoded)
-      
-      if(html === "") {
-        html = ansiHTML(encoded)
-        html = html.replace(/\[0;1;39m/g, "").replace(/\[38;2;97;175;239m/g, "").replace(/\[2K/g, "").replace(/\[1G/g, "")
-      }
+      const rawPath = "raw/" + cmd + "-" + args.join("-")
+      writeFixture(rawPath, ansi)
 
-      // console.log({ html, ansi })
+      const fullRaw = join(import.meta.url, "..", "..", "..", "output", rawPath + ".html").replace("file:", "")
+      const html = shelljs.cat(fullRaw).exec("ansi2html -i", { silent: true })
+      
       done(html)
     })
   })
