@@ -7,16 +7,17 @@ import { writeFixture } from "../lib/write.mjs";
 export const setupExamples = ({ cmd, args, env }) => {
   console.log(`\n\n--- ${env} ---\n`)
 
-  return async function runExample(relativePath) {
+  return async function runExample(relativePath, configure) {
     const name = basename(relativePath, ".md")
-    console.log(" - " + relativePath)
-    const mdData = md(join(env, relativePath))
-    const project = scaffoldTemplate(env, name, mdData.files)
+    const fullPath = join(env, relativePath)
+    console.log(" - " + fullPath)
+    const mdData = md(fullPath)
+    const projectDir = scaffoldTemplate(env, name, mdData.files)
+    if (configure) configure(projectDir)
     const firstFile = Object.keys(mdData.files)[0]
-    const consoleResults = await execToHTML(cmd, [...args, firstFile], { cwd: project, })
-  
+    const consoleResults = await execToHTML(cmd, [...args, firstFile], { cwd: projectDir, })
     const htmlWrapper = `
-<p>${mdData.blurb}</p>
+${codify(mdData.blurb)}
 
 ${codify(consoleResults)}
   `

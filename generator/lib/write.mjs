@@ -12,4 +12,5 @@ export function writeFixture (name, content) {
     mkdirSync(folder, { recursive: true})   
   }
   writeFileSync(path, content)
+  console.log(" > " + path)
 }

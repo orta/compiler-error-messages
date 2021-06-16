@@ -17,7 +17,6 @@ This site shows the output for different interactions with the CLI. I aim to foc
 
 What does it look like when you have two objects which are mis-matched, e.g. missing properties or different types.
 
-
 ### Extras
 
 # [`--help`](./help)

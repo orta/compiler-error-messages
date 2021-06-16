@@ -19,7 +19,7 @@ export function md(relativePath) {
   
     return {
       data: r.data,
-      blurb: codeblocks[0].trim(),
+      blurb: codeblocks[1].trim(),
       files
     }
     

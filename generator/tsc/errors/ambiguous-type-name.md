@@ -4,6 +4,8 @@ lang: tsc
 tags: ["conflicts"]
 ---
 
+Some code:
+
 ```ts index.ts
 type A = {}
 type A = {}

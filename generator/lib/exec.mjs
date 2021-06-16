@@ -24,7 +24,9 @@ export function execToHTML (cmd, args, opts) {
     run.onData(function (data) {
       const elmMessages = ["Compiling ...", "Verifying dependencies", "Dependencies ready", "Detected problems in"]
       const tscMessages = ["yarn run v", "[2K[2K[1G"]
-      const skipIncludes = [...elmMessages, ...tscMessages]
+      const flowMessages = ["Launching Flow server", "Spawned flow server", "Logs will go to", "Monitor logs will", "Started a new flow", "Please wait. Server"]
+
+      const skipIncludes = [...elmMessages, ...tscMessages, ...flowMessages]
       const included = skipIncludes.find(si => data.includes(si))
       if (!included) {
         ansi += data

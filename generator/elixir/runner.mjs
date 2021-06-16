@@ -9,9 +9,6 @@ import { codify, setupExamples } from "../lib/runExample.mjs";
 const go = async () => {
   setupExamples({ cmd: "elixir", args: [], env: "elixir" })
 
-  const html = await execToHTML("elixir", ["--help"], {})
-  writeFixture("elixir/help", codify(html))
-
   // const mdFiles = readdirSync(join(import.meta.url, "..", "errors").replace("file:", "")).filter(f => f.endsWith(".md"))
   // mdFiles.forEach(file => runner(`errors/${file}`))
 }

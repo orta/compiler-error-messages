@@ -4,7 +4,7 @@ lang: elm
 tags: ["not-comprehensive", "pattern-match"]
 ---
 
-Occurs when Elm a pattern match (facy switch statements) don't cover all cases:
+Occurs when Elm a pattern match (fancy switch statements) don't cover all cases:
 
 ```elm Pattern.elm
 module Pattern exposing (..)

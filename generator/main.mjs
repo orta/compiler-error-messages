@@ -29,6 +29,10 @@ if (filter.startsWith("*") || filter.startsWith("elixir")) {
   import("./elixir/runner.mjs")
 }
 
-if (filter.startsWith("*") || filter.startsWith("js")) {
-  import("./js/runner.mjs")
+if (filter.startsWith("*") || filter.startsWith("help")) {
+  import("./help/runner.mjs")
+}
+
+if (filter.startsWith("*") || filter.startsWith("flow")) {
+  import("./flow/runner.mjs")
 }
