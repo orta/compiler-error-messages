@@ -13,7 +13,6 @@
 <h2>TypeScript</h2>
 <pre><code>
 ts index.ts
-/* @flow */
 type A = { a: { b: { c: { d: "hello" } } } }
 
 let a: A = { a: { b: { c: { d: "hello" } } } }
@@ -22,11 +21,11 @@ let b = { a: { b: { c: { d: 123 } } } }
 a = b
 </code></pre>
 <pre><code>
-<span style="color: #40eaea">index.ts</span>:<span style="color: #ea9540">7</span>:<span style="color: #ea9540">1</span> - <span style="color: #ea4040">error</span><span style="color: #404356"> TS2322: </span>Type '{ a: { b: { c: { d: number; }; }; }; }' is not assignable to type 'A'.
+<span style="color: #40eaea">index.ts</span>:<span style="color: #ea9540">6</span>:<span style="color: #ea9540">1</span> - <span style="color: #ea4040">error</span><span style="color: #404356"> TS2322: </span>Type '{ a: { b: { c: { d: number; }; }; }; }' is not assignable to type 'A'.
   The types of 'a.b.c.d' are incompatible between these types.
     Type 'number' is not assignable to type '"hello"'.
 
-<span style="background-color: #AAAAAA; color: #000000">7</span> a = b
+<span style="background-color: #AAAAAA; color: #000000">6</span> a = b
 <span style="background-color: #AAAAAA; color: #000000"> </span> <span style="color: #ea4040">~</span>
 
 
