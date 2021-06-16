@@ -103,7 +103,80 @@ Options:
  --importHelpers                                    Import emit helpers from 'tslib'.
  --importsNotUsedAsValues                           Specify emit/checking behavior for imports that are only used for types
  -i, --incremental                                  Enable incremental compilation
- --init            
+ --init                                             Initializes a TypeScript project and creates a tsconfig.json file.
+ --inlineSourceMap                                  Emit a single file with source maps instead of having a separate file.
+ --inlineSources                                    Emit the source alongside the sourcemaps within a single file; requires '--inlineSourceMap' or '--sourceMap' to be set.
+ --isolatedModules                                  Transpile each file as a separate module (similar to 'ts.transpileModule').
+ --jsx KIND                                         Specify JSX code generation: 'preserve', 'react-native', 'react', 'react-jsx' or 'react-jsxdev'.
+ --jsxFactory                                       Specify the JSX factory function to use when targeting 'react' JSX emit, e.g. 'React.createElement' or 'h'.
+ --jsxFragmentFactory                               Specify the JSX fragment factory function to use when targeting 'react' JSX emit with 'jsxFactory' compiler option is specified, e.g. 'Fragment'.
+ --jsxImportSource                                  Specify the module specifier to be used to import the 'jsx' and 'jsxs' factory functions from. eg, react
+ --keyofStringsOnly                                 Resolve 'keyof' to string valued property names only (no numbers or symbols).
+ --lib                                              Specify library files to be included in the compilation.
+                                                      'es5' 'es6' 'es2015' 'es7' 'es2016' 'es2017' 'es2018' 'es2019' 'es2020' 'es2021' 'esnext' 'dom' 'dom.iterable' 'webworker' 'webworker.importscripts' 'webworker.iterable' 'scripthost' 'es2015.core' 'es2015.collection' 'es2015.generator' 'es2015.iterable' 'es2015.promise' 'es2015.proxy' 'es2015.reflect' 'es2015.symbol' 'es2015.symbol.wellknown' 'es2016.array.include' 'es2017.object' 'es2017.sharedmemory' 'es2017.string' 'es2017.intl' 'es2017.typedarrays' 'es2018.asyncgenerator' 'es2018.asynciterable' 'es2018.intl' 'es2018.promise' 'es2018.regexp' 'es2019.array' 'es2019.object' 'es2019.string' 'es2019.symbol' 'es2020.bigint' 'es2020.promise' 'es2020.sharedmemory' 'es2020.string' 'es2020.symbol.wellknown' 'es2020.intl' 'es2021.promise' 'es2021.string' 'es2021.weakref' 'esnext.array' 'esnext.symbol' 'esnext.asynciterable' 'esnext.intl' 'esnext.bigint' 'esnext.string' 'esnext.promise' 'esnext.weakref' 
+ --listEmittedFiles                                 Print names of generated files part of the compilation.
+ --listFiles                                        Print names of files part of the compilation.
+ --listFilesOnly                                    Print names of files that are part of the compilation and then stop processing.
+ --locale                                           The locale used when displaying messages to the user (e.g. 'en-us')
+ --mapRoot LOCATION                                 Specify the location where debugger should locate map files instead of generated locations.
+ --maxNodeModuleJsDepth                             The maximum dependency depth to search under node_modules and load JavaScript files.
+ -m KIND, --module KIND                             Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', 'es2020', or 'ESNext'.
+ --moduleResolution STRATEGY                        Specify module resolution strategy: 'node' (Node.js) or 'classic' (TypeScript pre-1.6).
+ --newLine NEWLINE                                  Specify the end of line sequence to be used when emitting files: 'CRLF' (dos) or 'LF' (unix).
+ --noEmit                                           Do not emit outputs.
+ --noEmitHelpers                                    Do not generate custom helper functions like '__extends' in compiled output.
+ --noEmitOnError                                    Do not emit outputs if any errors were reported.
+ --noErrorTruncation                                Do not truncate error messages.
+ --noFallthroughCasesInSwitch                       Report errors for fallthrough cases in switch statement.
+ --noImplicitAny                                    Raise error on expressions and declarations with an implied 'any' type.
+ --noImplicitOverride                               Ensure overriding members in derived classes are marked with an 'override' modifier.
+ --noImplicitReturns                                Report error when not all code paths in function return a value.
+ --noImplicitThis                                   Raise error on 'this' expressions with an implied 'any' type.
+ --noImplicitUseStrict                              Do not emit 'use strict' directives in module output.
+ --noLib                                            Do not include the default library file (lib.d.ts).
+ --noPropertyAccessFromIndexSignature               Require undeclared properties from index signatures to use element accesses.
+ --noResolve                                        Do not add triple-slash references or imported modules to the list of compiled files.
+ --noStrictGenericChecks                            Disable strict checking of generic signatures in function types.
+ --noUncheckedIndexedAccess                         Include 'undefined' in index signature results
+ --noUnusedLocals                                   Report errors on unused locals.
+ --noUnusedParameters                               Report errors on unused parameters.
+ --out FILE                                         [Deprecated] Use '--outFile' instead. Concatenate and emit output to single file
+ --outDir DIRECTORY                                 Redirect output structure to the directory.
+ --outFile FILE                                     Concatenate and emit output to single file.
+ --paths                                            A series of entries which re-map imports to lookup locations relative to the 'baseUrl'.
+ --plugins                                          List of language service plugins.
+ --preserveConstEnums                               Do not erase const enum declarations in generated code.
+ --preserveSymlinks                                 Do not resolve the real path of symlinks.
+ --preserveWatchOutput                              Whether to keep outdated console output in watch mode instead of clearing the screen.
+ --pretty                                           Stylize errors and messages using color and context (experimental).
+ -p FILE OR DIRECTORY, --project FILE OR DIRECTORY  Compile the project given the path to its configuration file, or to a folder with a 'tsconfig.json'.
+ --reactNamespace                                   [Deprecated] Use '--jsxFactory' instead. Specify the object invoked for createElement when targeting 'react' JSX emit
+ --removeComments                                   Do not emit comments to output.
+ --resolveJsonModule                                Include modules imported with '.json' extension
+ --rootDir LOCATION                                 Specify the root directory of input files. Use to control the output directory structure with --outDir.
+ --rootDirs                                         List of root folders whose combined content represents the structure of the project at runtime.
+ --showConfig                                       Print the final configuration instead of building.
+ --skipDefaultLibCheck                              [Deprecated] Use '--skipLibCheck' instead. Skip type checking of default library declaration files.
+ --skipLibCheck                                     Skip type checking of declaration files.
+ --sourceMap                                        Generates corresponding '.map' file.
+ --sourceRoot LOCATION                              Specify the location where debugger should locate TypeScript files instead of source locations.
+ --strict                                           Enable all strict type-checking options.
+ --strictBindCallApply                              Enable strict 'bind', 'call', and 'apply' methods on functions.
+ --strictFunctionTypes                              Enable strict checking of function types.
+ --strictNullChecks                                 Enable strict null checks.
+ --strictPropertyInitialization                     Enable strict checking of property initialization in classes.
+ --stripInternal                                    Do not emit declarations for code that has an '@internal' annotation.
+ --suppressExcessPropertyErrors                     Suppress excess property checks for object literals.
+ --suppressImplicitAnyIndexErrors                   Suppress noImplicitAny errors for indexing objects lacking index signatures.
+ -t VERSION, --target VERSION                       Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019', 'ES2020', 'ES2021', or 'ESNEXT'.
+ --traceResolution                                  Enable tracing of the name resolution process.
+ --tsBuildInfoFile FILE                             Specify file to store incremental compilation information
+ --typeRoots                                        List of folders to include type definitions from.
+ --types                                            Type declaration files to be included in compilation.
+ --useDefineForClassFields                          Emit class fields with Define instead of Set.
+ -v, --version                                      Print the compiler's version.
+ -w, --watch                                        Watch input files.
+ @&lt;file&gt;                                            Insert command line options and files from a file.
 
 </code></pre>
 <h3>Elixir</h3>
@@ -393,7 +466,108 @@ Lint checks provided by rustc:
                                   unused-crate-dependencies  allow    crate dependencies that are never used
                                        unused-extern-crates  allow    extern crates that are never used
                                        unused-import-braces  allow    unnecessary braces around an imported item
-                                           
+                                           unused-lifetimes  allow    detects lifetime parameters that are never used
+                                      unused-qualifications  allow    detects unnecessarily qualified names
+                                             unused-results  allow    unused result of an expression in a statement
+                                   variant-size-differences  allow    detects enums with widely varying variant sizes
+                                            array-into-iter  warn     detects calling `into_iter` on arrays
+                                           asm-sub-register  warn     using only a subset of a register for inline asm inputs
+                                         bare-trait-objects  warn     suggest using `dyn Trait` for trait objects
+                                 bindings-with-variant-name  warn     detects pattern bindings with the same name as one of the matched variants
+                                       cenum-impl-drop-cast  warn     a C-like enum implementing Drop is cast
+                                       coherence-leak-check  warn     distinct impls distinguished only by the leak-check code
+                                          confusable-idents  warn     detects visually confusable pairs between identifiers
+                                                  dead-code  warn     detect unused, unexported items
+                                                 deprecated  warn     detects use of deprecated items
+                          ellipsis-inclusive-range-patterns  warn     `...` range patterns are deprecated
+                              exported-private-dependencies  warn     public interface leaks type from a private dependency
+                     illegal-floating-point-literal-pattern  warn     floating-point literals cannot be used in patterns
+                                            improper-ctypes  warn     proper use of libc types in foreign modules
+                                improper-ctypes-definitions  warn     proper use of libc types in foreign item definitions
+                                        incomplete-features  warn     incomplete features that may function improperly in some or all cases
+                                         inline-no-sanitize  warn     detects incompatible use of `#[inline(always)]` and `#[no_sanitize(...)]`
+                          intra-doc-link-resolution-failure  warn     failures in resolving intra-doc link targets
+                               invalid-codeblock-attributes  warn     codeblock attribute looks a lot like a known one
+                                              invalid-value  warn     an invalid value is being created (such as a NULL reference)
+                                   irrefutable-let-patterns  warn     detects irrefutable patterns in if-let and while-let statements
+                              late-bound-lifetime-arguments  warn     detects generic lifetime arguments in path segments with late bound lifetime parameters
+                                   mixed-script-confusables  warn     detects Unicode scripts whose mixed script confusables codepoints are solely used
+                        mutable-borrow-reservation-conflict  warn     reservation of a two-phased borrow conflicts with other shared borrows
+                                       non-camel-case-types  warn     types, variants, traits and type parameters should have camel case names
+                               non-shorthand-field-patterns  warn     using `Struct { x: x }` instead of `Struct { x }` in a pattern
+                                             non-snake-case  warn     variables, methods, functions, lifetime parameters and modules should have snake case names
+                                     non-upper-case-globals  warn     static constants should have uppercase identifiers
+                                    no-mangle-generic-items  warn     generic items must be mangled
+                                       overlapping-patterns  warn     detects overlapping patterns
+                                            path-statements  warn     path statements with no effect
+                                          private-in-public  warn     detect private items in public interfaces not caught by the old implementation
+                      proc-macro-derive-resolution-fallback  warn     detects proc macro derives using inaccessible names from parent modules
+                                       redundant-semicolons  warn     detects unnecessary trailing semicolons
+                                  renamed-and-removed-lints  warn     lints that have been renamed or removed
+                                        safe-packed-borrows  warn     safe borrows of fields of packed structs were erroneously allowed
+                                            stable-features  warn     stable features found in `#[feature]` directive
+                                             trivial-bounds  warn     these bounds don't depend on an type parameters
+                                          type-alias-bounds  warn     bounds in type aliases are not enforced
+                                   tyvar-behind-raw-pointer  warn     raw pointer to an inference variable
+                                        uncommon-codepoints  warn     detects uncommon Unicode codepoints in identifiers
+                                    unconditional-recursion  warn     functions that cannot return without calling themselves
+                                              unknown-lints  warn     unrecognized lint attribute
+                                      unnameable-test-items  warn     detects an item that cannot be named being marked as `#[test_case]`
+                                           unreachable-code  warn     detects unreachable code paths
+                                       unreachable-patterns  warn     detects unreachable patterns
+                                   unstable-name-collisions  warn     detects name collision with an existing but unstable method
+                                          unused-allocation  warn     detects unnecessary allocations that can be eliminated
+                                         unused-assignments  warn     detect assignments that will never be read
+                                          unused-attributes  warn     detects attributes that were not used by the compiler
+                                              unused-braces  warn     unnecessary braces around an expression
+                                         unused-comparisons  warn     comparisons made useless by limits of the types involved
+                                        unused-doc-comments  warn     detects doc comments that aren't used by rustdoc
+                                            unused-features  warn     unused features found in crate-level `#[feature]` directives
+                                             unused-imports  warn     imports that are never used
+                                              unused-labels  warn     detects labels that are never used
+                                              unused-macros  warn     detects macros that were not used
+                                            unused-must-use  warn     unused result of a type flagged as `#[must_use]`
+                                                 unused-mut  warn     detect mut variables which don't need to be mutable
+                                              unused-parens  warn     `if`, `match`, `while` and `return` do not need parentheses
+                                              unused-unsafe  warn     unnecessary use of an `unsafe` block
+                                           unused-variables  warn     detect variables which are not used in any way
+                                                   warnings  warn     mass-change the level for lints which produce warnings
+                                where-clauses-object-safety  warn     checks the object safety of where clauses
+                                                 while-true  warn     suggest using `loop { }` instead of `while true { }`
+                                 ambiguous-associated-items  deny     ambiguous associated items
+                                        arithmetic-overflow  deny     arithmetic operation overflows
+                                     conflicting-repr-hints  deny     conflicts between `#[repr(..)]` hints that were previously accepted and used in practice
+                                                  const-err  deny     constant evaluation detected erroneous expression
+                                 ill-formed-attribute-input  deny     ill-formed attribute inputs that were previously accepted and used in practice
+                                         incomplete-include  deny     trailing content in included file
+                                 invalid-type-param-default  deny     type parameter default erroneously allowed in invalid location
+    macro-expanded-macro-exports-accessed-by-absolute-paths  deny     macro-expanded `macro_export` macros from the current crate cannot be referred to by absolute paths
+                                 missing-fragment-specifier  deny     detects missing fragment specifiers in unused `macro_rules!` patterns
+                                         mutable-transmutes  deny     mutating transmuted &amp;mut T from &amp;T may cause undefined behavior
+                                      no-mangle-const-items  deny     const items will not have their symbols exported
+                              order-dependent-trait-objects  deny     trait-object types were treated as different depending on marker-trait order
+                                       overflowing-literals  deny     literal out of range for its type
+                               patterns-in-fns-without-body  deny     patterns in functions without body were erroneously allowed
+                            pub-use-of-private-extern-crate  deny     detect public re-exports of private extern crates
+                                              soft-unstable  deny     a feature gate that doesn't break dependent crates
+                                        unconditional-panic  deny     operation will cause a panic at runtime
+                                        unknown-crate-types  deny     unknown crate type found in `#[crate_type]` directive
+
+
+Lint groups provided by rustc:
+
+                       name  sub-lints
+                       ----  ---------
+                   warnings  all lints that are set to issue warnings
+        future-incompatible  keyword-idents, anonymous-parameters, illegal-floating-point-literal-pattern, private-in-public, pub-use-of-private-extern-crate, invalid-type-param-default, safe-packed-borrows, patterns-in-fns-without-body, missing-fragment-specifier, late-bound-lifetime-arguments, order-dependent-trait-objects, coherence-leak-check, tyvar-behind-raw-pointer, absolute-paths-not-starting-with-crate, unstable-name-collisions, where-clauses-object-safety, proc-macro-derive-resolution-fallback, macro-expanded-macro-exports-accessed-by-absolute-paths, ill-formed-attribute-input, conflicting-repr-hints, ambiguous-associated-items, mutable-borrow-reservation-conflict, indirect-structural-match, soft-unstable, cenum-impl-drop-cast, array-into-iter
+          nonstandard-style  non-camel-case-types, non-snake-case, non-upper-case-globals
+    rust-2018-compatibility  keyword-idents, anonymous-parameters, tyvar-behind-raw-pointer, absolute-paths-not-starting-with-crate
+           rust-2018-idioms  bare-trait-objects, unused-extern-crates, ellipsis-inclusive-range-patterns, elided-lifetimes-in-paths, explicit-outlives-requirements
+                    rustdoc  intra-doc-link-resolution-failure, invalid-codeblock-attributes, missing-doc-code-examples, private-doc-tests
+                     unused  unused-imports, unused-variables, unused-assignments, dead-code, unused-mut, unreachable-code, unreachable-patterns, overlapping-patterns, unused-must-use, unused-unsafe, path-statements, unused-attributes, unused-macros, unused-allocation, unused-doc-comments, unused-extern-crates, unused-features, unused-labels, unused-parens, unused-braces, redundant-semicolons
+
+
+Compiler plugins can provide additional lints and lint groups. To see a listing of these, re-run `rustc -W help` with a crate filename.
 
 </code></pre>
 <h3>ReScript</h3>
@@ -498,7 +672,189 @@ OPTIONS:
                           Disable the Migrator phase which automatically applies fix-its
   -disable-only-one-dependency-file
                           Disables incremental build optimization that only produces one dependencies file
-  -disable-reque
+  -disable-request-based-incremental-dependencies
+                          Disable request-based name tracking
+  -disallow-use-new-driver
+                          Disable using new swift-driver
+  -driver-compare-incremental-schemes-path &lt;path&gt;
+                          Path to use for machine-readable comparison
+  -driver-compare-incremental-schemes
+                          Print a simple message comparing dependencies with source ranges (w/ fallback)
+  -driver-time-compilation
+                          Prints the total time it took to execute all compilation tasks
+  -dump-migration-states-dir &lt;path&gt;
+                          Dump the input text, output text, and states for migration to &lt;path&gt;
+  -dump-usr               Dump USR for each declaration reference
+  -D &lt;value&gt;              Marks a conditional compilation flag as true
+  -embed-bitcode-marker   Embed placeholder LLVM IR data as a marker
+  -embed-bitcode          Embed LLVM IR bitcode as data
+  -embed-tbd-for-module &lt;value&gt;
+                          Embed symbols from the module in the emitted tbd file
+  -emit-dependencies      Emit basic Make-compatible dependencies files
+  -emit-loaded-module-trace-path &lt;path&gt;
+                          Emit the loaded module trace JSON to &lt;path&gt;
+  -emit-loaded-module-trace
+                          Emit a JSON file containing information about what modules were loaded
+  -emit-module-interface-path &lt;path&gt;
+                          Output module interface file to &lt;path&gt;
+  -emit-module-interface  Output module interface file
+  -emit-module-path &lt;path&gt;
+                          Emit an importable module to &lt;path&gt;
+  -emit-module-source-info-path &lt;path&gt;
+                          Output module source info file to &lt;path&gt;
+  -emit-module-summary-path &lt;path&gt;
+                          Output module summary file to &lt;path&gt;
+  -emit-module-summary    Output module summary file
+  -emit-module            Emit an importable module
+  -emit-objc-header-path &lt;path&gt;
+                          Emit an Objective-C header file to &lt;path&gt;
+  -emit-objc-header       Emit an Objective-C header file
+  -emit-tbd-path &lt;path&gt;   Emit the TBD file to &lt;path&gt;
+  -emit-tbd               Emit a TBD file
+  -enable-experimental-additive-arithmetic-derivation
+                          Enable experimental 'AdditiveArithmetic' derived conformances
+  -enable-experimental-concise-pound-file
+                          Enable experimental concise '#file' identifier
+  -enable-experimental-cross-module-incremental-build
+                          (experimental) Enable cross-module incremental build metadata and driver scheduling
+  -enable-experimental-cxx-interop
+                          Allow importing C++ modules into Swift (experimental feature)
+  -enable-experimental-forward-mode-differentiation
+                          Enable experimental forward mode differentiation
+  -enable-fuzzy-forward-scan-trailing-closure-matching
+                          Enable fuzzy forward-scan trailing closure matching
+  -enable-library-evolution
+                          Build the module to allow binary-compatible library evolution
+  -enable-only-one-dependency-file
+                          Enables incremental build optimization that only produces one dependencies file
+  -enable-request-based-incremental-dependencies
+                          Enable request-based name tracking
+  -enable-source-range-dependencies
+                          Try using source range information
+  -enforce-exclusivity=&lt;enforcement&gt;
+                          Enforce law of exclusivity
+  -experimental-cxx-stdlib &lt;value&gt;
+                          C++ standard library to use; forwarded to Clang's -stdlib flag
+  -fixit-all              Apply all fixits from diagnostics without any filtering
+  -framework &lt;value&gt;      Specifies a framework which should be linked against
+  -Fsystem &lt;value&gt;        Add directory to system framework search path
+  -F &lt;value&gt;              Add directory to framework search path
+  -gdwarf-types           Emit full DWARF type info.
+  -gline-tables-only      Emit minimal debug info for backtraces only
+  -gnone                  Don't emit debug info
+  -g                      Emit debug info. This is the preferred setting for debugging with LLDB.
+  -help                   Display available options
+  -import-underlying-module
+                          Implicitly imports the Objective-C half of a module
+  -index-file-path &lt;path&gt; Produce index data for file &lt;path&gt;
+  -index-ignore-system-modules
+                          Avoid indexing system modules
+  -index-store-path &lt;path&gt;
+                          Store indexing data to &lt;path&gt;
+  -I &lt;value&gt;              Add directory to the import search path
+  -j &lt;n&gt;                  Number of commands to execute in parallel
+  -libc &lt;value&gt;           libc runtime library to use
+  -locale &lt;locale-code&gt;   Choose a language for diagnostic messages
+  -localization-path &lt;path&gt;
+                          Path to localized diagnostic messages directory
+  -lto=&lt;value&gt;            Specify the LTO type to either 'llvm-thin' or 'llvm-full'
+  -L &lt;value&gt;              Add directory to library link search path
+  -l&lt;value&gt;               Specifies a library which should be linked against
+  -migrate-keep-objc-visibility
+                          When migrating, add '@objc' to declarations that would've been implicitly visible in Swift 3
+  -migrator-update-sdk    Does nothing. Temporary compatibility flag for Xcode.
+  -migrator-update-swift  Does nothing. Temporary compatibility flag for Xcode.
+  -module-cache-path &lt;value&gt;
+                          Specifies the Clang module cache path
+  -module-link-name &lt;value&gt;
+                          Library to link against when using this module
+  -module-name &lt;value&gt;    Name of the module to build
+  -no-color-diagnostics   Do not print diagnostics in color
+  -no-verify-emitted-module-interface
+                          Don't check that module interfaces emitted during compilation typecheck
+  -no-warnings-as-errors  Don't treat warnings as errors
+  -no-whole-module-optimization
+                          Disable optimizing input files together instead of individually
+  -nostdimport            Don't search the standard library import path for modules
+  -num-threads &lt;n&gt;        Enable multi-threading and specify number of threads
+  -Onone                  Compile without any optimization
+  -Osize                  Compile with optimizations and target small code size
+  -Ounchecked             Compile with optimizations and remove runtime safety checks
+  -output-file-map &lt;path&gt; A file which specifies the location of outputs
+  -O                      Compile with optimizations
+  -o &lt;file&gt;               Write output to &lt;file&gt;
+  -parse-as-library       Parse the input file(s) as libraries, not scripts
+  -parse-sil              Parse the input file as SIL code, not Swift source
+  -parseable-output       Emit textual output in a parseable format
+  -pretty-print           Pretty-print the output JSON
+  -print-educational-notes
+                          Include educational notes in printed diagnostic output, if available
+  -print-target-info      Print target information for the given target &lt;triple&gt;, such as x86_64-apple-macos10.9
+  -profile-coverage-mapping
+                          Generate coverage data for use with profiled execution counts
+  -profile-generate       Generate instrumented code to collect execution counts
+  -profile-use=&lt;profdata&gt; Supply a profdata file to enable profile-guided optimization
+  -Rcross-import          Emit a remark if a cross-import of a module is triggered.
+  -remove-runtime-asserts Remove runtime safety checks.
+  -require-explicit-availability-target &lt;target&gt;
+                          Suggest fix-its adding @available(&lt;target&gt;, *) to public declarations without availability
+  -require-explicit-availability
+                          Require explicit availability on public declarations
+  -Rmodule-loading        Emit a remark and file path of each loaded module
+  -Rpass-missed=&lt;value&gt;   Report missed transformations by optimization passes whose name matches the given POSIX regular expression
+  -Rpass=&lt;value&gt;          Report performed transformations by optimization passes whose name matches the given POSIX regular expression
+  -runtime-compatibility-version &lt;value&gt;
+                          Link compatibility library for Swift runtime version, or 'none'
+  -sanitize-coverage=&lt;type&gt;
+                          Specify the type of coverage instrumentation for Sanitizers and additional options separated by commas
+  -sanitize-recover=&lt;check&gt;
+                          Specify which sanitizer runtime checks (see -sanitize=) will generate instrumentation that allows error recovery. Listed checks should be comma separated. Default behavior is to not allow error recovery.
+  -sanitize=&lt;check&gt;       Turn on runtime checks for erroneous behavior.
+  -save-optimization-record-passes &lt;regex&gt;
+                          Only include passes which match a specified regular expression inthe generated optimization record (by default, include all passes)
+  -save-optimization-record-path &lt;value&gt;
+                          Specify the file name of any generated optimization record
+  -save-optimization-record=&lt;format&gt;
+                          Generate an optimization record file in a specific format (default: YAML)
+  -save-optimization-record
+                          Generate a YAML optimization record file
+  -save-temps             Save intermediate compilation results
+  -sdk &lt;sdk&gt;              Compile against &lt;sdk&gt;
+  -serialize-diagnostics  Serialize diagnostics in a binary format
+  -static-executable      Statically link the executable
+  -static-stdlib          Statically link the Swift standard library
+  -static                 Make this module statically linkable and make the output of -emit-library a static library.
+  -suppress-warnings      Suppress all warnings
+  -swift-version &lt;vers&gt;   Interpret input according to a specific Swift language version number
+  -target-cpu &lt;value&gt;     Generate code for a particular CPU variant
+  -target-variant &lt;value&gt; Generate 'zippered' code for macCatalyst that can run on the specified variant target triple in addition to the main -target triple
+  -target &lt;triple&gt;        Generate code for the given target &lt;triple&gt;, such as x86_64-apple-macos10.9
+  -tools-directory &lt;directory&gt;
+                          Look for external executables (ld, clang, binutils) in &lt;directory&gt;
+  -track-system-dependencies
+                          Track system dependencies while emitting Make-style dependencies
+  -use-ld=&lt;value&gt;         Specifies the linker to be used
+  -verify-debug-info      Verify the binary representation of debug output.
+  -verify-emitted-module-interface
+                          Check that module interfaces emitted during compilation typecheck
+  -version                Print version information and exit
+  -vfsoverlay &lt;value&gt;     Add directory to VFS overlay file
+  -v                      Show commands to run and use verbose output
+  -warn-implicit-overrides
+                          Warn about implicit overrides of protocol members
+  -warn-swift3-objc-inference-complete
+                          Warn about deprecated @objc inference in Swift 3 for every declaration that will no longer be inferred as @objc in Swift 4
+  -warn-swift3-objc-inference-minimal
+                          Warn about deprecated @objc inference in Swift 3 based on direct uses of the Objective-C entrypoint
+  -warnings-as-errors     Treat warnings as errors
+  -whole-module-optimization
+                          Optimize input files together instead of individually
+  -working-directory &lt;path&gt;
+                          Resolve file paths relative to the specified directory
+  -Xcc &lt;arg&gt;              Pass &lt;arg&gt; to the C/C++/Objective-C compiler
+  -Xlinker &lt;value&gt;        Specifies an option which should be passed to the linker
+
+SEE ALSO: swift build, swift run, swift package, swift test 
 
 </code></pre>
 <h3>Other build tools</h3>
@@ -570,7 +926,73 @@ $ /home/runner/work/compiler-error-messages/compiler-error-messages/node_modules
   --resolver-platform &lt;platform&gt;        Specify the platform for module resolution -
                                         values "ios" "android" "mobile" "electron"
                                         "web" "node")
-  --resolver-scale &lt;num&gt;                Speci
+  --resolver-scale &lt;num&gt;                Specify the image scale for module resolution
+  --review                              Display and perform actions on diagnostics.
+                                        Only some commands support this.
+  --show-all-diagnostics                Display all diagnostics ignoring caps
+  --silent                              Don't write anything to the console
+  --temporary-daemon                    Start a daemon, if one isn't already running,
+                                        for the lifetime of this command
+  --timing                              Dump timing information after running the
+                                        command
+  --unsafe-writes                       When writing files, don't verify mtime or
+                                        existence. Potentially dangerous and could
+                                        lead to unintended data loss
+  --verbose-diagnostics                 Display hidden and truncated diagnostic
+                                        information
+  --version                             Show the version
+  --watch                               Keep running command and update on file
+                                        changes. Only some commands support this.
+  --write-shell-completions &lt;shell&gt;     Write shell completion commands - values
+                                        "fish" "bash")
+
+ Commands ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Code Quality Commands
+  - check run lint against a set of files
+
+  Internal Commands
+  - format formats a single file
+  - json dump an RJSON file to regular JSON
+  - logs view the logs stream
+  - noop do nothing
+  - rage create a rage archive for debugging
+
+  Process Management Commands
+  - init initialise the project
+  - restart restart daemon
+  - start start daemon (if none running)
+  - status get the current daemon status
+  - stop stop a running daemon if one exists
+
+  Project Management Commands
+  - config disable modify a project config- set the &lt;key&gt; to false
+  - config enable modify a project config- set the &lt;key&gt; to true
+  - config location show the config location
+  - config push modify a project config - push &lt;values&gt; to &lt;key&gt;
+  - config set modify a project config - set the &lt;key&gt; to &lt;value&gt;
+  - config set-directory modify a project config - set the &lt;key&gt; to &lt;value&gt;
+  - lsp connect to an lsp
+
+  Source Code Commands
+  - cache clear clear the cache directory
+  - cache dir show the location of the cache directory
+  - recover apply apply a specific patch from the recovery store
+  - recover clear clear the contents of the recovery store
+  - recover diff show the differences that would be applied for a given patch
+  - recover dir print the location of the recovery store
+  - recover list show all patches in the recovery store
+  - recover pop apply the most recent patch in the recovery story
+
+  ℹ To view help for a specific command run
+  $ rome command_name --help
+
+
+                                                                                         
+error Command failed with exit code 1.
+
+                                                                                         
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
 
 </code></pre>
 <p>Jest has a static line width, and does a good job of wrapping the long paragraphs for the bazillion config options.</p>
@@ -733,7 +1155,162 @@ Options:
                                 will look for.                           [array]
   --moduleNameMapper            A JSON string with a map from regular
                                 expressions to module names or to arrays of
-                                modul
+                                module names that allow to stub out resources,
+                                like images or styles with a single module
+                                                                        [string]
+  --modulePathIgnorePatterns    An array of regexp pattern strings that are
+                                matched against all module paths before those
+                                paths are to be considered "visible" to the
+                                module loader.                           [array]
+  --modulePaths                 An alternative API to setting the NODE_PATH env
+                                variable, modulePaths is an array of absolute
+                                paths to additional locations to search when
+                                resolving modules.                       [array]
+  --noStackTrace                Disables stack trace in test results output
+                                                                       [boolean]
+  --notify                      Activates notifications for test results.
+                                                                       [boolean]
+  --notifyMode                  Specifies when notifications will appear for
+                                test results.
+                                            [string] [default: "failure-change"]
+  --onlyChanged, -o             Attempts to identify which tests to run based on
+                                which files have changed in the current
+                                repository. Only works if you're running tests
+                                in a git or hg repository at the moment.
+                                                                       [boolean]
+  --onlyFailures, -f            Run tests that failed in the previous execution.
+                                                                       [boolean]
+  --outputFile                  Write test results to a file when the --json
+                                option is also specified.               [string]
+  --passWithNoTests             Will not fail if no tests are found (for example
+                                while using `--testPathPattern`.)
+                                                      [boolean] [default: false]
+  --preset                      A preset that is used as a base for Jest's
+                                configuration.                          [string]
+  --prettierPath                The path to the "prettier" module used for
+                                inline snapshots.                       [string]
+  --projects                    A list of projects that use Jest to run all
+                                tests of all projects in a single instance of
+                                Jest.                                    [array]
+  --reporters                   A list of custom reporters for the test suite.
+                                                                         [array]
+  --resetMocks                  Automatically reset mock state between every
+                                test. Equivalent to calling jest.resetAllMocks()
+                                between each test.                     [boolean]
+  --resetModules                If enabled, the module registry for every test
+                                file will be reset before running each
+                                individual test.                       [boolean]
+  --resolver                    A JSON string which allows the use of a custom
+                                resolver.                               [string]
+  --restoreMocks                Automatically restore mock state and
+                                implementation between every test. Equivalent to
+                                calling jest.restoreAllMocks() between each
+                                test.                                  [boolean]
+  --rootDir                     The root directory that Jest should scan for
+                                tests and modules within.               [string]
+  --roots                       A list of paths to directories that Jest should
+                                use to search for files in.              [array]
+  --runInBand, -i               Run all tests serially in the current process
+                                (rather than creating a worker pool of child
+                                processes that run tests). This is sometimes
+                                useful for debugging, but such use cases are
+                                pretty rare.                           [boolean]
+  --runTestsByPath              Used when provided patterns are exact file
+                                paths. This avoids converting them into a
+                                regular expression and matching it against every
+                                single file.          [boolean] [default: false]
+  --runner                      Allows to use a custom runner instead of Jest's
+                                default test runner.                    [string]
+  --selectProjects              Run only the tests of the specified
+                                projects.Jest uses the attribute `displayName`
+                                in the configuration to identify each project.
+                                                                         [array]
+  --setupFiles                  A list of paths to modules that run some code
+                                to configure or set up the testing environment
+                                before each test.                        [array]
+  --setupFilesAfterEnv          A list of paths to modules that run some code
+                                to configure or set up the testing framework
+                                before each test                         [array]
+  --showConfig                  Print your jest config and then exits. [boolean]
+  --silent                      Prevent tests from printing messages through the
+                                console.                               [boolean]
+  --skipFilter                  Disables the filter provided by --filter. Useful
+                                for CI jobs, or local enforcement when fixing
+                                tests.                                 [boolean]
+  --snapshotSerializers         A list of paths to snapshot serializer modules
+                                Jest should use for snapshot testing.    [array]
+  --testEnvironment             Alias for --env                         [string]
+  --testEnvironmentOptions      Test environment options that will be passed to
+                                the testEnvironment. The relevant options depend
+                                on the environment.                     [string]
+  --testFailureExitCode         Exit code of `jest` command if the test run
+                                failed                                  [string]
+  --testLocationInResults       Add `location` information to the test results
+                                                      [boolean] [default: false]
+  --testMatch                   The glob patterns Jest uses to detect test
+                                files.                                   [array]
+  --testNamePattern, -t         Run only tests with a name that matches the
+                                regex pattern.                          [string]
+  --testPathIgnorePatterns      An array of regexp pattern strings that are
+                                matched against all test paths before executing
+                                the test. If the test path matches any of the
+                                patterns, it will be skipped.            [array]
+  --testPathPattern             A regexp pattern string that is matched against
+                                all tests paths before executing the test.
+                                                                         [array]
+  --testRegex                   A string or array of string regexp patterns that
+                                Jest uses to detect test files.          [array]
+  --testResultsProcessor        Allows the use of a custom results processor.
+                                This processor must be a node module that
+                                exports a function expecting as the first
+                                argument the result object.             [string]
+  --testRunner                  Allows to specify a custom test runner. The
+                                default is  `jasmine2`. A path to a custom test
+                                runner can be provided:
+                                `&lt;rootDir&gt;/path/to/testRunner.js`.      [string]
+  --testSequencer               Allows to specify a custom test sequencer. The
+                                default is `@jest/test-sequencer`. A path to a
+                                custom test sequencer can be provided:
+                                `&lt;rootDir&gt;/path/to/testSequencer.js`    [string]
+  --testTimeout                 This option sets the default timeouts of test
+                                cases.                                  [number]
+  --testURL                     This option sets the URL for the jsdom
+                                environment.                            [string]
+  --timers                      Setting this value to fake allows the use of
+                                fake timers for functions such as setTimeout.
+                                                                        [string]
+  --transform                   A JSON string which maps from regular
+                                expressions to paths to transformers.   [string]
+  --transformIgnorePatterns     An array of regexp pattern strings that are
+                                matched against all source file paths before
+                                transformation.                          [array]
+  --unmockedModulePathPatterns  An array of regexp pattern strings that are
+                                matched against all modules before the module
+                                loader will automatically return a mock for
+                                them.                                    [array]
+  --updateSnapshot, -u          Use this flag to re-record snapshots. Can be
+                                used together with a test suite pattern or with
+                                `--testNamePattern` to re-record snapshot for
+                                test matching the pattern              [boolean]
+  --useStderr                   Divert all output to stderr.           [boolean]
+  --verbose                     Display individual test results with the test
+                                suite hierarchy.                       [boolean]
+  --watch                       Watch files for changes and rerun tests related
+                                to changed files. If you want to re-run all
+                                tests when a file has changed, use the
+                                `--watchAll` option.                   [boolean]
+  --watchAll                    Watch files for changes and rerun all tests. If
+                                you want to re-run only the tests related to the
+                                changed files, use the `--watch` option.
+                                                                       [boolean]
+  --watchPathIgnorePatterns     An array of regexp pattern strings that are
+                                matched against all paths before trigger test
+                                re-run in watch mode. If the test path matches
+                                any of the patterns, it will be skipped. [array]
+  --watchman                    Whether to use watchman for file crawling.
+                                Disable using --no-watchman.           [boolean]
+
+Documentation: https://jestjs.io/
 
 </code></pre>
 <p>Prettier's help does a good job of categorizing different types of settings via a hierarchy.</p>
@@ -812,7 +1389,47 @@ Config options:
                            Defaults to [].
   --plugin-search-dir &lt;path&gt;
                            Custom directory that contains prettier plugins in node_modules subdirectory.
-                           Overrides default behavior when plugins are searched relatively to the location of
+                           Overrides default behavior when plugins are searched relatively to the location of Prettier.
+                           Multiple values are accepted.
+                           Defaults to [].
+  --with-node-modules      Process files inside 'node_modules' directory.
+
+Editor options:
+
+  --cursor-offset &lt;int&gt;    Print (to stderr) where a cursor at the given position would move to after formatting.
+                           This option cannot be used with --range-start and --range-end.
+                           Defaults to -1.
+  --range-end &lt;int&gt;        Format code ending at a given character offset (exclusive).
+                           The range will extend forwards to the end of the selected statement.
+                           This option cannot be used with --cursor-offset.
+                           Defaults to Infinity.
+  --range-start &lt;int&gt;      Format code starting at a given character offset.
+                           The range will extend backwards to the start of the first line containing the selected statement.
+                           This option cannot be used with --cursor-offset.
+                           Defaults to 0.
+
+Other options:
+
+  --no-color               Do not colorize error messages.
+  --file-info &lt;path&gt;       Extract the following info (as JSON) for a given file path. Reported fields:
+                           * ignored (boolean) - true if file path is filtered by --ignore-path
+                           * inferredParser (string | null) - name of parser inferred from file path
+  -h, --help &lt;flag&gt;        Show CLI usage, or details about the given flag.
+                           Example: --help write
+  -u, --ignore-unknown     Ignore unknown files.
+  --insert-pragma          Insert @format pragma into file's first docblock comment.
+                           Defaults to false.
+  --loglevel &lt;silent|error|warn|log|debug&gt;
+                           What level of logs to report.
+                           Defaults to log.
+  --require-pragma         Require either '@prettier' or '@format' to be present in the file's first docblock comment
+                           in order for it to be formatted.
+                           Defaults to false.
+  --stdin-filepath &lt;path&gt;  Path to the file to pretend that stdin comes from.
+  --support-info           Print support information as JSON.
+  -v, --version            Print Prettier version.
+
+
 
 </code></pre>
 <p>I wrote this CLI, sure, but I think I did a pretty good job on offering a bunch of ways to go from here in the &quot;footer&quot; which hasn't really been represented other than Jest's mention of the website.</p>

@@ -11,7 +11,11 @@
   <body>
     <h1>Ambiguity</h1>
 <p>What happens when it's not obvious what an identifier in some code is?</p>
-<p></p>
+<pre><code>
+ts index.ts
+type A = {}
+type A = {}
+</code></pre>
 <pre><code>
 <span style="color: #40eaea">index.ts</span>:<span style="color: #ea9540">1</span>:<span style="color: #ea9540">6</span> - <span style="color: #ea4040">error</span><span style="color: #404356"> TS2300: </span>Duplicate identifier 'A'.
 

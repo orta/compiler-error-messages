@@ -9,68 +9,49 @@
     <title>How different compilers show assignability errors</title>
   </head>
   <body>
-    <h1>Help on the CLI</h1>
-<h3>Elm Test</h3>
-<p>Occurs when Elm cannot resolve which 'map' to use from the two imports:</p>
+    <p>Languages which feature a structural type system have to handle deeply nested issues:</p>
+<h2>TypeScript</h2>
 <pre><code>
-<span style="color: #00aaaa">-- NO elm.json FILE ------------------------------------------------------------</span>
+ts index.ts
+/* @flow */
+type A = { a: { b: { c: { d: "hello" } } } }
 
-It looks like you are starting a new Elm project. Very exciting! Try running:
+let a: A = { a: { b: { c: { d: "hello" } } } }
+let b = { a: { b: { c: { d: 123 } } } }
 
-    <span style="color: #40ea40">elm init</span>
+a = b
+</code></pre>
+<pre><code>
+<span style="color: #40eaea">index.ts</span>:<span style="color: #ea9540">7</span>:<span style="color: #ea9540">1</span> - <span style="color: #ea4040">error</span><span style="color: #404356"> TS2322: </span>Type '{ a: { b: { c: { d: number; }; }; }; }' is not assignable to type 'A'.
+  The types of 'a.b.c.d' are incompatible between these types.
+    Type 'number' is not assignable to type '"hello"'.
 
-It will help you get set up. It is really simple!
+<span style="background-color: #AAAAAA; color: #000000">7</span> a = b
+<span style="background-color: #AAAAAA; color: #000000"> </span> <span style="color: #ea4040">~</span>
+
+
+Found 1 error.
 
 
 </code></pre>
-<p>There's a lot of tsconfig flags (and some more which are just for the CLI) so the TypeScript CLI includes a  version which lists all possible flags:</p>
+<h2>Flow</h2>
 <pre><code>
-Version 4.3.2
-Syntax:   tsc [options] [file...]
+ts index.js
+/* @flow */
+type A = { a: { b: { c: { d: "hello" } } } }
 
-Examples: tsc hello.ts
-          tsc --outFile file.js file.ts
-          tsc @args.txt
-          tsc --build tsconfig.json
+let a:A = { a: { b: { c: { d: "hello" } } } }
+let b = { a: { b: { c: { d: 123 } } } }
 
-Options:
- --all                                              Show all compiler options.
- --allowJs                                          Allow javascript files to be compiled.
- --allowSyntheticDefaultImports                     Allow default imports from modules with no default export. This does not affect code emit, just typechecking.
- --allowUmdGlobalAccess                             Allow accessing UMD globals from modules.
- --allowUnreachableCode                             Do not report errors on unreachable code.
- --allowUnusedLabels                                Do not report errors on unused labels.
- --alwaysStrict                                     Parse in strict mode and emit "use strict" for each source file.
- --assumeChangesOnlyAffectDirectDependencies        Have recompiles in '--incremental' and '--watch' assume that changes within a file will only affect files directly depending on it.
- --baseUrl                                          Base directory to resolve non-absolute module names.
- -b, --build                                        Build one or more projects and their dependencies, if out of date
- --charset                                          The character set of the input files.
- --checkJs                                          Report errors in .js files.
- --composite                                        Enable project compilation
- -d, --declaration                                  Generates corresponding '.d.ts' file.
- --declarationDir DIRECTORY                         Output directory for generated declaration files.
- --declarationMap                                   Generates a sourcemap for each corresponding '.d.ts' file.
- --diagnostics                                      Show diagnostic information.
- --disableReferencedProjectLoad                     Disable loading referenced projects.
- --disableSizeLimit                                 Disable size limitations on JavaScript projects.
- --disableSolutionSearching                         Disable solution searching for this project.
- --disableSourceOfProjectReferenceRedirect          Disable use of source files instead of declaration files from referenced projects.
- --downlevelIteration                               Provide full support for iterables in 'for-of', spread, and destructuring when targeting 'ES5' or 'ES3'.
- --emitBOM                                          Emit a UTF-8 Byte Order Mark (BOM) in the beginning of output files.
- --emitDeclarationOnly                              Only emit '.d.ts' declaration files.
- --emitDecoratorMetadata                            Enables experimental support for emitting type metadata for decorators.
- --esModuleInterop                                  Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'.
- --experimentalDecorators                           Enables experimental support for ES7 decorators.
- --explainFiles                                     Print names of files and the reason they are part of the compilation.
- --extendedDiagnostics                              Show verbose diagnostic information.
- --forceConsistentCasingInFileNames                 Disallow inconsistently-cased references to the same file.
- --generateCpuProfile FILE OR DIRECTORY             Generates a CPU profile.
- --generateTrace DIRECTORY                          Generates an event trace and a list of types.
- -h, --help                                         Print this message.
- --importHelpers                                    Import emit helpers from 'tslib'.
- --importsNotUsedAsValues                           Specify emit/checking behavior for imports that are only used for types
- -i, --incremental                                  Enable incremental compilation
- --init            
+a = b
+</code></pre>
+<pre><code>
+
+                                                                                         
+error Couldn't find a package.json file in "/tmp/flow/assignability"
+
+                                                                                         
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
 
 </code></pre>
 
