@@ -2,9 +2,9 @@
 
 import { join } from "path"
 import { readdirSync } from "fs"
-import { execToHTML } from "../lib/exec.js";
-import { writeFixture } from "../lib/write.js";
-import { codify, setupExamples } from "../lib/runExample.js";
+import { execToHTML } from "../lib/exec.mjs";
+import { writeFixture } from "../lib/write.mjs";
+import { codify, setupExamples } from "../lib/runExample.mjs";
 
 const go = async () => {
   setupExamples({ cmd: "elixir", args: [], env: "elixir" })

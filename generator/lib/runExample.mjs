@@ -1,8 +1,8 @@
-import { scaffoldTemplate } from "../lib/scaffold.js";
-import { md } from "../lib/md.js"
+import { scaffoldTemplate } from "../lib/scaffold.mjs";
+import { md } from "../lib/md.mjs"
 import { basename, join } from "path"
-import { execToHTML } from "../lib/exec.js";
-import { writeFixture } from "../lib/write.js";
+import { execToHTML } from "../lib/exec.mjs";
+import { writeFixture } from "../lib/write.mjs";
 
 export const setupExamples = ({ cmd, args, env }) => {
   console.log(`\n\n--- ${env} ---\n`)

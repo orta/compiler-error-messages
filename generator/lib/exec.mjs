@@ -4,7 +4,7 @@ import pty  from 'node-pty';
 import { join } from 'path';
 import shelljs from "shelljs"
 
-import { writeFixture } from './write.js';
+import { writeFixture } from './write.mjs';
 
 /**
  * @param cmd string

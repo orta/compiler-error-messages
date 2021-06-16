@@ -1,8 +1,8 @@
 // @ts-check
 
-import { execToHTML } from "../lib/exec.js";
-import { writeFixture } from "../lib/write.js";
-import { codify, setupExamples } from "../lib/runExample.js";
+import { execToHTML } from "../lib/exec.mjs";
+import { writeFixture } from "../lib/write.mjs";
+import { codify, setupExamples } from "../lib/runExample.mjs";
 
 const go = async () => {
   setupExamples({ cmd: "js", args: [], env: "js" })
@@ -11,6 +11,7 @@ const go = async () => {
   execToFixture("yarn", ["rome", "--help"], "js/help-rome")
   execToFixture("yarn", ["prettier", "--help"], "js/help-prettier")
   execToFixture("yarn", ["danger", "--help"], "js/help-danger")
+  execToFixture("yarn", ["flow", "--help"], "js/help-flow")
   execToFixture("gh", ["--help"], "js/help-ghcli")
 }
 

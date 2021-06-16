@@ -2,9 +2,9 @@
 
 import { readdirSync } from "fs"
 import { join } from "path"
-import { execToHTML } from "../lib/exec.js";
-import { writeFixture } from "../lib/write.js";
-import { codify, setupExamples } from "../lib/runExample.js";
+import { execToHTML } from "../lib/exec.mjs";
+import { writeFixture } from "../lib/write.mjs";
+import { codify, setupExamples } from "../lib/runExample.mjs";
 
 const go = async () => {
   const vanilla = await execToHTML("rustc", ["--help"], {})

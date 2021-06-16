@@ -74,7 +74,7 @@ These aren't compilers, which means they're a bit less rigidly "professional" in
 
 Some of these tools of these are definitely pushing the ANSI to HTML systems in my tooling, so forgive some ASCII/color errors. I'll get it fixed with time.
 
-Rome's help output is coming up next, and it is probably my favourite of the whole set. The use of bold, lines for delination and taking the width into account all make for a very polished introduction to the tool.
+Rome's help output is coming up next, and it is probably my favourite of the whole set. Very effective use of bold, strong lines for delination between section and taking the width into account all make for a very polished introduction to the tool.
 
 {% example "js/help-rome" %}
 
