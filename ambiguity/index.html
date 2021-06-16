@@ -1,0 +1,33 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/compiler-error-messages/assets/vanilla.css">
+    <link rel="stylesheet" href="/compiler-error-messages/assets/site.css">
+    <title>How different compilers show ambiguity errors</title>
+  </head>
+  <body>
+    <h1>Ambiguity</h1>
+<p>What happens when it's not obvious what an identifier in some code is?</p>
+<p></p>
+<pre><code>
+<span style="color: #40eaea">index.ts</span>:<span style="color: #ea9540">1</span>:<span style="color: #ea9540">6</span> - <span style="color: #ea4040">error</span><span style="color: #404356"> TS2300: </span>Duplicate identifier 'A'.
+
+<span style="background-color: #AAAAAA; color: #000000">1</span> type A = {}
+<span style="background-color: #AAAAAA; color: #000000"> </span> <span style="color: #ea4040">     ~</span>
+
+<span style="color: #40eaea">index.ts</span>:<span style="color: #ea9540">2</span>:<span style="color: #ea9540">6</span> - <span style="color: #ea4040">error</span><span style="color: #404356"> TS2300: </span>Duplicate identifier 'A'.
+
+<span style="background-color: #AAAAAA; color: #000000">2</span> type A = {}
+<span style="background-color: #AAAAAA; color: #000000"> </span> <span style="color: #ea4040">     ~</span>
+
+
+Found 2 errors.
+
+
+</code></pre>
+
+  </body>
+</html>

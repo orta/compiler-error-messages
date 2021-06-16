@@ -16,7 +16,7 @@
 <p>It looks like generally a help prompts from compilers avoids using colour too much. I think <code>elm</code> does quite a good job of both color and personality, which is something I've seen pretty consistently throughout the errors too.</p>
 <h3>TypeScript</h3>
 <pre><code>
-Version 4.1.5
+Version 4.3.2
 Syntax:   tsc [options] [file...]
 
 Examples: tsc hello.ts
@@ -33,12 +33,12 @@ Options:
  --init                                             Initializes a TypeScript project and creates a tsconfig.json file.
  -p FILE OR DIRECTORY, --project FILE OR DIRECTORY  Compile the project given the path to its configuration file, or to a folder with a 'tsconfig.json'.
  -b, --build                                        Build one or more projects and their dependencies, if out of date
- -t VERSION, --target VERSION                       Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019', 'ES2020', or 'ESNEXT'.
+ -t VERSION, --target VERSION                       Specify ECMAScript target version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017', 'ES2018', 'ES2019', 'ES2020', 'ES2021', or 'ESNEXT'.
  -m KIND, --module KIND                             Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', 'es2020', or 'ESNext'.
  --lib                                              Specify library files to be included in the compilation.
-                                                      'es5' 'es6' 'es2015' 'es7' 'es2016' 'es2017' 'es2018' 'es2019' 'es2020' 'esnext' 'dom' 'dom.iterable' 'webworker' 'webworker.importscripts' 'webworker.iterable' 'scripthost' 'es2015.core' 'es2015.collection' 'es2015.generator' 'es2015.iterable' 'es2015.promise' 'es2015.proxy' 'es2015.reflect' 'es2015.symbol' 'es2015.symbol.wellknown' 'es2016.array.include' 'es2017.object' 'es2017.sharedmemory' 'es2017.string' 'es2017.intl' 'es2017.typedarrays' 'es2018.asyncgenerator' 'es2018.asynciterable' 'es2018.intl' 'es2018.promise' 'es2018.regexp' 'es2019.array' 'es2019.object' 'es2019.string' 'es2019.symbol' 'es2020.bigint' 'es2020.promise' 'es2020.sharedmemory' 'es2020.string' 'es2020.symbol.wellknown' 'es2020.intl' 'esnext.array' 'esnext.symbol' 'esnext.asynciterable' 'esnext.intl' 'esnext.bigint' 'esnext.string' 'esnext.promise' 'esnext.weakref' 
+                                                      'es5' 'es6' 'es2015' 'es7' 'es2016' 'es2017' 'es2018' 'es2019' 'es2020' 'es2021' 'esnext' 'dom' 'dom.iterable' 'webworker' 'webworker.importscripts' 'webworker.iterable' 'scripthost' 'es2015.core' 'es2015.collection' 'es2015.generator' 'es2015.iterable' 'es2015.promise' 'es2015.proxy' 'es2015.reflect' 'es2015.symbol' 'es2015.symbol.wellknown' 'es2016.array.include' 'es2017.object' 'es2017.sharedmemory' 'es2017.string' 'es2017.intl' 'es2017.typedarrays' 'es2018.asyncgenerator' 'es2018.asynciterable' 'es2018.intl' 'es2018.promise' 'es2018.regexp' 'es2019.array' 'es2019.object' 'es2019.string' 'es2019.symbol' 'es2020.bigint' 'es2020.promise' 'es2020.sharedmemory' 'es2020.string' 'es2020.symbol.wellknown' 'es2020.intl' 'es2021.promise' 'es2021.string' 'es2021.weakref' 'esnext.array' 'esnext.symbol' 'esnext.asynciterable' 'esnext.intl' 'esnext.bigint' 'esnext.string' 'esnext.promise' 'esnext.weakref' 
  --allowJs                                          Allow javascript files to be compiled.
- --jsx KIND                                         Specify JSX code generation: 'preserve', 'react-native', or 'react'.
+ --jsx KIND                                         Specify JSX code generation: 'preserve', 'react-native', 'react', 'react-jsx' or 'react-jsxdev'.
  -d, --declaration                                  Generates corresponding '.d.ts' file.
  --declarationMap                                   Generates a sourcemap for each corresponding '.d.ts' file.
  --sourceMap                                        Generates corresponding '.map' file.
@@ -53,12 +53,12 @@ Options:
  --strictBindCallApply                              Enable strict 'bind', 'call', and 'apply' methods on functions.
  --strictPropertyInitialization                     Enable strict checking of property initialization in classes.
  --noImplicitThis                                   Raise error on 'this' expressions with an implied 'any' type.
- --alwaysStrict                                     Parse in strict mode and emit "use strict" for each source file.
+ --alwaysStrict      
 
 </code></pre>
 <p>There's a lot of tsconfig flags (and some more which are just for the CLI) so the TypeScript CLI includes a  version which lists all possible flags:</p>
 <pre><code>
-Version 4.1.5
+Version 4.3.2
 Syntax:   tsc [options] [file...]
 
 Examples: tsc hello.ts
@@ -94,6 +94,7 @@ Options:
  --emitDecoratorMetadata                            Enables experimental support for emitting type metadata for decorators.
  --esModuleInterop                                  Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'.
  --experimentalDecorators                           Enables experimental support for ES7 decorators.
+ --explainFiles                                     Print names of files and the reason they are part of the compilation.
  --extendedDiagnostics                              Show verbose diagnostic information.
  --forceConsistentCasingInFileNames                 Disallow inconsistently-cased references to the same file.
  --generateCpuProfile FILE OR DIRECTORY             Generates a CPU profile.
@@ -102,8 +103,7 @@ Options:
  --importHelpers                                    Import emit helpers from 'tslib'.
  --importsNotUsedAsValues                           Specify emit/checking behavior for imports that are only used for types
  -i, --incremental                                  Enable incremental compilation
- --init                                             Initializes a TypeScript project and creates a tsconfig.json file.
- --inlineSourceMap    
+ --init            
 
 </code></pre>
 <h3>Elixir</h3>
@@ -453,10 +453,15 @@ MODES:
   -emit-sib              Emit serialized AST + canonical SIL file(s)
   -emit-silgen           Emit raw SIL file(s)
   -emit-sil              Emit canonical SIL file(s)
+  -emit-supported-features
+                         Emit a JSON file including all supported compiler features
   -index-file            Produce index data for a source file
   -parse                 Parse input file(s)
   -print-ast             Parse and type-check input file(s) and pretty print AST(s)
   -resolve-imports       Parse and resolve imports in input file(s)
+  -scan-clang-dependencies
+                         Scan dependencies of the given Clang module
+  -scan-dependencies     Scan dependencies of the given Swift sources
   -typecheck             Parse and type-check input file(s)
 
 OPTIONS:
@@ -471,16 +476,18 @@ OPTIONS:
   -color-diagnostics      Print diagnostics in color
   -continue-building-after-errors
                           Continue building, even after errors are encountered
-  -coverage-prefix-map &lt;value&gt;
+  -coverage-prefix-map &lt;prefix=replacement&gt;
                           Remap source paths in coverage info
   -debug-info-format=&lt;value&gt;
                           Specify the debug info format type to either 'dwarf' or 'codeview'
   -debug-info-store-invocation
                           Emit the compiler invocation in the debug info.
-  -debug-prefix-map &lt;value&gt;
+  -debug-prefix-map &lt;prefix=replacement&gt;
                           Remap source paths in debug info
-  -disable-astscope-lookup
-                          Disable ASTScope-based unqualified name lookup
+  -define-availability &lt;macro&gt;
+                          Define an availability macro in the format 'macroName : iOS 13.0, macOS 10.15'
+  -diagnostic-style &lt;style&gt;
+                          The formatting style used when printing diagnostics ('swift' or 'llvm')
   -disable-autolinking-runtime-compatibility-dynamic-replacements
                           Do not use autolinking for the dynamic replacement runtime compatibility library
   -disable-autolinking-runtime-compatibility
@@ -491,20 +498,13 @@ OPTIONS:
                           Disable the Migrator phase which automatically applies fix-its
   -disable-only-one-dependency-file
                           Disables incremental build optimization that only produces one dependencies file
-  -disable-parser-lookup  Disable parser lookup &amp; use ast scope lookup only (experimental)
-  -disable-request-based-incremental-dependencies
-                          Disable request-based name tracking
-  -driver-compare-incremental-schemes-path &lt;path&gt;
-                          Path to use for machine-readable comparision
-  -driver-compare-incremental-schemes
-                          Print a simple message comparing dependencies with source ranges (w/ fallback)
-  -driver-time
+  -disable-reque
 
 </code></pre>
 <h3>Other build tools</h3>
 <p>These aren't compilers, which means they're a bit less rigidly &quot;professional&quot; in their output and have a bit more style about themselves. Rome especially is very clear in its hierarchy and visual weighting, but it's also very long - trade-offs.</p>
 <p>Some of these tools of these are definitely pushing the ANSI to HTML systems in my tooling, so forgive some ASCII/color errors. I'll get it fixed with time.</p>
-<p>Rome's help output is coming up next, and it is probably my favourite of the whole set. The use of bold, lines for delination and taking the width into account all make for a very polished introduction to the tool.</p>
+<p>Rome's help output is coming up next, and it is probably my favourite of the whole set. Very effective use of bold, strong lines for delination between section and taking the width into account all make for a very polished introduction to the tool.</p>
 <pre><code>
 
                                                                                          
@@ -561,7 +561,16 @@ $ /home/runner/work/compiler-error-messages/compiler-error-messages/node_modules
   --profile-sampling &lt;microsec&gt;         Profiler sampling interval in microseconds -
                                         default 100
   --profile-timeout &lt;millisec&gt;          Stop the profile after the milliseconds
-      
+                                        specified. When omitted the profile is of the
+                                        whole command
+  --rage                                Create a rage tarball of debug information
+  --rage-path &lt;path&gt;                    Path where to write rage tarball. When omitted
+                                        defaults to Rage-TIMESTAMP.tgz
+  --resolver-mocks                      Enable mocks for module resolution
+  --resolver-platform &lt;platform&gt;        Specify the platform for module resolution -
+                                        values "ios" "android" "mobile" "electron"
+                                        "web" "node")
+  --resolver-scale &lt;num&gt;                Speci
 
 </code></pre>
 <p>Jest has a static line width, and does a good job of wrapping the long paragraphs for the bazillion config options.</p>
@@ -802,7 +811,8 @@ Config options:
   --plugin &lt;path&gt;          Add a plugin. Multiple plugins can be passed as separate `--plugin`s.
                            Defaults to [].
   --plugin-search-dir &lt;path&gt;
-                     
+                           Custom directory that contains prettier plugins in node_modules subdirectory.
+                           Overrides default behavior when plugins are searched relatively to the location of
 
 </code></pre>
 <p>I wrote this CLI, sure, but I think I did a pretty good job on offering a bunch of ways to go from here in the &quot;footer&quot; which hasn't really been represented other than Jest's mention of the website.</p>
@@ -853,6 +863,11 @@ Work seamlessly with GitHub from the command line.
   release:    Manage GitHub releases
   repo:       Create, clone, fork, and view repositories
 
+<span style="font-weight: bold">ACTIONS COMMANDS</span>
+  actions:    Learn about working with GitHub actions
+  run:        View details about workflow runs
+  workflow:   View details about GitHub Actions workflows
+
 <span style="font-weight: bold">ADDITIONAL COMMANDS</span>
   alias:      Create command shortcuts
   api:        Make an authenticated GitHub API request
@@ -861,6 +876,7 @@ Work seamlessly with GitHub from the command line.
   config:     Manage configuration for gh
   help:       Help about any command
   secret:     Manage GitHub secrets
+  ssh-key:    Manage SSH keys
 
 <span style="font-weight: bold">FLAGS</span>
   --help      Show help for command
